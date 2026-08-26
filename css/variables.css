@@ -1,0 +1,109 @@
+/* ==========================================================================
+   SUNCAPITAL ECO-LUXURY DESIGN SYSTEM - VARIABLES & THEMING
+   ========================================================================== */
+
+@import url('https://fonts.googleapis.com/css2?family=DM+Serif+Display:ital@0;1&family=Space+Grotesk:wght@300;400;500;600;700&display=swap');
+
+:root {
+  /* Core Brand Palette */
+  --color-evergreen: #12372A;
+  --color-evergreen-dark: #0B2119;
+  --color-solar-gold: #E0A92D;
+  --color-solar-gold-hover: #F0B83E;
+  --color-solar-gold-glow: rgba(224, 169, 45, 0.3);
+  --color-sage: #8BAF8A;
+  --color-sage-light: #C4D7C3;
+  --color-midnight: #17252A;
+  --color-solar-cream: #F7F3E7;
+  --color-mist: #E4EEE8;
+
+  /* Contextual Colors - Light Theme Default */
+  --bg-primary: #F7F3E7;
+  --bg-secondary: #E4EEE8;
+  --bg-card: #FFFFFF;
+  --bg-card-hover: #F0F6F2;
+  --bg-surface: #12372A;
+  --bg-glass: rgba(255, 255, 255, 0.75);
+  --bg-glass-card: rgba(255, 255, 255, 0.65);
+  --bg-nav: rgba(18, 55, 42, 0.88);
+
+  --text-primary: #17252A;
+  --text-secondary: #2C4A3E;
+  --text-muted: #5A7569;
+  --text-light: #F7F3E7;
+  --text-gold: #E0A92D;
+
+  --border-light: rgba(18, 55, 42, 0.12);
+  --border-gold: rgba(224, 169, 45, 0.35);
+  --border-glass: rgba(255, 255, 255, 0.3);
+
+  /* Shadows */
+  --shadow-sm: 0 4px 12px rgba(18, 55, 42, 0.05);
+  --shadow-md: 0 8px 24px rgba(18, 55, 42, 0.08);
+  --shadow-lg: 0 16px 40px rgba(18, 55, 42, 0.12);
+  --shadow-gold: 0 10px 30px rgba(224, 169, 45, 0.25);
+  --shadow-inner: inset 0 2px 4px rgba(0, 0, 0, 0.06);
+
+  /* Fonts */
+  --font-heading: 'DM Serif Display', Georgia, serif;
+  --font-body: 'Space Grotesk', system-ui, -apple-system, sans-serif;
+
+  /* Transition Speeds */
+  --transition-fast: 0.2s cubic-bezier(0.4, 0, 0.2, 1);
+  --transition-normal: 0.35s cubic-bezier(0.4, 0, 0.2, 1);
+  --transition-slow: 0.6s cubic-bezier(0.16, 1, 0.3, 1);
+
+  /* Layout Radius */
+  --radius-sm: 8px;
+  --radius-md: 16px;
+  --radius-lg: 24px;
+  --radius-xl: 32px;
+  --radius-full: 9999px;
+
+  /* Container Constraints */
+  --container-max: 1320px;
+  --header-height: 90px;
+}
+
+/* Dark Mode Theme Overrides */
+[data-theme="dark"] {
+  --bg-primary: #0A1914;
+  --bg-secondary: #10241C;
+  --bg-card: #152E24;
+  --bg-card-hover: #1D3A2F;
+  --bg-surface: #06110D;
+  --bg-glass: rgba(16, 36, 28, 0.82);
+  --bg-glass-card: rgba(21, 46, 36, 0.7);
+  --bg-nav: rgba(10, 25, 20, 0.92);
+
+  --text-primary: #F7F3E7;
+  --text-secondary: #C4D7C3;
+  --text-muted: #8BAF8A;
+  --text-light: #FFFFFF;
+  --text-gold: #F0B83E;
+
+  --border-light: rgba(139, 175, 138, 0.18);
+  --border-gold: rgba(224, 169, 45, 0.45);
+  --border-glass: rgba(255, 255, 255, 0.1);
+
+  --shadow-sm: 0 4px 16px rgba(0, 0, 0, 0.25);
+  --shadow-md: 0 8px 30px rgba(0, 0, 0, 0.35);
+  --shadow-lg: 0 18px 45px rgba(0, 0, 0, 0.45);
+  --shadow-gold: 0 10px 30px rgba(224, 169, 45, 0.35);
+}
+
+/* RTL Layout Direction Adjustments */
+[dir="rtl"] {
+  direction: rtl;
+  text-align: right;
+}
+
+[dir="rtl"] .icon-arrow,
+[dir="rtl"] .cta-arrow {
+  transform: scaleX(-1);
+}
+
+[dir="rtl"] .timeline-step::before {
+  right: auto;
+  left: -20px;
+}
