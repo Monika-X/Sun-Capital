@@ -285,6 +285,12 @@ h1, h2, h3, h4, h5, h6 {
   transition: color var(--transition-normal);
 }
 
+/* Light Theme Utility Header Logo Text Contrast (404.html & maintenance.html) */
+[data-theme="light"] header:not(.site-header) .logo-text,
+html[data-theme="light"] header:not(.site-header) .logo-text {
+  color: #12372A !important;
+}
+
 .logo-text span {
   background: linear-gradient(135deg, #FFE89C 0%, #E0A92D 45%, #B8820B 100%);
   -webkit-background-clip: text;
