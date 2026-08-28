@@ -438,6 +438,16 @@ header .toggle-btn:hover {
   color: var(--color-solar-cream);
 }
 
+.mobile-menu-overlay .btn-primary,
+.mobile-menu-overlay .btn {
+  width: auto !important;
+  max-width: 260px !important;
+  padding: 0.6rem 1.4rem !important;
+  font-size: 0.9rem !important;
+  border-radius: 30px !important;
+  margin: 0 auto !important;
+}
+
 .mobile-nav-link:hover {
   color: var(--color-solar-gold);
 }
