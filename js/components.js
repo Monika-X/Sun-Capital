@@ -100,60 +100,72 @@ function initGalleryFilter() {
   });
 }
 
-/* --- Form Validation & Toast Feedback --- */
+/* --- Form Validation & Toast Feedback ---
+   Intercepts every form on the site: prevents the full-page reload,
+   shows a tailored success toast on a valid submit, and only resets the
+   submitted form's own input fields (partial refresh). --- */
 function initFormValidation() {
-  const forms = document.querySelectorAll('form:not(.newsletter-form)');
+  const forms = document.querySelectorAll('form');
 
   forms.forEach(form => {
     form.addEventListener('submit', (e) => {
-      e.preventDefault();
+      e.preventDefault(); // never reload the whole page
 
-      let isValid = true;
-      const inputs = form.querySelectorAll('input[required], select[required], textarea[required]');
+      // Respect native HTML5 constraints (required, email, etc.)
+      if (typeof form.reportValidity === 'function' && !form.reportValidity()) {
+        return;
+      }
 
-      inputs.forEach(input => {
-        if (!input.value.trim()) {
-          isValid = false;
-          input.style.borderColor = '#E74C3C';
-        } else {
-          input.style.borderColor = '';
-        }
-      });
+      // Choose an appropriate success message per form type
+      let message = 'Form submitted successfully!';
+      if (form.matches('.newsletter-form, .newsletter-form-inline')) {
+        message = 'Thank you for subscribing to the SunCapital Clean Energy Journal!';
+      } else if (form.id === 'contactPageForm') {
+        message = 'Thanks for reaching out! Our team will be in touch shortly.';
+      } else if (form.id === 'commentForm') {
+        message = 'Your comment has been posted successfully!';
+      } else if (form.id === 'privacyRequestForm') {
+        message = 'Your privacy request has been submitted successfully!';
+      } else if (form.closest('.modal-backdrop') || form.id === 'assessmentForm') {
+        message = 'Request submitted successfully! Our solar engineer will call you shortly.';
+      } else if (form.querySelector('input[type="search"]') || /\b(search|zip|postal)\b/i.test(form.className)) {
+        const q = form.querySelector('input')?.value || '';
+        message = q ? `Showing results for "${q}"` : 'Search submitted successfully!';
+      }
 
-      if (isValid) {
-        // Trigger Toast
-        if (window.showToast) {
-          window.showToast('Request submitted successfully! Our solar engineer will call you shortly.', 'success');
-        }
+      if (window.showToast) {
+        window.showToast(message, 'success');
+      }
 
-        form.reset();
+      // Only refresh THIS form's input columns, not the entire page
+      form.reset();
 
-        // Close modal if inside modal
-        const modal = form.closest('.modal-backdrop');
-        if (modal) {
-          modal.classList.remove('active');
-          document.body.style.overflow = '';
-        }
-      } else {
-        if (window.showToast) {
-          window.showToast('Please fill out all required fields marked in red.', 'error');
-        }
+      // Close the modal if the form lives inside one
+      const modal = form.closest('.modal-backdrop');
+      if (modal) {
+        modal.classList.remove('active');
+        document.body.style.overflow = '';
       }
     });
   });
 
-  // Newsletter forms
-  const newsForms = document.querySelectorAll('.newsletter-form');
-  newsForms.forEach(nf => {
-    nf.addEventListener('submit', (e) => {
+  // Standalone search / zip-code inputs that are not wrapped in a <form>.
+  // Give feedback on Enter without reloading the page.
+  document.querySelectorAll('input[type="text"], input[type="search"]').forEach(input => {
+    const ph = (input.getAttribute('placeholder') || '').toLowerCase();
+    const token = `${input.name} ${input.id}`.toLowerCase();
+    const isSearch = ph.includes('search') || /\b(zip|postal|search)\b/.test(token);
+    if (!isSearch) return;
+
+    input.addEventListener('keydown', (e) => {
+      if (e.key !== 'Enter') return;
       e.preventDefault();
-      const input = nf.querySelector('input[type="email"]');
-      if (input && input.value.includes('@')) {
-        if (window.showToast) window.showToast('Thank you for subscribing to SunCapital Clean Energy Journal!', 'success');
-        input.value = '';
-      } else {
-        if (window.showToast) window.showToast('Please enter a valid email address.', 'error');
+      const q = input.value.trim();
+      if (!q) return;
+      if (window.showToast) {
+        window.showToast(`Searching for "${q}"...`, 'success');
       }
+      input.value = ''; // clear only this input column
     });
   });
 }
