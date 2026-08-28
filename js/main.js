@@ -39,6 +39,17 @@ function updateThemeIcons(theme) {
     if (textSpan) {
       textSpan.textContent = theme === 'dark' ? 'Light Mode' : 'Dark Mode';
     }
+    const sunIcon = btn.querySelector('.theme-icon-sun');
+    const moonIcon = btn.querySelector('.theme-icon-moon');
+    if (sunIcon && moonIcon) {
+      if (theme === 'dark') {
+        sunIcon.style.display = 'none';
+        moonIcon.style.display = 'inline-block';
+      } else {
+        sunIcon.style.display = 'inline-block';
+        moonIcon.style.display = 'none';
+      }
+    }
   });
 }
 

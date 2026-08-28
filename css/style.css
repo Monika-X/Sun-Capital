@@ -1857,9 +1857,20 @@ div[style*="border-radius:50%"],
     display: none !important;
   }
 
+  .utility-header .theme-toggle-btn {
+    padding: 0.35rem 0.55rem !important;
+    border-radius: var(--radius-full) !important;
+  }
+
+  .utility-header .rtl-toggle-btn {
+    padding: 0.35rem 0.65rem !important;
+    border-radius: var(--radius-full) !important;
+    font-size: 0.72rem !important;
+    font-weight: 700 !important;
+  }
+
   .utility-header .toggle-btn {
-    padding: 0.18rem 0.32rem !important;
-    font-size: 0.62rem !important;
+    font-size: 0.72rem !important;
   }
 
   .destinations-grid {
