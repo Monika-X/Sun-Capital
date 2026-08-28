@@ -50,28 +50,129 @@
     </div>
   </header>
 
-  <!-- SECTION 1: MAINTENANCE STATUS HERO & LIVE COUNTDOWN -->
-  <section class="section-padding text-center" style="min-height: 65vh; display: flex; align-items: center; justify-content: center;">
+  <style>
+    @keyframes spin-slow {
+      from { transform: rotate(0deg); }
+      to { transform: rotate(360deg); }
+    }
+    @keyframes spin-reverse {
+      from { transform: rotate(360deg); }
+      to { transform: rotate(0deg); }
+    }
+    @keyframes pulse-glow {
+      0%, 100% { opacity: 0.5; transform: scale(0.98); }
+      50% { opacity: 1; transform: scale(1.05); }
+    }
+    .vector-orbit-outer {
+      transform-origin: center;
+      animation: spin-slow 28s linear infinite;
+    }
+    .vector-orbit-inner {
+      transform-origin: center;
+      animation: spin-reverse 18s linear infinite;
+    }
+    .vector-pulse-core {
+      animation: pulse-glow 3s ease-in-out infinite;
+    }
+  </style>
+
+  <!-- SECTION 1: ANIMATED VECTOR HERO & COUNTDOWN -->
+  <section class="section-padding text-center" style="min-height: 75vh; display: flex; align-items: center; justify-content: center; position: relative; overflow: hidden;">
     <div class="container">
-      <span class="badge-pill">Infrastructure Optimization</span>
-      <h1 class="heading-xl" style="margin-top: 0.8rem; margin-bottom: 1rem;">
+      
+      <!-- VECTOR SOLAR GRID ANIMATED GRAPHIC CENTERPIECE -->
+      <div style="position: relative; width: 260px; height: 260px; margin: 0 auto 2rem auto; display: flex; align-items: center; justify-content: center;">
+        <svg width="260" height="260" viewBox="0 0 280 280" fill="none" xmlns="http://www.w3.org/2000/svg" style="overflow: visible;">
+          <!-- Glowing Outer Aura -->
+          <circle cx="140" cy="140" r="130" fill="rgba(224, 169, 45, 0.06)" filter="blur(15px)" />
+          
+          <!-- Outer Dash Orbit Ring -->
+          <circle class="vector-orbit-outer" cx="140" cy="140" r="125" stroke="var(--color-solar-gold)" stroke-width="1.8" stroke-dasharray="12 8" opacity="0.75"/>
+          
+          <!-- Inner Reverse Orbit Ring -->
+          <circle class="vector-orbit-inner" cx="140" cy="140" r="100" stroke="var(--color-evergreen-light)" stroke-width="2" stroke-dasharray="6 6" opacity="0.85"/>
+
+          <!-- Crosshair Radar Grid Vectors -->
+          <line x1="140" y1="10" x2="140" y2="270" stroke="var(--border-gold)" stroke-width="1" stroke-dasharray="4 4" opacity="0.4"/>
+          <line x1="10" y1="140" x2="270" y2="140" stroke="var(--border-gold)" stroke-width="1" stroke-dasharray="4 4" opacity="0.4"/>
+
+          <!-- 4 Solar Node Vector Circles -->
+          <g class="vector-pulse-core">
+            <circle cx="140" cy="40" r="11" fill="var(--bg-card)" stroke="var(--color-solar-gold)" stroke-width="2"/>
+            <path d="M140 34v12M134 40h12" stroke="var(--color-solar-gold)" stroke-width="1.5"/>
+
+            <circle cx="140" cy="240" r="11" fill="var(--bg-card)" stroke="var(--color-solar-gold)" stroke-width="2"/>
+            <path d="M140 234v12M134 240h12" stroke="var(--color-solar-gold)" stroke-width="1.5"/>
+
+            <circle cx="40" cy="140" r="11" fill="var(--bg-card)" stroke="var(--color-solar-gold)" stroke-width="2"/>
+            <path d="M40 134v12M34 140h12" stroke="var(--color-solar-gold)" stroke-width="1.5"/>
+
+            <circle cx="240" cy="140" r="11" fill="var(--bg-card)" stroke="var(--color-solar-gold)" stroke-width="2"/>
+            <path d="M240 134v12M234 140h12" stroke="var(--color-solar-gold)" stroke-width="1.5"/>
+          </g>
+
+          <!-- Central Core Solar Hexagon Shield -->
+          <polygon points="140,75 190,105 190,175 140,205 90,175 90,105" fill="var(--color-evergreen-dark)" stroke="var(--color-solar-gold)" stroke-width="3" />
+          
+          <!-- Inner Solar Cell Grid Vectors -->
+          <polygon points="140,88 178,111 178,169 140,192 102,169 102,111" fill="rgba(224,169,45,0.15)" stroke="var(--color-solar-gold)" stroke-width="1.5" stroke-dasharray="3 3"/>
+
+          <!-- Animated Gear / Solar Lightning Core -->
+          <g transform="translate(140, 140) scale(1.3)">
+            <polygon points="-5,-14 5,-14 2,-2 8,-2 -5,14 -2,2 -8,2" fill="url(#goldGrad)"/>
+          </g>
+
+          <!-- SVG Gradient Definition -->
+          <defs>
+            <linearGradient id="goldGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+              <stop offset="0%" stop-color="#FFE89C" />
+              <stop offset="100%" stop-color="#E0A92D" />
+            </linearGradient>
+          </defs>
+        </svg>
+
+        <!-- Floating Live Status Badge -->
+        <div style="position: absolute; bottom: -8px; background: var(--bg-card); border: 1px solid var(--color-solar-gold); padding: 0.35rem 0.9rem; border-radius: var(--radius-full); font-size: 0.78rem; font-weight: 700; color: var(--color-solar-gold); box-shadow: var(--shadow-md); display: flex; align-items: center; gap: 0.4rem;">
+          <span style="width: 8px; height: 8px; border-radius: 50%; background: var(--color-solar-gold); display: inline-block; animation: pulse-glow 1.5s infinite;"></span>
+          85% CALIBRATED
+        </div>
+      </div>
+
+      <span class="badge-pill" style="border-color: var(--color-solar-gold); color: var(--color-solar-gold);">
+        System Infrastructure Optimization
+      </span>
+
+      <h1 class="heading-xl" style="margin-top: 0.8rem; margin-bottom: 1rem; font-family: var(--font-heading);">
         Upgrading Our Solar Grid Systems
       </h1>
-      <p class="text-lead" style="max-width: 650px; margin: 0 auto 2.5rem auto;">
+
+      <p class="text-lead" style="max-width: 650px; margin: 0 auto 2rem auto; color: var(--text-secondary); line-height: 1.65;">
         We are deploying next-gen AI LIDAR roof modeling updates to enhance your CAD assessment speed. Estimated online return in:
       </p>
 
+      <!-- VECTOR PROGRESS BAR -->
+      <div style="max-width: 480px; margin: 0 auto 2.5rem auto; text-align: left;">
+        <div style="display: flex; justify-content: space-between; font-size: 0.85rem; font-weight: 600; margin-bottom: 0.5rem; color: var(--text-primary);">
+          <span>Upgrade Progress</span>
+          <span style="color: var(--color-solar-gold);">85% Complete</span>
+        </div>
+        <div style="width: 100%; height: 8px; background: var(--bg-secondary); border-radius: var(--radius-full); overflow: hidden; border: 1px solid var(--border-light); padding: 1px;">
+          <div style="width: 85%; height: 100%; background: linear-gradient(90deg, var(--color-solar-gold) 0%, #FFE89C 100%); border-radius: var(--radius-full); box-shadow: 0 0 10px rgba(224, 169, 45, 0.5);"></div>
+        </div>
+      </div>
+
+      <!-- COUNTDOWN GRID -->
       <div class="countdown-grid">
-        <div class="countdown-item">
-          <div class="countdown-val">02</div>
+        <div class="countdown-item" style="border-color: var(--border-gold); background: var(--bg-card);">
+          <div class="countdown-val" style="color: var(--color-solar-gold);">02</div>
           <div class="countdown-label">Hours</div>
         </div>
-        <div class="countdown-item">
-          <div class="countdown-val">45</div>
+        <div class="countdown-item" style="border-color: var(--border-gold); background: var(--bg-card);">
+          <div class="countdown-val" style="color: var(--color-solar-gold);">45</div>
           <div class="countdown-label">Minutes</div>
         </div>
-        <div class="countdown-item">
-          <div class="countdown-val">12</div>
+        <div class="countdown-item" style="border-color: var(--border-gold); background: var(--bg-card);">
+          <div class="countdown-val" style="color: var(--color-solar-gold);">12</div>
           <div class="countdown-label">Seconds</div>
         </div>
       </div>
@@ -82,28 +183,38 @@
   <section class="section-padding" style="background: var(--bg-secondary);">
     <div class="container container-narrow">
       <div class="section-header text-center">
-        <h2 class="heading-md">Live System Sub-Services Status</h2>
+        <span class="badge-pill">Live System Diagnostics</span>
+        <h2 class="heading-md" style="margin-top: 0.5rem;">Sub-Services Operational Status</h2>
       </div>
 
-      <div class="card-glass" style="display: flex; flex-direction: column; gap: 1rem;">
-        <div style="display: flex; justify-content: space-between; align-items: center; border-bottom: 1px solid var(--border-light); padding-bottom: 0.8rem;">
-          <span>24/7 Smart Battery Monitoring SLA</span>
-          <span style="color: #27AE60; font-weight: 700; display: flex; align-items: center; gap: 0.4rem;">
-            <span style="width: 10px; height: 10px; border-radius: 50%; background: #27AE60; display: inline-block;"></span> Operational
+      <div class="card-glass" style="display: flex; flex-direction: column; gap: 1.2rem; border-color: var(--border-gold); padding: 2rem;">
+        <div style="display: flex; justify-content: space-between; align-items: center; border-bottom: 1px solid var(--border-light); padding-bottom: 1rem;">
+          <div style="display: flex; align-items: center; gap: 0.8rem;">
+            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="var(--color-solar-gold)" stroke-width="2"><rect x="2" y="7" width="20" height="10" rx="2" ry="2"/><line x1="22" y1="11" x2="22" y2="13"/><line x1="6" y1="11" x2="6" y2="13"/><line x1="10" y1="11" x2="10" y2="13"/></svg>
+            <span style="font-weight: 600; font-size: 0.95rem;">24/7 Smart Battery Monitoring SLA</span>
+          </div>
+          <span style="color: #27AE60; font-weight: 700; font-size: 0.88rem; display: flex; align-items: center; gap: 0.4rem; background: rgba(39, 174, 96, 0.12); padding: 0.3rem 0.75rem; border-radius: var(--radius-full); border: 1px solid rgba(39, 174, 96, 0.3);">
+            <span style="width: 8px; height: 8px; border-radius: 50%; background: #27AE60; display: inline-block;"></span> Operational
           </span>
         </div>
 
-        <div style="display: flex; justify-content: space-between; align-items: center; border-bottom: 1px solid var(--border-light); padding-bottom: 0.8rem;">
-          <span>Emergency Dispatch Hotline</span>
-          <span style="color: #27AE60; font-weight: 700; display: flex; align-items: center; gap: 0.4rem;">
-            <span style="width: 10px; height: 10px; border-radius: 50%; background: #27AE60; display: inline-block;"></span> Operational
+        <div style="display: flex; justify-content: space-between; align-items: center; border-bottom: 1px solid var(--border-light); padding-bottom: 1rem;">
+          <div style="display: flex; align-items: center; gap: 0.8rem;">
+            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="var(--color-solar-gold)" stroke-width="2"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"/></svg>
+            <span style="font-weight: 600; font-size: 0.95rem;">Emergency Solar Dispatch Hotline</span>
+          </div>
+          <span style="color: #27AE60; font-weight: 700; font-size: 0.88rem; display: flex; align-items: center; gap: 0.4rem; background: rgba(39, 174, 96, 0.12); padding: 0.3rem 0.75rem; border-radius: var(--radius-full); border: 1px solid rgba(39, 174, 96, 0.3);">
+            <span style="width: 8px; height: 8px; border-radius: 50%; background: #27AE60; display: inline-block;"></span> Operational (18s SLA)
           </span>
         </div>
 
         <div style="display: flex; justify-content: space-between; align-items: center;">
-          <span>Remote CAD Roof Scanner Portal</span>
-          <span style="color: var(--color-solar-gold); font-weight: 700; display: flex; align-items: center; gap: 0.4rem;">
-            <span style="width: 10px; height: 10px; border-radius: 50%; background: var(--color-solar-gold); display: inline-block;"></span> Maintenance Upgrade
+          <div style="display: flex; align-items: center; gap: 0.8rem;">
+            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="var(--color-solar-gold)" stroke-width="2"><circle cx="12" cy="12" r="3"/><path d="M19.4 15a1.65 1.65 0 0 0 .33 1.82l.06.06a2 2 0 0 1 0 2.83 2 2 0 0 1-2.83 0l-.06-.06a1.65 1.65 0 0 0-1.82-.33 1.65 1.65 0 0 0-1 1.51V21a2 2 0 0 1-2 2 2 2 0 0 1-2-2v-.09A1.65 1.65 0 0 0 9 19.4a1.65 1.65 0 0 0-1.82.33l-.06.06a2 2 0 0 1-2.83 0 2 2 0 0 1 0-2.83l.06-.06a1.65 1.65 0 0 0 .33-1.82 1.65 1.65 0 0 0-1.51-1H3a2 2 0 0 1-2-2 2 2 0 0 1 2-2h.09A1.65 1.65 0 0 0 4.6 9a1.65 1.65 0 0 0-.33-1.82l-.06-.06a2 2 0 0 1 0-2.83 2 2 0 0 1 2.83 0l.06.06a1.65 1.65 0 0 0 1.82.33H9a1.65 1.65 0 0 0 1-1.51V3a2 2 0 0 1 2-2 2 2 0 0 1 2 2v.09a1.65 1.65 0 0 0 1 1.51 1.65 1.65 0 0 0 1.82-.33l.06-.06a2 2 0 0 1 2.83 0 2 2 0 0 1 0 2.83l-.06.06a1.65 1.65 0 0 0-.33 1.82V9a1.65 1.65 0 0 0 1.51 1H21a2 2 0 0 1 2 2 2 2 0 0 1-2 2h-.09a1.65 1.65 0 0 0-1.51 1z"/></svg>
+            <span style="font-weight: 600; font-size: 0.95rem;">Remote CAD LIDAR Roof Scanner</span>
+          </div>
+          <span style="color: var(--color-solar-gold); font-weight: 700; font-size: 0.88rem; display: flex; align-items: center; gap: 0.4rem; background: rgba(224, 169, 45, 0.12); padding: 0.3rem 0.75rem; border-radius: var(--radius-full); border: 1px solid var(--border-gold);">
+            <span style="width: 8px; height: 8px; border-radius: 50%; background: var(--color-solar-gold); display: inline-block; animation: pulse-glow 1s infinite;"></span> Maintenance Upgrade
           </span>
         </div>
       </div>
