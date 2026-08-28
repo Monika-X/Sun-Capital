@@ -225,10 +225,17 @@
   background: var(--color-evergreen);
   border-radius: var(--radius-lg);
   padding: 2.2rem;
-  color: var(--color-solar-cream);
+  color: var(--color-solar-cream) !important;
   display: flex;
   flex-direction: column;
   justify-content: space-between;
+}
+
+.calc-results-box h1,
+.calc-results-box h2,
+.calc-results-box h3,
+.calc-results-box h4 {
+  color: #FFFFFF !important;
 }
 
 .calc-metric-grid {
