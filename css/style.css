@@ -230,50 +230,72 @@ h1, h2, h3, h4, h5, h6 {
 .logo-brand {
   display: flex;
   align-items: center;
-  gap: 0.75rem;
+  gap: 0.8rem;
   text-decoration: none;
+  transition: transform var(--transition-fast);
+}
+
+.logo-brand:hover {
+  transform: translateY(-1px);
 }
 
 .logo-icon {
-  width: 42px;
-  height: 42px;
-  background: linear-gradient(135deg, var(--color-solar-gold), var(--color-sage));
-  border-radius: 50%;
+  width: 44px;
+  height: 44px;
+  background: linear-gradient(135deg, var(--color-evergreen-dark), #05140E);
+  border: 1.5px solid var(--color-solar-gold);
+  border-radius: 12px;
   display: flex;
   align-items: center;
   justify-content: center;
-  color: var(--color-evergreen-dark);
-  box-shadow: 0 0 20px var(--color-solar-gold-glow);
+  color: var(--color-solar-gold);
+  box-shadow: 0 4px 18px rgba(224, 169, 45, 0.35);
   flex-shrink: 0;
+  transition: all var(--transition-normal);
+  position: relative;
+}
+
+.logo-brand:hover .logo-icon {
+  transform: rotate(12deg) scale(1.08);
+  box-shadow: 0 6px 24px rgba(224, 169, 45, 0.6);
+  border-color: #FFFFFF;
+  color: #FFFFFF;
 }
 
 .logo-text-group {
   display: flex;
   flex-direction: column;
-  line-height: 1.1;
+  line-height: 1.05;
 }
 
 .logo-text {
   font-family: var(--font-heading);
-  font-size: 1.6rem;
-  color: #FFFFFF;
-  font-weight: 700;
-  letter-spacing: -0.02em;
+  font-size: 1.65rem;
+  color: var(--text-primary);
+  font-weight: 800;
+  letter-spacing: -0.03em;
+  transition: color var(--transition-normal);
 }
 
 .logo-text span {
-  color: var(--color-solar-gold);
+  background: linear-gradient(135deg, #FFE89C 0%, #E0A92D 45%, #B8820B 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+  font-weight: 900;
+  margin-left: 1px;
 }
 
 .logo-tagline {
   font-family: var(--font-sans);
   font-size: 0.62rem;
-  font-weight: 600;
+  font-weight: 700;
   text-transform: uppercase;
-  letter-spacing: 0.14em;
+  letter-spacing: 0.16em;
   color: var(--color-solar-gold);
-  margin-top: 1px;
+  margin-top: 3px;
   white-space: nowrap;
+  opacity: 0.95;
 }
 
 .nav-menu {
@@ -522,10 +544,10 @@ h1, h2, h3, h4, h5, h6 {
 
 .footer-brand-title {
   font-family: var(--font-heading);
-  font-style: italic;
-  font-size: 2.1rem;
-  color: var(--color-solar-cream);
-  letter-spacing: -0.01em;
+  font-size: 2.2rem;
+  font-weight: 800;
+  color: #FFFFFF;
+  letter-spacing: -0.03em;
   line-height: 1.1;
   text-decoration: none;
   display: inline-block;
@@ -533,7 +555,11 @@ h1, h2, h3, h4, h5, h6 {
 }
 
 .footer-brand-title span {
-  color: var(--color-solar-gold);
+  background: linear-gradient(135deg, #FFE89C 0%, #E0A92D 45%, #B8820B 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+  font-weight: 900;
 }
 
 .footer-brand-desc {
