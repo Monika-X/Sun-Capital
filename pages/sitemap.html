@@ -362,37 +362,43 @@
 
   <!-- SITEMAP REALTIME FILTER SCRIPT -->
   <script>
-    document.addEventListener('DOMContentLoaded', function() {
-      const searchInput = document.getElementById('sitemapSearchInput');
-      if (!searchInput) return;
+    (function () {
+      function initSitemapFilter() {
+        const searchInput = document.getElementById('sitemapSearchInput');
+        if (!searchInput) return;
 
-      searchInput.addEventListener('input', function() {
-        const query = this.value.toLowerCase().trim();
-        const sitemapCards = document.querySelectorAll('.sitemap-card');
+        // Strip spaces so "5kW" matches "5 kW" in the link text
+        const normalize = (str) => str.toLowerCase().replace(/\s+/g, '');
 
-        sitemapCards.forEach(card => {
-          const items = card.querySelectorAll('li, .sitemap-list-item');
-          let matchCount = 0;
+        searchInput.addEventListener('input', function () {
+          const query = normalize(this.value.trim());
+          const cards = document.querySelectorAll('.sitemap-card');
 
-          items.forEach(item => {
-            const text = item.textContent.toLowerCase();
-            if (query === '' || text.includes(query)) {
-              item.style.display = '';
-              matchCount++;
-            } else {
-              item.style.display = 'none';
-            }
+          cards.forEach(card => {
+            const items = card.querySelectorAll('.sitemap-list-item');
+            const titleEl = card.querySelector('h3, h4');
+            const cardTitle = titleEl ? normalize(titleEl.textContent) : '';
+            const titleMatch = query !== '' && cardTitle.includes(query);
+
+            let anyItemMatch = false;
+            items.forEach(item => {
+              const match = query === '' || titleMatch || normalize(item.textContent).includes(query);
+              item.style.display = match ? '' : 'none';
+              if (match) anyItemMatch = true;
+            });
+
+            const cardMatch = query === '' || anyItemMatch || titleMatch;
+            card.style.display = cardMatch ? '' : 'none';
           });
-
-          const cardTitle = card.querySelector('h3, h4')?.textContent.toLowerCase() || '';
-          if (query === '' || matchCount > 0 || cardTitle.includes(query)) {
-            card.style.display = '';
-          } else {
-            card.style.display = 'none';
-          }
         });
-      });
-    });
+      }
+
+      if (document.readyState === 'loading') {
+        document.addEventListener('DOMContentLoaded', initSitemapFilter);
+      } else {
+        initSitemapFilter();
+      }
+    })();
   </script>
 </body>
 </html>
