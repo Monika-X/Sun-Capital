@@ -311,6 +311,17 @@
   font-size: 0.78rem;
   text-transform: uppercase;
   letter-spacing: 0.1em;
+  color: var(--text-secondary);
+  font-weight: 600;
+}
+
+[data-theme="light"] .countdown-label {
+  color: #2C4A3E !important;
+  font-weight: 700 !important;
+}
+
+[data-theme="dark"] .countdown-label {
+  color: rgba(247, 243, 231, 0.85) !important;
 }
 
 /* --- Dark Background Section Text Contrast Safety Rules --- */
