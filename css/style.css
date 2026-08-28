@@ -1208,3 +1208,33 @@ div[style*="border-radius:50%"],
     padding: 1.8rem 1.2rem !important;
   }
 }
+
+/* Mobile Hero Clearance & Alignment Protection */
+@media (max-width: 768px) {
+  body {
+    padding-top: 0 !important;
+  }
+
+  .hero-slider-wrapper {
+    margin-top: 0 !important;
+    height: auto !important;
+    min-height: 540px !important;
+  }
+
+  .hero-content {
+    justify-content: flex-start !important;
+    padding-top: 115px !important;
+    padding-bottom: 4rem !important;
+  }
+
+  .hero-content .badge-pill {
+    margin-top: 0.5rem !important;
+    margin-bottom: 1rem !important;
+  }
+
+  .page-hero {
+    margin-top: 0 !important;
+    padding-top: 110px !important;
+    padding-bottom: 3.5rem !important;
+  }
+}
