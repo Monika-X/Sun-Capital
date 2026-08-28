@@ -243,6 +243,20 @@
   transform: scale(1.2);
 }
 
+.calc-options-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 1.2rem;
+  margin-bottom: 1.5rem;
+}
+
+.calc-checkbox-wrap {
+  display: flex;
+  align-items: center;
+  gap: 0.6rem;
+  height: 46px;
+}
+
 .calc-results-box {
   background: var(--color-evergreen);
   border-radius: var(--radius-lg);
@@ -287,7 +301,74 @@
   letter-spacing: 0.05em;
 }
 
-/* --- System Capacity Option Cards --- */
+.calc-footer-action {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 1rem;
+  margin-top: 1rem;
+  padding-top: 1rem;
+  border-top: 1px solid rgba(255, 255, 255, 0.12);
+}
+
+.calc-subsidy-lbl {
+  font-size: 0.8rem;
+  text-transform: uppercase;
+  color: rgba(247, 243, 231, 0.6);
+}
+
+.calc-subsidy-val {
+  font-size: 1.3rem;
+  font-weight: 700;
+  color: var(--color-solar-gold);
+}
+
+@media (max-width: 768px) {
+  .calculator-card {
+    padding: 1.5rem 1rem !important;
+    gap: 1.5rem !important;
+  }
+
+  .calc-options-grid {
+    grid-template-columns: 1fr !important;
+    gap: 1rem !important;
+  }
+
+  .calc-results-box {
+    padding: 1.4rem 1.1rem !important;
+  }
+
+  .calc-metric-grid {
+    grid-template-columns: 1fr 1fr !important;
+    gap: 0.8rem !important;
+  }
+
+  .calc-metric-card {
+    padding: 0.9rem 0.75rem !important;
+  }
+
+  .calc-metric-num {
+    font-size: 1.45rem !important;
+  }
+
+  .calc-footer-action {
+    flex-direction: column !important;
+    align-items: stretch !important;
+    text-align: center !important;
+    gap: 0.8rem !important;
+  }
+
+  .calc-footer-action .btn {
+    width: 100% !important;
+  }
+}
+
+@media (max-width: 480px) {
+  .calc-metric-grid {
+    grid-template-columns: 1fr !important;
+    gap: 0.75rem !important;
+  }
+}
 .capacity-grid {
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
