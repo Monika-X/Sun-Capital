@@ -1790,6 +1790,24 @@ div[style*="border-radius:50%"],
     margin-bottom: 1.5rem !important;
   }
 
+  /* Contact Page at 320px */
+  .contact-grid {
+    gap: 1.2rem !important;
+  }
+
+  .contact-grid .card-glass {
+    padding: 1.1rem 0.75rem !important;
+  }
+
+  .contact-grid h2 {
+    font-size: 1.25rem !important;
+    line-height: 1.3 !important;
+  }
+
+  .contact-form-grid {
+    gap: 0.8rem !important;
+  }
+
   /* Pre-footer CTA Banner at 320px */
   .cta-banner {
     padding: 1.25rem 0.75rem !important;
