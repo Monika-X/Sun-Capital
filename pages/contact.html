@@ -134,73 +134,110 @@
     </div>
   </section>
 
-  <!-- SECTION 2: INTERACTIVE CONSULTATION FORM -->
+  <!-- SECTION 2: INTERACTIVE CONSULTATION FORM & TIMELINE -->
   <section class="section-padding">
     <div class="container">
-      <div style="display: grid; grid-template-columns: 1.2fr 1fr; gap: 4rem; align-items: flex-start;">
-        <div class="card-glass" style="border-color: var(--border-gold);">
-          <span class="badge-pill">Private Consultation</span>
-          <h2 class="heading-md" style="margin-top: 0.5rem; margin-bottom: 1.5rem;">Request a Custom Solar Quote</h2>
+      <div style="display: grid; grid-template-columns: 1.15fr 1fr; gap: 3rem; align-items: stretch;">
+        <div class="card-glass" style="border-color: var(--border-gold); padding: 2.5rem; display: flex; flex-direction: column; justify-content: space-between;">
+          <div>
+            <span class="badge-pill">Private Consultation</span>
+            <h2 class="heading-md" style="margin-top: 0.5rem; margin-bottom: 1.8rem; font-family: var(--font-heading); font-size: 1.8rem;">Request a Custom Solar Quote</h2>
 
-          <form id="contactPageForm">
-            <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 1.2rem;">
-              <div class="form-group">
-                <label class="form-label">Full Name *</label>
-                <input type="text" class="form-control" placeholder="Eleanor Vance" required>
+            <form id="contactPageForm">
+              <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 1.2rem;">
+                <div class="form-group">
+                  <label class="form-label" style="font-weight: 600; font-size: 0.88rem;">Full Name *</label>
+                  <input type="text" class="form-control" placeholder="Eleanor Vance" required style="border: 1px solid var(--border-light); padding: 0.75rem 1rem;">
+                </div>
+                <div class="form-group">
+                  <label class="form-label" style="font-weight: 600; font-size: 0.88rem;">Phone Number *</label>
+                  <input type="tel" class="form-control" placeholder="+1 (555) 000-0000" required style="border: 1px solid var(--border-light); padding: 0.75rem 1rem;">
+                </div>
               </div>
-              <div class="form-group">
-                <label class="form-label">Phone Number *</label>
-                <input type="tel" class="form-control" placeholder="+1 (555) 000-0000" required>
+
+              <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 1.2rem;">
+                <div class="form-group">
+                  <label class="form-label" style="font-weight: 600; font-size: 0.88rem;">Email Address *</label>
+                  <input type="email" class="form-control" placeholder="eleanor@estate.com" required style="border: 1px solid var(--border-light); padding: 0.75rem 1rem;">
+                </div>
+                <div class="form-group">
+                  <label class="form-label" style="font-weight: 600; font-size: 0.88rem;">System Interest *</label>
+                  <select class="form-control" required style="border: 1px solid var(--border-light); padding: 0.75rem 1rem;">
+                    <option value="residential">Residential Solar Roof</option>
+                    <option value="battery">Battery Microgrid Reserve</option>
+                    <option value="commercial">Small Office Commercial</option>
+                    <option value="ev">EV Fast Charging Hub</option>
+                  </select>
+                </div>
               </div>
-            </div>
 
-            <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 1.2rem;">
               <div class="form-group">
-                <label class="form-label">Email Address *</label>
-                <input type="email" class="form-control" placeholder="eleanor@estate.com" required>
+                <label class="form-label" style="font-weight: 600; font-size: 0.88rem;">Estate Address / City *</label>
+                <input type="text" class="form-control" placeholder="100 Ocean Drive, Malibu, CA" required style="border: 1px solid var(--border-light); padding: 0.75rem 1rem;">
               </div>
+
               <div class="form-group">
-                <label class="form-label">System Interest *</label>
-                <select class="form-control" required>
-                  <option value="residential">Residential Solar Roof</option>
-                  <option value="battery">Battery Microgrid Reserve</option>
-                  <option value="commercial">Small Office Commercial</option>
-                  <option value="ev">EV Fast Charging Hub</option>
-                </select>
+                <label class="form-label" style="font-weight: 600; font-size: 0.88rem;">Project Details or Specific Requirements</label>
+                <textarea class="form-control" rows="3" placeholder="Tell us about your roof type, estimated electric bill, or power goals..." style="border: 1px solid var(--border-light); padding: 0.75rem 1rem;"></textarea>
               </div>
-            </div>
 
-            <div class="form-group">
-              <label class="form-label">Estate Address / City *</label>
-              <input type="text" class="form-control" placeholder="100 Ocean Drive, Malibu, CA" required>
-            </div>
-
-            <div class="form-group">
-              <label class="form-label">Project Details or Specific Requirements</label>
-              <textarea class="form-control" rows="4" placeholder="Tell us about your roof type, estimated electric bill, or power goals..."></textarea>
-            </div>
-
-            <button type="submit" class="btn btn-primary" style="width: 100%; font-size: 1.05rem;">
-              Submit Solar Inquiry
-            </button>
-          </form>
+              <button type="submit" class="btn btn-primary" style="width: 100%; font-size: 1.05rem; padding: 0.85rem; margin-top: 0.5rem; box-shadow: 0 4px 18px rgba(224, 169, 45, 0.3);">
+                Submit Solar Inquiry →
+              </button>
+            </form>
+          </div>
         </div>
 
         <div>
-          <div class="card-glass" style="margin-bottom: 2rem;">
-            <h3 class="heading-sm" style="margin-bottom: 1rem; color: var(--color-solar-gold);">
-              What Happens Next?
-            </h3>
-            <ol style="display: flex; flex-direction: column; gap: 1.2rem; list-style-type: decimal; padding-left: 1.2rem; font-size: 0.95rem;">
-              <li><strong>Initial Consultation:</strong> Our solar advisor calls you to review your property layout and electric bill.</li>
-              <li><strong>3D LIDAR CAD Scan:</strong> Drone sensors map your roof geometry remotely to calculate exact power output.</li>
-              <li><strong>Custom Proposal:</strong> Receive a detailed financial proposal outlining 30% tax credit savings and ROI.</li>
-              <li><strong>Master Installation:</strong> Complete installation and grid activation in under 7 business days.</li>
-            </ol>
-          </div>
+          <div class="card-glass" style="border-color: var(--border-gold); padding: 2.5rem; display: flex; flex-direction: column; justify-content: space-between; height: 100%;">
+            <div>
+              <span class="badge-pill" style="margin-bottom: 0.8rem;">Turnkey Roadmap</span>
+              <h3 class="heading-sm" style="color: var(--color-solar-gold); margin-bottom: 1.6rem; font-family: var(--font-heading); font-size: 1.5rem;">
+                What Happens Next?
+              </h3>
+              
+              <div style="display: flex; flex-direction: column; gap: 1.2rem;">
+                <div style="display: flex; gap: 1rem; align-items: flex-start;">
+                  <div style="width: 32px; height: 32px; border-radius: 50%; background: rgba(224,169,45,0.18); border: 1px solid var(--color-solar-gold); color: var(--color-solar-gold); display: flex; align-items: center; justify-content: center; font-weight: 700; font-size: 0.82rem; flex-shrink: 0;">01</div>
+                  <div>
+                    <strong style="color: var(--text-primary); font-size: 0.95rem; display: block; margin-bottom: 0.15rem;">Initial Consultation</strong>
+                    <span style="font-size: 0.88rem; color: var(--text-secondary); line-height: 1.5;">Our lead solar advisor reviews your property layout and electric bill.</span>
+                  </div>
+                </div>
 
-          <div style="border-radius: var(--radius-lg); overflow: hidden; height: 380px; border: 2px solid var(--border-gold); box-shadow: var(--shadow-lg);">
-            <img src="https://i.pinimg.com/1200x/29/7d/08/297d08adcfcfc5db1e01f5bf5f609276.jpg" alt="SunCapital Architectural Solar Engineering" style="width: 100%; height: 100%; object-fit: cover; object-position: center;">
+                <div style="display: flex; gap: 1rem; align-items: flex-start;">
+                  <div style="width: 32px; height: 32px; border-radius: 50%; background: rgba(224,169,45,0.18); border: 1px solid var(--color-solar-gold); color: var(--color-solar-gold); display: flex; align-items: center; justify-content: center; font-weight: 700; font-size: 0.82rem; flex-shrink: 0;">02</div>
+                  <div>
+                    <strong style="color: var(--text-primary); font-size: 0.95rem; display: block; margin-bottom: 0.15rem;">3D LIDAR CAD Scan</strong>
+                    <span style="font-size: 0.88rem; color: var(--text-secondary); line-height: 1.5;">Drone sensors map roof geometry remotely to calculate power output.</span>
+                  </div>
+                </div>
+
+                <div style="display: flex; gap: 1rem; align-items: flex-start;">
+                  <div style="width: 32px; height: 32px; border-radius: 50%; background: rgba(224,169,45,0.18); border: 1px solid var(--color-solar-gold); color: var(--color-solar-gold); display: flex; align-items: center; justify-content: center; font-weight: 700; font-size: 0.82rem; flex-shrink: 0;">03</div>
+                  <div>
+                    <strong style="color: var(--text-primary); font-size: 0.95rem; display: block; margin-bottom: 0.15rem;">Bespoke Financial Proposal</strong>
+                    <span style="font-size: 0.88rem; color: var(--text-secondary); line-height: 1.5;">Receive a detailed financial roadmap outlining 30% tax credit savings.</span>
+                  </div>
+                </div>
+
+                <div style="display: flex; gap: 1rem; align-items: flex-start;">
+                  <div style="width: 32px; height: 32px; border-radius: 50%; background: rgba(224,169,45,0.18); border: 1px solid var(--color-solar-gold); color: var(--color-solar-gold); display: flex; align-items: center; justify-content: center; font-weight: 700; font-size: 0.82rem; flex-shrink: 0;">04</div>
+                  <div>
+                    <strong style="color: var(--text-primary); font-size: 0.95rem; display: block; margin-bottom: 0.15rem;">Master Installation</strong>
+                    <span style="font-size: 0.88rem; color: var(--text-secondary); line-height: 1.5;">Turnkey roof mounting and grid activation in under 7 business days.</span>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <!-- Integrated Image Showcase Frame -->
+            <div style="position: relative; border-radius: var(--radius-lg); overflow: hidden; height: 180px; border: 1px solid var(--border-gold); margin-top: 1.5rem;">
+              <img src="https://i.pinimg.com/1200x/29/7d/08/297d08adcfcfc5db1e01f5bf5f609276.jpg" alt="SunCapital Architectural Solar Engineering" style="width: 100%; height: 100%; object-fit: cover; object-position: center;">
+              <div style="position: absolute; bottom: 0.8rem; left: 0.8rem; background: rgba(11, 33, 25, 0.88); backdrop-filter: blur(8px); border: 1px solid var(--color-solar-gold); color: var(--color-solar-cream); padding: 0.35rem 0.85rem; border-radius: var(--radius-full); font-size: 0.78rem; font-weight: 600;">
+                ⚡ 99.9% Grid Reliability Guarantee
+              </div>
+            </div>
           </div>
         </div>
       </div>
