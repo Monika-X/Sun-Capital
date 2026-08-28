@@ -105,8 +105,8 @@
   <section class="section-padding" style="padding-bottom: 2rem;">
     <div class="container container-narrow">
       <div class="card-glass" style="display: flex; align-items: center; gap: 1rem;">
-        <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="11" cy="11" r="8"/><line x1="21" y1="21" x2="16.65" y2="16.65"/></svg>
-        <input type="text" placeholder="Filter sitemap links by keyword (e.g. calculator, subsidies, 5kW)..." style="width: 100%; font-size: 1rem;">
+        <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="var(--color-solar-gold)" stroke-width="2"><circle cx="11" cy="11" r="8"/><line x1="21" y1="21" x2="16.65" y2="16.65"/></svg>
+        <input type="text" id="sitemapSearchInput" placeholder="Filter sitemap links by keyword (e.g. calculator, subsidies, 5kW)..." style="width: 100%; font-size: 1rem; border: none; outline: none; background: transparent; color: var(--text-primary);">
       </div>
     </div>
   </section>
@@ -359,5 +359,40 @@
   <script src="../js/slider.js"></script>
   <script src="../js/calculator.js"></script>
   <script src="../js/components.js"></script>
+
+  <!-- SITEMAP REALTIME FILTER SCRIPT -->
+  <script>
+    document.addEventListener('DOMContentLoaded', function() {
+      const searchInput = document.getElementById('sitemapSearchInput');
+      if (!searchInput) return;
+
+      searchInput.addEventListener('input', function() {
+        const query = this.value.toLowerCase().trim();
+        const sitemapCards = document.querySelectorAll('.sitemap-card');
+
+        sitemapCards.forEach(card => {
+          const items = card.querySelectorAll('li, .sitemap-list-item');
+          let matchCount = 0;
+
+          items.forEach(item => {
+            const text = item.textContent.toLowerCase();
+            if (query === '' || text.includes(query)) {
+              item.style.display = '';
+              matchCount++;
+            } else {
+              item.style.display = 'none';
+            }
+          });
+
+          const cardTitle = card.querySelector('h3, h4')?.textContent.toLowerCase() || '';
+          if (query === '' || matchCount > 0 || cardTitle.includes(query)) {
+            card.style.display = '';
+          } else {
+            card.style.display = 'none';
+          }
+        });
+      });
+    });
+  </script>
 </body>
 </html>
