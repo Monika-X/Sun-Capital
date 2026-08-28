@@ -46,27 +46,35 @@
   </header>
 
   <!-- SECTION 1: ANIMATED 404 VISUAL HERO -->
-  <section class="error-hero" style="padding-top: 3rem; padding-bottom: 4rem;">
-    <div class="container text-center" style="margin-top: 2.8rem;">
-      <div class="error-code">404</div>
-      <span class="badge-pill" style="margin-top: 0.8rem;">System Routing Error</span>
-      <h1 class="heading-lg" style="margin-top: 0.8rem; margin-bottom: 1rem;">
+  <section class="error-hero">
+    <div class="container text-center">
+      <div class="error-visual">
+        <span class="error-sun"></span>
+        <span class="error-ring"></span>
+        <div class="error-code">404</div>
+      </div>
+      <span class="badge-pill" style="margin-top: 1.2rem;">Off-Grid · Signal Lost</span>
+      <h1 class="heading-lg" style="margin-top: 1rem; margin-bottom: 1rem;">
         This Page Has Gone Off-Grid
       </h1>
       <p class="text-lead" style="max-width: 600px; margin: 0 auto 2rem auto;">
         The solar trajectory link you followed might have moved, been renamed, or is temporarily disconnected from our server grid.
       </p>
-      <a href="../index.html" class="btn btn-primary">Return to SunCapital Home</a>
+      <div class="error-actions">
+        <a href="../index.html" class="btn btn-primary">Return to SunCapital Home</a>
+        <a href="contact.html" class="btn btn-outline">Contact Engineers</a>
+      </div>
     </div>
   </section>
 
   <!-- SECTION 2: QUICK SEARCH BAR -->
   <section class="section-padding" style="padding-top: 0;">
     <div class="container container-narrow">
-      <div class="card-glass" style="display: flex; align-items: center; gap: 1rem;">
+      <form class="error-search" onsubmit="return false;">
         <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="11" cy="11" r="8"/><line x1="21" y1="21" x2="16.65" y2="16.65"/></svg>
-        <input type="text" placeholder="Search SunCapital solar services, battery microgrids, or contact details..." style="width: 100%; font-size: 1rem;">
-      </div>
+        <input type="text" placeholder="Search SunCapital solar services, battery microgrids, or contact details...">
+        <button type="submit" class="btn btn-primary">Search</button>
+      </form>
     </div>
   </section>
 
