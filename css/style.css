@@ -1604,12 +1604,32 @@ div[style*="border-radius:50%"],
 
   /* Section 1: Hero Slider at 320px */
   .hero-slider-wrapper {
-    min-height: 520px !important;
+    min-height: auto !important;
+    height: auto !important;
+    padding-bottom: 0 !important;
+  }
+
+  .hero-slide {
+    position: relative !important;
+    height: auto !important;
+    min-height: auto !important;
+  }
+
+  .hero-slide:not(.active) {
+    display: none !important;
   }
 
   .hero-content {
-    padding-top: 85px !important;
-    padding-bottom: 5.5rem !important;
+    padding-top: 65px !important;
+    padding-bottom: 3.2rem !important;
+  }
+
+  .slider-controls {
+    bottom: 0.6rem !important;
+  }
+
+  .slider-dots {
+    bottom: 0.8rem !important;
   }
 
   .badge-pill {
