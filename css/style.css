@@ -13,6 +13,8 @@ html {
   scroll-behavior: smooth;
   font-size: 16px;
   -webkit-text-size-adjust: 100%;
+  overflow-x: hidden;
+  max-width: 100%;
 }
 
 body {
@@ -21,6 +23,8 @@ body {
   color: var(--text-primary);
   line-height: 1.6;
   overflow-x: hidden;
+  max-width: 100%;
+  position: relative;
   transition: background-color var(--transition-normal), color var(--transition-normal);
 }
 
@@ -212,7 +216,7 @@ h1, h2, h3, h4, h5, h6 {
   top: 0;
   left: 0;
   width: 100%;
-  z-index: 1000;
+  z-index: 1010;
   background-color: var(--bg-nav);
   backdrop-filter: blur(16px);
   -webkit-backdrop-filter: blur(16px);
@@ -383,8 +387,9 @@ h1, h2, h3, h4, h5, h6 {
   position: fixed;
   top: 0;
   left: 0;
-  width: 100vw;
-  height: 100vh;
+  width: 100%;
+  max-width: 100%;
+  height: 100%;
   background: linear-gradient(135deg, var(--color-evergreen-dark) 0%, #061510 100%);
   z-index: 1005;
   display: flex;
@@ -772,8 +777,9 @@ h1, h2, h3, h4, h5, h6 {
   position: fixed;
   top: 0;
   left: 0;
-  width: 100vw;
-  height: 100vh;
+  width: 100%;
+  max-width: 100%;
+  height: 100%;
   background: rgba(10, 25, 20, 0.85);
   backdrop-filter: blur(8px);
   z-index: 2000;
@@ -939,6 +945,45 @@ h1, h2, h3, h4, h5, h6 {
 }
 
 @media (max-width: 768px) {
+  html, body {
+    overflow-x: hidden !important;
+    max-width: 100vw !important;
+  }
+
+  .container {
+    padding-left: 1.2rem !important;
+    padding-right: 1.2rem !important;
+    width: 100% !important;
+    max-width: 100% !important;
+    box-sizing: border-box !important;
+  }
+
+  div[style*="grid-template-columns: 1.2fr 1fr"],
+  div[style*="grid-template-columns: 1fr 1fr"],
+  div[style*="grid-template-columns: 2.8fr 1fr"] {
+    grid-template-columns: 1fr !important;
+    gap: 2rem !important;
+  }
+
+  .blog-details-layout {
+    grid-template-columns: 1fr !important;
+  }
+
+  .calculator-card {
+    padding: 1.5rem 1.2rem !important;
+    grid-template-columns: 1fr !important;
+    gap: 1.5rem !important;
+  }
+
+  .calc-metric-grid {
+    grid-template-columns: 1fr !important;
+  }
+
+  .gallery-filter-bar {
+    flex-wrap: wrap !important;
+    justify-content: center !important;
+  }
+
   .nav-cta-group .toggle-btn,
   .nav-cta-group .btn-primary {
     display: none !important;
@@ -971,5 +1016,9 @@ h1, h2, h3, h4, h5, h6 {
 
   .newsletter-btn-join {
     width: 100%;
+  }
+
+  .calc-metric-grid {
+    grid-template-columns: 1fr !important;
   }
 }
