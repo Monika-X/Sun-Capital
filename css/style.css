@@ -1742,6 +1742,33 @@ div[style*="border-radius:50%"],
     padding: 1.1rem 0.75rem !important;
   }
 
+  /* Blog & Blog Details at 320px */
+  .blog-featured-card {
+    padding: 1.1rem 0.75rem !important;
+  }
+
+  .blog-featured-card h2 {
+    font-size: 1.25rem !important;
+    line-height: 1.3 !important;
+  }
+
+  .blog-featured-card p {
+    font-size: 0.85rem !important;
+  }
+
+  .blog-featured-card .btn {
+    width: 100% !important;
+  }
+
+  .blog-search-bar {
+    padding: 0.8rem 0.65rem !important;
+  }
+
+  .blog-article-hero-img {
+    height: 220px !important;
+    margin-bottom: 1.5rem !important;
+  }
+
   /* Section 2: Financial Calculator at 320px */
   .calculator-card {
     padding: 1rem 0.7rem !important;
