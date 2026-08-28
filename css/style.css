@@ -276,7 +276,7 @@ h1, h2, h3, h4, h5, h6 {
 .logo-text {
   font-family: var(--font-logo);
   font-size: 1.7rem;
-  color: var(--text-primary);
+  color: #FFFFFF !important;
   font-weight: 800;
   letter-spacing: -0.025em;
   transition: color var(--transition-normal);
@@ -342,6 +342,20 @@ h1, h2, h3, h4, h5, h6 {
   display: flex;
   align-items: center;
   gap: 1rem;
+}
+
+.site-header .toggle-btn,
+header .toggle-btn {
+  background: rgba(255, 255, 255, 0.12) !important;
+  color: #FFFFFF !important;
+  border: 1px solid var(--border-gold) !important;
+}
+
+.site-header .toggle-btn:hover,
+header .toggle-btn:hover {
+  background: rgba(224, 169, 45, 0.25) !important;
+  color: #FFFFFF !important;
+  border-color: var(--color-solar-gold) !important;
 }
 
 /* Mobile Hamburger Toggle */
