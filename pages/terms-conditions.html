@@ -101,30 +101,41 @@
     </div>
   </section>
 
-  <!-- SECTION 1: DOCUMENT METADATA -->
-  <section class="section-padding" style="padding-bottom: 2rem;">
+  <!-- SECTION 1: DOCUMENT METADATA & SLA BADGES -->
+  <section class="section-padding" style="padding-bottom: 1.5rem;">
     <div class="container">
-      <div class="card-glass" style="display: flex; justify-content: space-between; align-items: center; flex-wrap: wrap; gap: 1.5rem;">
+      <div class="card-glass" style="border-color: var(--border-gold); display: flex; justify-content: space-between; align-items: center; flex-wrap: wrap; gap: 1.5rem; padding: 1.8rem 2.5rem;">
         <div>
-          <span style="font-size: 0.85rem; color: var(--text-muted);">Agreement ID: SC-TOS-2026-REV7</span>
-          <h3 class="heading-sm" style="margin-top: 0.2rem;">Effective Date: January 1, 2026</h3>
+          <span style="font-size: 0.82rem; color: var(--color-solar-gold); font-weight: 700; text-transform: uppercase; letter-spacing: 0.1em;">Agreement ID: SC-TOS-2026-REV7</span>
+          <h3 class="heading-sm" style="margin-top: 0.3rem; font-family: var(--font-heading);">Effective Date: January 1, 2026</h3>
         </div>
-        <button class="btn btn-outline" onclick="window.print();" style="font-size: 0.88rem; display: inline-flex; align-items: center; gap: 0.5rem;">
-          <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="6 9 6 2 18 2 18 9"/><path d="M6 18H4a2 2 0 0 1-2-2v-5a2 2 0 0 1 2-2h16a2 2 0 0 1 2 2v5a2 2 0 0 1-2 2h-2"/><rect x="6" y="14" width="12" height="8"/></svg>
-          <span>Print Agreement</span>
-        </button>
+        <div style="display: flex; gap: 0.8rem; flex-wrap: wrap;">
+          <span class="badge-pill" style="margin: 0; background: rgba(224, 169, 45, 0.12); color: var(--color-solar-gold); border-color: var(--border-gold);">✓ 25-Year Power SLA</span>
+          <button class="btn btn-outline" onclick="window.print();" style="font-size: 0.88rem; display: inline-flex; align-items: center; gap: 0.5rem; padding: 0.5rem 1.2rem;">
+            <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="6 9 6 2 18 2 18 9"/><path d="M6 18H4a2 2 0 0 1-2-2v-5a2 2 0 0 1 2-2h16a2 2 0 0 1 2 2v5a2 2 0 0 1-2 2h-2"/><rect x="6" y="14" width="12" height="8"/></svg>
+            <span>Print SLA Agreement</span>
+          </button>
+        </div>
       </div>
     </div>
   </section>
 
   <!-- SECTION 2: QUICK NAVIGATION MENU -->
-  <section class="section-padding" style="padding-top: 0;">
+  <section class="section-padding" style="padding-top: 0; padding-bottom: 2rem;">
     <div class="container container-narrow">
-      <div style="background: var(--bg-card); padding: 1.2rem; border-radius: var(--radius-md); border: 1px solid var(--border-light); display: flex; justify-content: space-around; flex-wrap: wrap; gap: 1rem; text-align: center; font-size: 0.9rem;">
-        <a href="#t-1" style="color: var(--color-solar-gold); font-weight: 600;">1. System Warranty</a>
-        <a href="#t-2" style="color: var(--color-solar-gold); font-weight: 600;">2. Roof Access</a>
-        <a href="#t-3" style="color: var(--color-solar-gold); font-weight: 600;">3. Subsidy Policy</a>
-        <a href="#t-4" style="color: var(--color-solar-gold); font-weight: 600;">4. Power Guarantee</a>
+      <div class="card-glass" style="padding: 1rem 1.5rem; display: flex; justify-content: space-around; flex-wrap: wrap; gap: 1rem; text-align: center; font-size: 0.9rem;">
+        <a href="#t-1" style="color: var(--color-solar-gold); font-weight: 600; text-decoration: none; display: inline-flex; align-items: center; gap: 0.4rem;">
+          <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg> 1. Equipment Warranty
+        </a>
+        <a href="#t-2" style="color: var(--color-solar-gold); font-weight: 600; text-decoration: none; display: inline-flex; align-items: center; gap: 0.4rem;">
+          <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M3 9l9-7 9 7v11a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2z"/></svg> 2. Property Access
+        </a>
+        <a href="#t-3" style="color: var(--color-solar-gold); font-weight: 600; text-decoration: none; display: inline-flex; align-items: center; gap: 0.4rem;">
+          <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"/></svg> 3. Tax Credit Filings
+        </a>
+        <a href="#t-4" style="color: var(--color-solar-gold); font-weight: 600; text-decoration: none; display: inline-flex; align-items: center; gap: 0.4rem;">
+          <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polygon points="13 2 3 14 12 14 11 22 21 10 12 10 13 2"/></svg> 4. Yield Guarantee
+        </a>
       </div>
     </div>
   </section>
@@ -132,27 +143,38 @@
   <!-- SECTION 3: LEGAL TERMS CLAUSES -->
   <section class="section-padding">
     <div class="container container-narrow">
-      <div style="display: flex; flex-direction: column; gap: 3rem;">
-        <div id="t-1">
-          <h3 class="heading-md" style="margin-bottom: 0.8rem; color: var(--color-solar-gold);">1. 25-Year Equipment & Craftsmanship Warranty</h3>
-          <p style="color: var(--text-secondary); line-height: 1.7;">
+      <div style="display: flex; flex-direction: column; gap: 2rem;">
+        
+        <div id="t-1" class="card-glass" style="border-color: var(--border-gold); padding: 2.2rem;">
+          <div style="display: flex; align-items: center; gap: 0.8rem; margin-bottom: 0.8rem;">
+            <div style="width: 36px; height: 36px; border-radius: 50%; background: rgba(224,169,45,0.18); border: 1px solid var(--color-solar-gold); color: var(--color-solar-gold); display: flex; align-items: center; justify-content: center; font-weight: 700; font-size: 0.9rem;">01</div>
+            <h3 class="heading-sm" style="color: var(--color-solar-gold); font-family: var(--font-heading); margin: 0;">25-Year Equipment & Craftsmanship Warranty</h3>
+          </div>
+          <p style="color: var(--text-secondary); line-height: 1.7; font-size: 0.98rem; margin: 0;">
             SunCapital warrants that all installed monocrystalline photovoltaic modules shall maintain at least 85% of their initial rated power generation capacity after 25 years of continuous operation. All roof mounting flashing carries a 10-year weatherproof seal warranty.
           </p>
         </div>
 
-        <div id="t-2">
-          <h3 class="heading-md" style="margin-bottom: 0.8rem; color: var(--color-solar-gold);">2. Property Access & Structural Prerequisites</h3>
-          <p style="color: var(--text-secondary); line-height: 1.7;">
+        <div id="t-2" class="card-glass" style="border-color: var(--border-gold); padding: 2.2rem;">
+          <div style="display: flex; align-items: center; gap: 0.8rem; margin-bottom: 0.8rem;">
+            <div style="width: 36px; height: 36px; border-radius: 50%; background: rgba(224,169,45,0.18); border: 1px solid var(--color-solar-gold); color: var(--color-solar-gold); display: flex; align-items: center; justify-content: center; font-weight: 700; font-size: 0.9rem;">02</div>
+            <h3 class="heading-sm" style="color: var(--color-solar-gold); font-family: var(--font-heading); margin: 0;">Property Access & Structural Prerequisites</h3>
+          </div>
+          <p style="color: var(--text-secondary); line-height: 1.7; font-size: 0.98rem; margin: 0;">
             The property owner agrees to grant SunCapital certified engineers safe physical access to the rooftop, main electrical breaker panel, and grounds during agreed installation hours. Roof structural framing must be certified sound via drone CAD scan.
           </p>
         </div>
 
-        <div id="t-3">
-          <h3 class="heading-md" style="margin-bottom: 0.8rem; color: var(--color-solar-gold);">3. Federal Tax Subsidy & Utility Net Metering Disclaimer</h3>
-          <p style="color: var(--text-secondary); line-height: 1.7;">
+        <div id="t-3" class="card-glass" style="border-color: var(--border-gold); padding: 2.2rem;">
+          <div style="display: flex; align-items: center; gap: 0.8rem; margin-bottom: 0.8rem;">
+            <div style="width: 36px; height: 36px; border-radius: 50%; background: rgba(224,169,45,0.18); border: 1px solid var(--color-solar-gold); color: var(--color-solar-gold); display: flex; align-items: center; justify-content: center; font-weight: 700; font-size: 0.9rem;">03</div>
+            <h3 class="heading-sm" style="color: var(--color-solar-gold); font-family: var(--font-heading); margin: 0;">Federal Tax Subsidy & Utility Net Metering Disclaimer</h3>
+          </div>
+          <p style="color: var(--text-secondary); line-height: 1.7; font-size: 0.98rem; margin: 0;">
             While SunCapital provides concierge administrative support for claiming the 30% Federal Investment Tax Credit (ITC) and net metering 3.0 approval, final tax credit eligibility remains subject to IRS guidelines and individual tax counsel.
           </p>
         </div>
+
       </div>
     </div>
   </section>
@@ -160,33 +182,25 @@
   <!-- SECTION 4: PERFORMANCE GUARANTEE CLAUSE -->
   <section class="section-padding" style="background: var(--bg-secondary);" id="t-4">
     <div class="container container-narrow text-center">
-      <span class="badge-pill">Yield Protection</span>
-      <h2 class="heading-md" style="margin-bottom: 1rem;">Annual Power Generation Guarantee</h2>
-      <p style="color: var(--text-secondary); line-height: 1.7; max-width: 650px; margin: 0 auto 2rem auto;">
-        If your SunCapital solar array fails to produce at least 90% of projected annual kilowatt-hours due to equipment degradation, SunCapital will reimburse the financial bill difference directly.
-      </p>
-      <div style="font-weight: 700; color: var(--color-solar-gold); font-size: 1.2rem;">90% Annual Power Production Guarantee SLA</div>
-    </div>
-  </section>
-
-  <!-- SECTION 5: MAINTENANCE & EQUIPMENT TERMS -->
-  <section class="section-padding">
-    <div class="container container-narrow">
-      <div class="card-glass">
-        <h3 class="heading-md" style="margin-bottom: 1rem;">Equipment Maintenance & Inverter Replacement</h3>
-        <p style="color: var(--text-secondary); line-height: 1.7;">
-          Smart solar inverters are rated for a 15-year operational lifespan. Routine solar panel cleaning and thermal sensor inspections are covered under SunCapital Concierge SLA maintenance plans.
+      <div class="card-glass" style="border-color: var(--border-gold); padding: 2.5rem;">
+        <span class="badge-pill">Yield Protection SLA</span>
+        <h2 class="heading-md" style="margin-top: 0.5rem; margin-bottom: 1rem; font-family: var(--font-heading);">Annual Power Generation Guarantee</h2>
+        <p style="color: var(--text-secondary); line-height: 1.7; max-width: 650px; margin: 0 auto 1.8rem auto; font-size: 1.02rem;">
+          If your SunCapital solar array fails to produce at least 90% of projected annual kilowatt-hours due to equipment degradation, SunCapital will reimburse the financial bill difference directly.
         </p>
+        <div style="font-weight: 700; color: var(--color-solar-gold); font-size: 1.2rem; background: rgba(224, 169, 45, 0.12); border: 1px solid var(--border-gold); display: inline-block; padding: 0.6rem 1.8rem; border-radius: var(--radius-full);">
+          ⚡ 90% Annual Power Production Guarantee SLA
+        </div>
       </div>
     </div>
   </section>
 
-  <!-- SECTION 6: DISPUTE RESOLUTION & JURISDICTION -->
+  <!-- SECTION 5: DISPUTE RESOLUTION & JURISDICTION -->
   <section class="section-padding" style="background: var(--color-evergreen); color: var(--color-solar-cream);">
     <div class="container text-center">
       <span class="badge-pill" style="border-color: var(--color-solar-gold); color: var(--color-solar-gold);">Legal Jurisdiction</span>
-      <h2 class="heading-lg" style="color: #FFF; margin-bottom: 1rem;">Governing Law & Arbitration</h2>
-      <p style="max-width: 600px; margin: 0 auto; color: rgba(247,243,231,0.85);">
+      <h2 class="heading-lg" style="color: #FFF; margin-bottom: 1rem; font-family: var(--font-heading);">Governing Law & Arbitration</h2>
+      <p style="max-width: 650px; margin: 0 auto; color: rgba(247,243,231,0.85); line-height: 1.65; font-size: 1.02rem;">
         This Agreement is governed by the laws of the State of Texas. Any unresolved disputes shall be settled via binding arbitration under the rules of the American Arbitration Association.
       </p>
     </div>

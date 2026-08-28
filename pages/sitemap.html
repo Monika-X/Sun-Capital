@@ -101,12 +101,23 @@
     </div>
   </section>
 
-  <!-- SECTION 1: SITEMAP SEARCH BAR -->
+  <!-- SECTION 1: SITEMAP SEARCH BAR & CATEGORY FILTERS -->
   <section class="section-padding" style="padding-bottom: 2rem;">
     <div class="container container-narrow">
-      <div class="card-glass" style="display: flex; align-items: center; gap: 1rem;">
-        <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="var(--color-solar-gold)" stroke-width="2"><circle cx="11" cy="11" r="8"/><line x1="21" y1="21" x2="16.65" y2="16.65"/></svg>
-        <input type="text" id="sitemapSearchInput" placeholder="Filter sitemap links by keyword (e.g. calculator, subsidies, 5kW)..." style="width: 100%; font-size: 1rem; border: none; outline: none; background: transparent; color: var(--text-primary);">
+      <div style="display: flex; flex-direction: column; gap: 1.5rem;">
+        <!-- Search Input -->
+        <div class="card-glass" style="display: flex; align-items: center; gap: 1rem; border-color: var(--border-gold); padding: 1.2rem 1.8rem; box-shadow: var(--shadow-md);">
+          <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="var(--color-solar-gold)" stroke-width="2.5"><circle cx="11" cy="11" r="8"/><line x1="21" y1="21" x2="16.65" y2="16.65"/></svg>
+          <input type="text" id="sitemapSearchInput" placeholder="Filter sitemap links by keyword (e.g. calculator, subsidies, 5kW, privacy)..." style="width: 100%; font-size: 1.05rem; border: none; outline: none; background: transparent; color: var(--text-primary);">
+        </div>
+
+        <!-- Quick Category Filter Pills -->
+        <div style="display: flex; justify-content: center; gap: 0.8rem; flex-wrap: wrap;">
+          <button class="btn btn-outline sitemap-cat-filter active" data-cat="all" style="padding: 0.45rem 1.2rem; font-size: 0.88rem;">All Nodes (18)</button>
+          <button class="btn btn-outline sitemap-cat-filter" data-cat="core" style="padding: 0.45rem 1.2rem; font-size: 0.88rem;">Core Landing Pages</button>
+          <button class="btn btn-outline sitemap-cat-filter" data-cat="services" style="padding: 0.45rem 1.2rem; font-size: 0.88rem;">Services & Capacity</button>
+          <button class="btn btn-outline sitemap-cat-filter" data-cat="utility" style="padding: 0.45rem 1.2rem; font-size: 0.88rem;">Legal & Utilities</button>
+        </div>
       </div>
     </div>
   </section>
@@ -360,18 +371,17 @@
   <script src="../js/calculator.js"></script>
   <script src="../js/components.js"></script>
 
-  <!-- SITEMAP REALTIME FILTER SCRIPT -->
+  <!-- SITEMAP REALTIME & CATEGORY FILTER SCRIPT -->
   <script>
     (function () {
       function initSitemapFilter() {
         const searchInput = document.getElementById('sitemapSearchInput');
-        if (!searchInput) return;
+        const catButtons = document.querySelectorAll('.sitemap-cat-filter');
 
-        // Strip spaces so "5kW" matches "5 kW" in the link text
         const normalize = (str) => str.toLowerCase().replace(/\s+/g, '');
 
-        searchInput.addEventListener('input', function () {
-          const query = normalize(this.value.trim());
+        function applyFilters() {
+          const query = searchInput ? normalize(searchInput.value.trim()) : '';
           const cards = document.querySelectorAll('.sitemap-card');
 
           cards.forEach(card => {
@@ -389,6 +399,34 @@
 
             const cardMatch = query === '' || anyItemMatch || titleMatch;
             card.style.display = cardMatch ? '' : 'none';
+          });
+        }
+
+        if (searchInput) {
+          searchInput.addEventListener('input', applyFilters);
+        }
+
+        catButtons.forEach(btn => {
+          btn.addEventListener('click', function() {
+            catButtons.forEach(b => b.classList.remove('active'));
+            this.classList.add('active');
+            const activeCat = this.getAttribute('data-cat');
+            
+            const sections = document.querySelectorAll('section.section-padding');
+            sections.forEach((sec, idx) => {
+              if (idx === 0) return; // Search section
+              if (activeCat === 'all') {
+                sec.style.display = '';
+              } else if (activeCat === 'core' && idx === 1) {
+                sec.style.display = '';
+              } else if (activeCat === 'services' && (idx === 2 || idx === 3)) {
+                sec.style.display = '';
+              } else if (activeCat === 'utility' && idx === 4) {
+                sec.style.display = '';
+              } else {
+                sec.style.display = 'none';
+              }
+            });
           });
         });
       }

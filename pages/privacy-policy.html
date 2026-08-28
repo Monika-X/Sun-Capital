@@ -101,30 +101,38 @@
     </div>
   </section>
 
-  <!-- SECTION 1: POLICY HEADER & QUICK INDEX -->
-  <section class="section-padding" style="padding-bottom: 2rem;">
+  <!-- SECTION 1: POLICY HEADER & METADATA -->
+  <section class="section-padding" style="padding-bottom: 1.5rem;">
     <div class="container">
-      <div class="card-glass" style="display: flex; justify-content: space-between; align-items: center; flex-wrap: wrap; gap: 1.5rem;">
+      <div class="card-glass" style="border-color: var(--border-gold); display: flex; justify-content: space-between; align-items: center; flex-wrap: wrap; gap: 1.5rem; padding: 1.8rem 2.5rem;">
         <div>
-          <span style="font-size: 0.85rem; color: var(--text-muted);">Document ID: SC-PRIV-2026-V4</span>
-          <h3 class="heading-sm" style="margin-top: 0.2rem;">Last Updated: August 26, 2026</h3>
+          <span style="font-size: 0.82rem; color: var(--color-solar-gold); font-weight: 700; text-transform: uppercase; letter-spacing: 0.1em;">Security Protocol: SC-PRIV-2026-V4</span>
+          <h3 class="heading-sm" style="margin-top: 0.3rem; font-family: var(--font-heading);">Last Updated: August 26, 2026</h3>
         </div>
-        <div style="display: flex; gap: 1rem;">
-          <a href="#clauses" class="btn btn-outline" style="font-size: 0.88rem;">Jump to Clauses</a>
-          <a href="#security" class="btn btn-outline" style="font-size: 0.88rem;">Security Specs</a>
+        <div style="display: flex; gap: 0.8rem; flex-wrap: wrap;">
+          <span class="badge-pill" style="margin: 0; background: rgba(39, 174, 96, 0.12); color: #27AE60; border-color: rgba(39, 174, 96, 0.3);">✓ 100% GDPR Compliant</span>
+          <span class="badge-pill" style="margin: 0; background: rgba(224, 169, 45, 0.12); color: var(--color-solar-gold); border-color: var(--border-gold);">✓ AES-256 Encrypted</span>
         </div>
       </div>
     </div>
   </section>
 
   <!-- SECTION 2: INTERACTIVE SECTION JUMP BAR -->
-  <section class="section-padding" style="padding-top: 0;">
+  <section class="section-padding" style="padding-top: 0; padding-bottom: 2rem;">
     <div class="container container-narrow">
-      <div style="background: var(--bg-card); padding: 1.2rem; border-radius: var(--radius-md); border: 1px solid var(--border-light); display: flex; justify-content: space-around; flex-wrap: wrap; gap: 1rem; text-align: center; font-size: 0.9rem;">
-        <a href="#sec-1" style="color: var(--color-solar-gold); font-weight: 600;">1. Roof Scan Data</a>
-        <a href="#sec-2" style="color: var(--color-solar-gold); font-weight: 600;">2. Smart Telemetry</a>
-        <a href="#sec-3" style="color: var(--color-solar-gold); font-weight: 600;">3. Subsidy Filings</a>
-        <a href="#sec-4" style="color: var(--color-solar-gold); font-weight: 600;">4. Cookie Controls</a>
+      <div class="card-glass" style="padding: 1rem 1.5rem; display: flex; justify-content: space-around; flex-wrap: wrap; gap: 1rem; text-align: center; font-size: 0.9rem;">
+        <a href="#sec-1" style="color: var(--color-solar-gold); font-weight: 600; text-decoration: none; display: inline-flex; align-items: center; gap: 0.4rem;">
+          <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/></svg> 1. LIDAR Roof Telemetry
+        </a>
+        <a href="#sec-2" style="color: var(--color-solar-gold); font-weight: 600; text-decoration: none; display: inline-flex; align-items: center; gap: 0.4rem;">
+          <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="2" y="7" width="20" height="10" rx="2" ry="2"/></svg> 2. Smart Inverter Data
+        </a>
+        <a href="#sec-3" style="color: var(--color-solar-gold); font-weight: 600; text-decoration: none; display: inline-flex; align-items: center; gap: 0.4rem;">
+          <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"/></svg> 3. Tax Credit Filings
+        </a>
+        <a href="#sec-4" style="color: var(--color-solar-gold); font-weight: 600; text-decoration: none; display: inline-flex; align-items: center; gap: 0.4rem;">
+          <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="3"/></svg> 4. Cookie Preferences
+        </a>
       </div>
     </div>
   </section>
@@ -132,40 +140,100 @@
   <!-- SECTION 3: IN-DEPTH PRIVACY CLAUSES -->
   <section class="section-padding" id="clauses">
     <div class="container container-narrow">
-      <div style="display: flex; flex-direction: column; gap: 3rem;">
-        <div id="sec-1">
-          <h3 class="heading-md" style="margin-bottom: 0.8rem; color: var(--color-solar-gold);">1. Drone LIDAR & Roof Spatial Data Handling</h3>
-          <p style="color: var(--text-secondary); line-height: 1.7;">
+      <div style="display: flex; flex-direction: column; gap: 2rem;">
+        
+        <div id="sec-1" class="card-glass" style="border-color: var(--border-gold); padding: 2.2rem;">
+          <div style="display: flex; align-items: center; gap: 0.8rem; margin-bottom: 0.8rem;">
+            <div style="width: 36px; height: 36px; border-radius: 50%; background: rgba(224,169,45,0.18); border: 1px solid var(--color-solar-gold); color: var(--color-solar-gold); display: flex; align-items: center; justify-content: center; font-weight: 700; font-size: 0.9rem;">01</div>
+            <h3 class="heading-sm" style="color: var(--color-solar-gold); font-family: var(--font-heading); margin: 0;">Drone LIDAR & Roof Spatial Data Handling</h3>
+          </div>
+          <p style="color: var(--text-secondary); line-height: 1.7; font-size: 0.98rem; margin: 0;">
             Drone sensors collect high-resolution 3D point cloud telemetry for the explicit purpose of rendering rooftop solar CAD layout options. LIDAR spatial data is stored on encrypted cloud servers (AES-256) and is never sold, shared, or licensed to third-party advertising entities.
           </p>
         </div>
 
-        <div id="sec-2">
-          <h3 class="heading-md" style="margin-bottom: 0.8rem; color: var(--color-solar-gold);">2. Smart Energy Meter & Inverter Telemetry</h3>
-          <p style="color: var(--text-secondary); line-height: 1.7;">
+        <div id="sec-2" class="card-glass" style="border-color: var(--border-gold); padding: 2.2rem;">
+          <div style="display: flex; align-items: center; gap: 0.8rem; margin-bottom: 0.8rem;">
+            <div style="width: 36px; height: 36px; border-radius: 50%; background: rgba(224,169,45,0.18); border: 1px solid var(--color-solar-gold); color: var(--color-solar-gold); display: flex; align-items: center; justify-content: center; font-weight: 700; font-size: 0.9rem;">02</div>
+            <h3 class="heading-sm" style="color: var(--color-solar-gold); font-family: var(--font-heading); margin: 0;">Smart Energy Meter & Inverter Telemetry</h3>
+          </div>
+          <p style="color: var(--text-secondary); line-height: 1.7; font-size: 0.98rem; margin: 0;">
             Our mobile application receives real-time kilowatt-hour generation and consumption metrics from your solar inverter. This telemetry is transmitted via TLS 1.3 encryption solely to render dashboard analytics and automated diagnostic alerts.
           </p>
         </div>
 
-        <div id="sec-3">
-          <h3 class="heading-md" style="margin-bottom: 0.8rem; color: var(--color-solar-gold);">3. Federal Tax Subsidy & Municipal Filing Data</h3>
-          <p style="color: var(--text-secondary); line-height: 1.7;">
+        <div id="sec-3" class="card-glass" style="border-color: var(--border-gold); padding: 2.2rem;">
+          <div style="display: flex; align-items: center; gap: 0.8rem; margin-bottom: 0.8rem;">
+            <div style="width: 36px; height: 36px; border-radius: 50%; background: rgba(224,169,45,0.18); border: 1px solid var(--color-solar-gold); color: var(--color-solar-gold); display: flex; align-items: center; justify-content: center; font-weight: 700; font-size: 0.9rem;">03</div>
+            <h3 class="heading-sm" style="color: var(--color-solar-gold); font-family: var(--font-heading); margin: 0;">Federal Tax Subsidy & Municipal Filing Data</h3>
+          </div>
+          <p style="color: var(--text-secondary); line-height: 1.7; font-size: 0.98rem; margin: 0;">
             Personal information provided for 30% federal tax credit assistance or net metering 3.0 approval is transmitted exclusively to authorized municipal building departments and official public utility commissions.
           </p>
         </div>
 
-        <div id="sec-4">
-          <h3 class="heading-md" style="margin-bottom: 0.8rem; color: var(--color-solar-gold);">4. GDPR & CCPA Consumer Rights</h3>
-          <p style="color: var(--text-secondary); line-height: 1.7;">
+        <div id="sec-4" class="card-glass" style="border-color: var(--border-gold); padding: 2.2rem;">
+          <div style="display: flex; align-items: center; gap: 0.8rem; margin-bottom: 0.8rem;">
+            <div style="width: 36px; height: 36px; border-radius: 50%; background: rgba(224,169,45,0.18); border: 1px solid var(--color-solar-gold); color: var(--color-solar-gold); display: flex; align-items: center; justify-content: center; font-weight: 700; font-size: 0.9rem;">04</div>
+            <h3 class="heading-sm" style="color: var(--color-solar-gold); font-family: var(--font-heading); margin: 0;">GDPR & CCPA Consumer Rights</h3>
+          </div>
+          <p style="color: var(--text-secondary); line-height: 1.7; font-size: 0.98rem; margin: 0;">
             Under the California Consumer Privacy Act (CCPA) and European General Data Protection Regulation (GDPR), property owners maintain full rights to request data deletion, export their solar telemetry archives, or opt out of telemetry processing.
           </p>
         </div>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- INTERACTIVE COOKIE PREFERENCES MANAGER -->
+  <section class="section-padding" style="background: var(--bg-secondary);">
+    <div class="container container-narrow">
+      <div class="card-glass" style="border-color: var(--border-gold); padding: 2.5rem;">
+        <span class="badge-pill">Privacy Controls</span>
+        <h3 class="heading-md" style="margin-top: 0.5rem; margin-bottom: 1.5rem; font-family: var(--font-heading);">Cookie & Telemetry Preference Manager</h3>
+        
+        <div style="display: flex; flex-direction: column; gap: 1.5rem;">
+          <div style="display: flex; justify-content: space-between; align-items: center; border-bottom: 1px solid var(--border-light); padding-bottom: 1rem;">
+            <div>
+              <strong style="color: var(--text-primary); display: block;">Strictly Necessary System Telemetry</strong>
+              <span style="font-size: 0.85rem; color: var(--text-secondary);">Required for real-time inverter health monitoring and CAD scan processing.</span>
+            </div>
+            <span style="font-size: 0.82rem; font-weight: 700; color: #27AE60; background: rgba(39, 174, 96, 0.15); padding: 0.3rem 0.75rem; border-radius: var(--radius-full);">Always Active</span>
+          </div>
+
+          <div style="display: flex; justify-content: space-between; align-items: center; border-bottom: 1px solid var(--border-light); padding-bottom: 1rem;">
+            <div>
+              <strong style="color: var(--text-primary); display: block;">Performance Analytics & Solar Yield Metrics</strong>
+              <span style="font-size: 0.85rem; color: var(--text-secondary);">Anonymized metrics to optimize regional solar panel efficiency algorithms.</span>
+            </div>
+            <label style="position: relative; display: inline-block; width: 46px; height: 24px; cursor: pointer;">
+              <input type="checkbox" checked style="opacity: 0; width: 0; height: 0;">
+              <span style="position: absolute; cursor: pointer; top:0; left:0; right:0; bottom:0; background-color: var(--color-solar-gold); border-radius: 24px; transition: .4s;"></span>
+            </label>
+          </div>
+
+          <div style="display: flex; justify-content: space-between; align-items: center;">
+            <div>
+              <strong style="color: var(--text-primary); display: block;">Personalized Rebate & Subsidy Notifications</strong>
+              <span style="font-size: 0.85rem; color: var(--text-secondary);">Receive tailored state net metering and property tax credit updates.</span>
+            </div>
+            <label style="position: relative; display: inline-block; width: 46px; height: 24px; cursor: pointer;">
+              <input type="checkbox" checked style="opacity: 0; width: 0; height: 0;">
+              <span style="position: absolute; cursor: pointer; top:0; left:0; right:0; bottom:0; background-color: var(--color-solar-gold); border-radius: 24px; transition: .4s;"></span>
+            </label>
+          </div>
+        </div>
+
+        <button type="button" class="btn btn-primary" onclick="alert('Your privacy preferences have been updated!');" style="margin-top: 1.8rem;">
+          Save Privacy Preferences
+        </button>
       </div>
     </div>
   </section>
 
   <!-- SECTION 4: DATA SECURITY ARCHITECTURE MATRIX -->
-  <section class="section-padding" style="background: var(--bg-secondary);" id="security">
+  <section class="section-padding" id="security">
     <div class="container">
       <div class="section-header text-center">
         <span class="badge-pill">Cybersecurity Standard</span>
@@ -173,21 +241,30 @@
       </div>
 
       <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(260px, 1fr)); gap: 2rem;">
-        <div class="card-glass">
-          <h4>AES-256 Encryption</h4>
-          <p style="font-size: 0.88rem; color: var(--text-secondary); margin-top: 0.4rem;">
+        <div class="card-glass" style="border-color: var(--border-gold); padding: 2rem;">
+          <div style="color: var(--color-solar-gold); margin-bottom: 1rem;">
+            <svg width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/></svg>
+          </div>
+          <h4 style="font-family: var(--font-heading); font-size: 1.2rem; margin-bottom: 0.5rem;">AES-256 Encryption</h4>
+          <p style="font-size: 0.88rem; color: var(--text-secondary); line-height: 1.6; margin: 0;">
             Military-grade encryption for all stored customer CAD files and electric account records.
           </p>
         </div>
-        <div class="card-glass">
-          <h4>TLS 1.3 Transport</h4>
-          <p style="font-size: 0.88rem; color: var(--text-secondary); margin-top: 0.4rem;">
+        <div class="card-glass" style="border-color: var(--border-gold); padding: 2rem;">
+          <div style="color: var(--color-solar-gold); margin-bottom: 1rem;">
+            <svg width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M10 13a5 5 0 0 0 7.54.54l3-3a5 5 0 0 0-7.07-7.07l-1.72 1.71"/><path d="M14 11a5 5 0 0 0-7.54-.54l-3 3a5 5 0 0 0 7.07 7.07l1.71-1.71"/></svg>
+          </div>
+          <h4 style="font-family: var(--font-heading); font-size: 1.2rem; margin-bottom: 0.5rem;">TLS 1.3 Transport</h4>
+          <p style="font-size: 0.88rem; color: var(--text-secondary); line-height: 1.6; margin: 0;">
             End-to-end encrypted SSL connection for mobile app inverter data telemetry.
           </p>
         </div>
-        <div class="card-glass">
-          <h4>SOC-2 Type II Certified</h4>
-          <p style="font-size: 0.88rem; color: var(--text-secondary); margin-top: 0.4rem;">
+        <div class="card-glass" style="border-color: var(--border-gold); padding: 2rem;">
+          <div style="color: var(--color-solar-gold); margin-bottom: 1rem;">
+            <svg width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="3" y="11" width="18" height="11" rx="2" ry="2"/><path d="M7 11V7a5 5 0 0 1 10 0v4"/></svg>
+          </div>
+          <h4 style="font-family: var(--font-heading); font-size: 1.2rem; margin-bottom: 0.5rem;">SOC-2 Type II Certified</h4>
+          <p style="font-size: 0.88rem; color: var(--text-secondary); line-height: 1.6; margin: 0;">
             Audited cloud infrastructure ensuring 99.99% data security compliance.
           </p>
         </div>
@@ -196,28 +273,33 @@
   </section>
 
   <!-- SECTION 5: USER DATA CONTROL REQUEST FORM -->
-  <section class="section-padding">
+  <section class="section-padding" style="background: var(--bg-secondary);">
     <div class="container container-narrow">
-      <div class="card-glass">
-        <h3 class="heading-md" style="margin-bottom: 1rem;">Submit a Privacy & Data Request</h3>
+      <div class="card-glass" style="border-color: var(--border-gold); padding: 2.5rem;">
+        <span class="badge-pill">Consumer Rights Portal</span>
+        <h3 class="heading-md" style="margin-top: 0.5rem; margin-bottom: 1.5rem; font-family: var(--font-heading);">Submit a Privacy & Data Request</h3>
         <form id="privacyRequestForm">
           <div class="form-group">
-            <label class="form-label">Full Name</label>
-            <input type="text" class="form-control" required>
+            <label class="form-label" style="font-weight: 600;">Full Name *</label>
+            <input type="text" class="form-control" required style="border: 1px solid var(--border-light); padding: 0.75rem 1rem;">
           </div>
           <div class="form-group">
-            <label class="form-label">Email Address Associated with Account</label>
-            <input type="email" class="form-control" required>
+            <label class="form-label" style="font-weight: 600;">Email Address Associated with Account *</label>
+            <input type="email" class="form-control" required style="border: 1px solid var(--border-light); padding: 0.75rem 1rem;">
           </div>
           <div class="form-group">
-            <label class="form-label">Request Type</label>
-            <select class="form-control" required>
+            <label class="form-label" style="font-weight: 600;">Request Type *</label>
+            <select class="form-control" required style="border: 1px solid var(--border-light); padding: 0.75rem 1rem;">
               <option value="export">Export My Telemetry & CAD Data</option>
               <option value="delete">Request Total Data Purge (CCPA/GDPR)</option>
               <option value="optout">Opt-Out of Non-Essential Telemetry</option>
             </select>
           </div>
-          <button type="submit" class="btn btn-primary" style="margin-top: 0.5rem;">Submit Privacy Request</button>
+          <button type="submit" class="btn btn-primary" style="margin-top: 0.5rem; width: 100%; padding: 0.85rem;">Submit Privacy Request →</button>
+        </form>
+      </div>
+    </div>
+  </section>
         </form>
       </div>
     </div>
