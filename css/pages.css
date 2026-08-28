@@ -334,12 +334,19 @@
   align-items: center;
 }
 
+.services-matrix-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  gap: 2rem;
+}
+
 @media (max-width: 992px) {
   .hero-dark-grid,
   .solutions-grid,
-  .roi-compare-grid {
+  .roi-compare-grid,
+  .services-matrix-grid {
     grid-template-columns: 1fr !important;
-    gap: 2rem !important;
+    gap: 1.8rem !important;
   }
 }
 

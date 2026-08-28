@@ -616,6 +616,27 @@ html.menu-open {
   }
 }
 
+@media (max-width: 480px) {
+  .cta-banner {
+    padding: 2.5rem 1.25rem !important;
+  }
+  .cta-banner .heading-lg {
+    font-size: 1.4rem !important;
+    line-height: 1.3 !important;
+  }
+  .cta-banner-content {
+    gap: 1.4rem !important;
+  }
+  .cta-banner .btn-primary {
+    width: 100% !important;
+  }
+  .cta-banner::before {
+    width: 280px;
+    height: 280px;
+    right: -35%;
+  }
+}
+
 /* --- Footer --- */
 .site-footer {
   background:
@@ -1711,6 +1732,14 @@ div[style*="border-radius:50%"],
 
   .roi-compare-grid > div {
     padding: 1.2rem 0.85rem !important;
+  }
+
+  .services-matrix-grid {
+    gap: 1.2rem !important;
+  }
+
+  .services-matrix-grid .card-glass {
+    padding: 1.1rem 0.75rem !important;
   }
 
   /* Section 2: Financial Calculator at 320px */
