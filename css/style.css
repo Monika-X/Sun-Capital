@@ -1114,11 +1114,17 @@ header .toggle-btn:hover {
 
 @media (max-width: 480px) {
   body {
-    padding-top: 52px;
+    padding-top: 85px !important;
+  }
+
+  .hero-section,
+  .page-hero,
+  .hero {
+    padding-top: 2.2rem !important;
   }
 
   .site-header .navbar {
-    height: 52px !important;
+    height: 56px !important;
   }
 
   .logo-icon {
