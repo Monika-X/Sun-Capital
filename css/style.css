@@ -1318,13 +1318,13 @@ div[style*="border-radius:50%"],
   }
 
   .slider-controls {
-    display: none !important;
-  }
-
-  .slider-dots {
-    bottom: 1.2rem !important;
+    display: flex !important;
+    position: absolute !important;
+    bottom: 1.5rem !important;
+    right: auto !important;
     left: 50% !important;
     transform: translateX(-50%) !important;
+    padding: 0.3rem 0.6rem !important;
   }
 
   .page-hero {
