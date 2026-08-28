@@ -439,6 +439,19 @@
   gap: 1rem;
 }
 
+/* Maintenance & 404 Hero Gap Below Fixed Nav Bar */
+.maintenance-hero-grid,
+.error-hero .container {
+  margin-top: 2.8rem !important;
+}
+
+@media (max-width: 768px) {
+  .maintenance-hero-grid,
+  .error-hero .container {
+    margin-top: 3.5rem !important;
+  }
+}
+
 .case-study-teaser-grid {
   display: grid;
   grid-template-columns: 1fr 1fr;
