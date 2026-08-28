@@ -84,164 +84,84 @@
     <button class="btn btn-primary trigger-assessment-modal">Book Free Assessment</button>
   </div>
 
-  <!-- SECTION 1: ARTICLE HEADER HERO -->
+  <!-- SECTION 1: ARTICLE HEADER HERO (populated by js/blog-data.js) -->
   <section class="page-hero">
     <div class="container">
-      <div class="breadcrumb">
-        <a href="../index.html">Home</a> <span>/</span> <a href="blog.html">Blog</a> <span>/</span> <span>Subsidy Guide</span>
-      </div>
-      <span class="badge-pill" style="margin-bottom: 1rem;">Policy & Subsidies</span>
-      <h1 class="heading-xl">The Complete 2026 Residential Solar Subsidy & Tax Incentive Master Guide</h1>
-      
+      <div class="breadcrumb" id="articleBreadcrumb"></div>
+      <span class="badge-pill" id="articleCategory" style="margin-bottom: 1rem;"></span>
+      <h1 class="heading-xl" id="articleTitle"></h1>
+
       <div style="display: flex; gap: 2rem; align-items: center; margin-top: 1.5rem; flex-wrap: wrap; color: rgba(247,243,231,0.85); font-size: 0.95rem;">
         <div style="display: flex; align-items: center; gap: 0.6rem;">
-          <img src="https://images.unsplash.com/photo-1573496359142-b8d87734a5a2?q=80&w=600" alt="Dr. Sophia Chen" style="width: 40px; height: 40px; border-radius: 50%; object-fit: cover;">
-          <span>By <strong>Dr. Sophia Chen</strong></span>
+          <img id="articleAuthorImg" alt="" style="width: 40px; height: 40px; border-radius: 50%; object-fit: cover; flex-shrink: 0; aspect-ratio: 1 / 1;">
+          <span>By <strong id="articleAuthor"></strong></span>
         </div>
         <span>•</span>
-        <span>Published August 24, 2026</span>
+        <span id="articleDate"></span>
         <span>•</span>
-        <span>8 Min Read</span>
+        <span id="articleReadTime"></span>
       </div>
     </div>
   </section>
 
-  <!-- SECTION 2: ARTICLE BODY & TOC STICKY SIDEBAR -->
+  <!-- SECTION 2: ARTICLE BODY & TOC STICKY SIDEBAR (populated by js/blog-data.js) -->
   <section class="section-padding">
     <div class="container">
       <div style="margin-bottom: 3rem; border-radius: var(--radius-xl); overflow: hidden; height: 450px; border: 1px solid var(--border-gold);">
-        <img src="https://images.unsplash.com/photo-1566093097221-ac2335b09e70?q=80&w=1600" alt="Sunset Solar Array Header" style="width: 100%; height: 100%; object-fit: cover;">
+        <img id="articleHeroImg" alt="" style="width: 100%; height: 100%; object-fit: cover;">
       </div>
 
       <div class="blog-details-layout">
-        <div>
-          <h2 id="overview" class="heading-lg" style="margin-bottom: 1rem;">1. Executive Overview of 2026 Tax Rebates</h2>
-          <p style="font-size: 1.05rem; line-height: 1.8; color: var(--text-secondary); margin-bottom: 1.5rem;">
-            The 2026 clean energy legislative landscape presents unprecedented opportunities for luxury homeowners. Under the extended Investment Tax Credit (ITC) framework, residential property owners who install solar photovoltaic equipment and battery microgrids can write off 30% of total system hardware and labor expenses directly against their income tax returns.
-          </p>
-
-          <div style="background: var(--bg-secondary); border-left: 4px solid var(--color-solar-gold); padding: 1.8rem; border-radius: var(--radius-md); margin: 2rem 0;">
-            <p style="font-family: var(--font-heading); font-size: 1.3rem; color: var(--text-primary); font-style: italic;">
-              "Tax credits directly reduce your income tax bill dollar-for-dollar, unlike tax deductions which merely lower taxable income."
-            </p>
-          </div>
-
-          <h2 id="itc-framework" class="heading-lg" style="margin-top: 3rem; margin-bottom: 1rem;">2. Claiming the 30% Federal Investment Tax Credit</h2>
-          <p style="font-size: 1.05rem; line-height: 1.8; color: var(--text-secondary); margin-bottom: 1.5rem;">
-            To qualify for the full 30% credit, solar equipment must be installed on your primary or secondary residence during tax year 2026. Eligible expenses include:
-          </p>
-          <ul style="display: flex; flex-direction: column; gap: 0.8rem; margin-bottom: 2rem; font-size: 1rem; padding-left: 1.5rem; list-style-type: disc;">
-            <li>Photovoltaic solar panels and mounting racking structures.</li>
-            <li>Inverters, microinverters, and electrical conduit upgrades.</li>
-            <li>Solid-state battery storage systems with capacity ≥ 3 kWh.</li>
-            <li>Professional CAD roof engineering and municipal permit fees.</li>
-          </ul>
-
-          <h2 id="net-metering" class="heading-lg" style="margin-top: 3rem; margin-bottom: 1rem;">3. Net Metering 3.0 & Grid Surplus Selling</h2>
-          <p style="font-size: 1.05rem; line-height: 1.8; color: var(--text-secondary); margin-bottom: 1.5rem;">
-            Net Metering (NEM 3.0) allows residential solar microgrids to export excess daytime generation back to the municipal electrical grid. With integrated battery storage, energy is stored during mid-day and dispatched back during peak 4 PM – 9 PM utility rates to maximize buy-back credits.
-          </p>
-        </div>
+        <div id="articleBody"></div>
 
         <div>
           <div class="toc-sidebar">
             <h4 style="font-family: var(--font-heading); font-size: 1.2rem; margin-bottom: 1rem; border-bottom: 1px solid var(--border-light); padding-bottom: 0.5rem;">
               Table of Contents
             </h4>
-            <a href="#overview" class="toc-link">1. Executive Overview</a>
-            <a href="#itc-framework" class="toc-link">2. 30% Federal ITC Credit</a>
-            <a href="#net-metering" class="toc-link">3. Net Metering 3.0 Rules</a>
-            <a href="#checklist" class="toc-link">4. Eligibility Checklist</a>
-            <a href="#author" class="toc-link">5. Author Expert Bio</a>
+            <div id="articleToc"></div>
           </div>
         </div>
       </div>
     </div>
   </section>
 
-  <!-- SECTION 3: INTERACTIVE SUBSIDY CHECKLIST WIDGET -->
-  <section class="section-padding" style="background: var(--bg-secondary);" id="checklist">
+  <!-- SECTION 3: KEY TAKEAWAYS WIDGET (populated by js/blog-data.js) -->
+  <section class="section-padding" style="background: var(--bg-secondary);">
     <div class="container container-narrow">
       <div class="section-header text-center">
-        <span class="badge-pill">Interactive Audit</span>
-        <h2 class="heading-lg">2026 Solar Subsidy Qualification Checklist</h2>
+        <span class="badge-pill">Key Takeaways</span>
+        <h2 class="heading-lg">At a Glance</h2>
       </div>
 
       <div class="card-glass">
-        <div style="display: flex; flex-direction: column; gap: 1.2rem;">
-          <label style="display: flex; align-items: center; gap: 0.8rem; cursor: pointer; font-size: 1rem;">
-            <input type="checkbox" checked style="width: 22px; height: 22px; accent-color: var(--color-solar-gold);">
-            <span>Property owner of single-family residence or executive estate.</span>
-          </label>
-          <label style="display: flex; align-items: center; gap: 0.8rem; cursor: pointer; font-size: 1rem;">
-            <input type="checkbox" checked style="width: 22px; height: 22px; accent-color: var(--color-solar-gold);">
-            <span>Solar equipment installed and commissioned between Jan 1 – Dec 31, 2026.</span>
-          </label>
-          <label style="display: flex; align-items: center; gap: 0.8rem; cursor: pointer; font-size: 1rem;">
-            <input type="checkbox" checked style="width: 22px; height: 22px; accent-color: var(--color-solar-gold);">
-            <span>Battery storage system capacity rated at 3 kWh or higher.</span>
-          </label>
-          <label style="display: flex; align-items: center; gap: 0.8rem; cursor: pointer; font-size: 1rem;">
-            <input type="checkbox" style="width: 22px; height: 22px; accent-color: var(--color-solar-gold);">
-            <span>Direct purchasing or solar financing structure selected (non-lease PPA).</span>
-          </label>
-        </div>
-
-        <div style="margin-top: 2rem; padding-top: 1.5rem; border-top: 1px solid var(--border-light); display: flex; justify-content: space-between; align-items: center; flex-wrap: wrap; gap: 1rem;">
-          <div>
-            <span style="font-size: 0.85rem; color: var(--text-muted);">Estimated Subsidy Score:</span>
-            <div style="font-size: 1.5rem; font-weight: 700; color: var(--color-solar-gold);">100% Fully Eligible (30% Credit)</div>
-          </div>
-          <button class="btn btn-primary trigger-assessment-modal">Claim Official Filing Quote</button>
-        </div>
+        <ul id="articleTakeaways" style="display: flex; flex-direction: column; gap: 0.8rem; margin: 0; font-size: 1rem; padding-left: 1.2rem; list-style-type: disc;"></ul>
       </div>
     </div>
   </section>
 
-  <!-- SECTION 4: AUTHOR BIO & EXPERT Q&A -->
+  <!-- SECTION 4: AUTHOR BIO (populated by js/blog-data.js) -->
   <section class="section-padding" id="author">
     <div class="container container-narrow">
-      <div class="card-glass" style="display: flex; gap: 2rem; align-items: center;">
-        <img src="https://images.unsplash.com/photo-1573496359142-b8d87734a5a2?q=80&w=600" alt="Dr. Sophia Chen" style="width: 100px; height: 100px; border-radius: 50%; object-fit: cover;">
+      <div class="card-glass author-card-flex" style="display: flex; gap: 2rem; align-items: center;">
+        <img id="authorBioImg" alt="" style="width: 100px; height: 100px; border-radius: 50%; object-fit: cover; flex-shrink: 0; aspect-ratio: 1 / 1;">
         <div>
-          <h3 style="font-family: var(--font-heading); font-size: 1.4rem;">Dr. Sophia Chen</h3>
-          <div style="color: var(--color-solar-gold); font-size: 0.85rem; font-weight: 600; margin-bottom: 0.4rem;">VP of Photovoltaic R&D at SunCapital</div>
-          <p style="font-size: 0.9rem; color: var(--text-secondary);">
-            Dr. Chen holds a Ph.D. in Material Sciences from Stanford University and has authored 14 published papers on solar cell efficiency and grid net metering economics.
-          </p>
+          <h3 id="authorBioName" style="font-family: var(--font-heading); font-size: 1.4rem;"></h3>
+          <div id="authorBioRole" style="color: var(--color-solar-gold); font-size: 0.85rem; font-weight: 600; margin-bottom: 0.4rem;"></div>
+          <p id="authorBioText" style="font-size: 0.9rem; color: var(--text-secondary);"></p>
         </div>
       </div>
     </div>
   </section>
 
-  <!-- SECTION 5: RELATED ARTICLES GRID -->
+  <!-- SECTION 5: RELATED ARTICLES GRID (populated by js/blog-data.js) -->
   <section class="section-padding" style="background: var(--bg-secondary);">
     <div class="container">
       <div class="section-header text-center">
         <h2 class="heading-md">Related Journal Articles</h2>
       </div>
 
-      <div class="blog-grid">
-        <article class="blog-card">
-          <div class="blog-img-wrap">
-            <img src="https://images.unsplash.com/photo-1532601224476-15c79f2f7a51?q=80&w=1200" alt="Solar Tech" class="gallery-img">
-            <span class="blog-tag">SOLAR TECH</span>
-          </div>
-          <div class="blog-content">
-            <h3 class="blog-title"><a href="blog-details.html">Why N-Type TOPCon Cell Efficiency Outperforms Standard Solar</a></h3>
-          </div>
-        </article>
-
-        <article class="blog-card">
-          <div class="blog-img-wrap">
-            <img src="https://images.unsplash.com/photo-1508873696983-2df515122519?q=80&w=1200" alt="Smart Home" class="gallery-img">
-            <span class="blog-tag">SMART HOME</span>
-          </div>
-          <div class="blog-content">
-            <h3 class="blog-title"><a href="blog-details.html">Integrating Solid-State Battery Storage with Smart Automation</a></h3>
-          </div>
-        </article>
-      </div>
+      <div class="blog-grid" id="relatedGrid"></div>
     </div>
   </section>
 
@@ -384,9 +304,85 @@
     </div>
   </div>
 
+  <script src="../js/blog-data.js"></script>
   <script src="../js/main.js"></script>
   <script src="../js/slider.js"></script>
   <script src="../js/calculator.js"></script>
   <script src="../js/components.js"></script>
+  <script>
+    (function () {
+      var articles = window.BLOG_ARTICLES || {};
+      var order = window.BLOG_ORDER || [];
+      var id = new URLSearchParams(location.search).get('id') || '2026-subsidy-master-guide';
+      var a = articles[id] || articles['2026-subsidy-master-guide'];
+      if (!a) return;
+
+      document.title = a.title + ' | SunCapital';
+      var metaDesc = document.querySelector('meta[name="description"]');
+      if (metaDesc) metaDesc.setAttribute('content', a.excerpt);
+
+      var set = function (elId, val) { var el = document.getElementById(elId); if (el) el.textContent = val; };
+      set('articleCategory', a.tag);
+      set('articleTitle', a.title);
+      set('articleAuthor', a.author);
+      set('articleDate', a.date);
+      set('articleReadTime', a.readTime);
+
+      var authImg = document.getElementById('articleAuthorImg');
+      if (authImg) { authImg.src = a.authorImg; authImg.alt = a.author; }
+      var heroImg = document.getElementById('articleHeroImg');
+      if (heroImg) { heroImg.src = a.img; heroImg.alt = a.title; }
+
+      var crumb = document.getElementById('articleBreadcrumb');
+      if (crumb) crumb.innerHTML = '<a href="../index.html">Home</a> <span>/</span> <a href="blog.html">Blog</a> <span>/</span> <span>' + a.tag + '</span>';
+
+      var html = '<p style="font-size:1.05rem; line-height:1.8; color:var(--text-secondary); margin-bottom:1.5rem;">' + a.body.lead + '</p>';
+      a.body.sections.forEach(function (s, i) {
+        html += '<h2 id="sec-' + i + '" class="heading-lg" style="margin-top:3rem; margin-bottom:1rem;">' + s.h + '</h2>';
+        html += '<p style="font-size:1.05rem; line-height:1.8; color:var(--text-secondary); margin-bottom:1.5rem;">' + s.p + '</p>';
+      });
+      if (a.body.quote) {
+        html += '<div style="background: var(--bg-secondary); border-left: 4px solid var(--color-solar-gold); padding: 1.8rem; border-radius: var(--radius-md); margin: 2rem 0;"><p style="font-family: var(--font-heading); font-size: 1.3rem; color: var(--text-primary); font-style: italic;">"' + a.body.quote + '"</p></div>';
+      }
+      if (a.body.list && a.body.list.length) {
+        html += '<ul style="display:flex; flex-direction:column; gap:0.8rem; margin:1.5rem 0 2rem; font-size:1rem; padding-left:1.5rem; list-style-type:disc; color:var(--text-secondary);">';
+        a.body.list.forEach(function (li) { html += '<li>' + li + '</li>'; });
+        html += '</ul>';
+      }
+      var body = document.getElementById('articleBody');
+      if (body) body.innerHTML = html;
+
+      var toc = document.getElementById('articleToc');
+      if (toc) toc.innerHTML = a.body.sections.map(function (s, i) { return '<a href="#sec-' + i + '" class="toc-link">' + s.h + '</a>'; }).join('');
+
+      var tak = document.getElementById('articleTakeaways');
+      if (tak) tak.innerHTML = a.takeaways.map(function (t) { return '<li>' + t + '</li>'; }).join('');
+
+      set('authorBioName', a.author);
+      set('authorBioRole', a.authorRole);
+      set('authorBioText', a.authorBio);
+      var abImg = document.getElementById('authorBioImg');
+      if (abImg) { abImg.src = a.authorImg; abImg.alt = a.author; }
+
+      var related = order.filter(function (k) { return k !== id && articles[k].category === a.category; });
+      var others = order.filter(function (k) { return k !== id && articles[k].category !== a.category; });
+      related = related.concat(others).slice(0, 3);
+      var grid = document.getElementById('relatedGrid');
+      if (grid) {
+        grid.innerHTML = related.map(function (k) {
+          var r = articles[k];
+          return '<article class="blog-card">' +
+            '<div class="blog-img-wrap"><img src="' + r.img + '" alt="' + r.title + '" class="gallery-img"><span class="blog-tag">' + r.tag + '</span></div>' +
+            '<div class="blog-content">' +
+              '<div class="blog-meta"><span>' + r.date + '</span> • <span>' + r.readTime + '</span></div>' +
+              '<h3 class="blog-title"><a href="blog-details.html?id=' + encodeURIComponent(k) + '">' + r.title + '</a></h3>' +
+              '<p style="font-size:0.9rem; color:var(--text-secondary); margin-bottom:1.2rem; flex-grow:1;">' + r.excerpt + '</p>' +
+              '<a href="blog-details.html?id=' + encodeURIComponent(k) + '" style="color:var(--color-solar-gold); font-weight:700; font-size:0.9rem;">Read Article →</a>' +
+            '</div>' +
+          '</article>';
+        }).join('');
+      }
+    })();
+  </script>
 </body>
 </html>

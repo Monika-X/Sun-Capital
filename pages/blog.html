@@ -140,14 +140,14 @@
 
           <div style="display: flex; align-items: center; justify-content: space-between; gap: 2rem; flex-wrap: wrap; border-top: 1px solid rgba(224,169,45,0.25); padding-top: 1.5rem;">
             <div style="display: flex; align-items: center; gap: 0.8rem;">
-              <div style="width: 42px; height: 42px; border-radius: 50%; background: var(--color-solar-gold); color: #000; display: flex; align-items: center; font-weight: 700; font-family: var(--font-heading); justify-content: center; font-size: 1rem;">SC</div>
+              <div style="width: 42px; height: 42px; border-radius: 50%; background: var(--color-solar-gold); color: #000; display: flex; align-items: center; font-weight: 700; font-family: var(--font-heading); justify-content: center; font-size: 1rem; flex-shrink: 0; aspect-ratio: 1 / 1;">SC</div>
               <div>
                 <div style="color: #FFFFFF !important; font-weight: 700; font-size: 0.92rem;">Dr. Sophia Chen</div>
                 <div style="color: rgba(247,243,231,0.7) !important; font-size: 0.8rem;">Aug 24, 2026 • 8 Min Read</div>
               </div>
             </div>
 
-            <a href="blog-details.html" class="btn btn-primary" style="padding: 0.85rem 2rem; font-size: 0.98rem; box-shadow: 0 4px 20px rgba(224, 169, 45, 0.35);">
+            <a href="blog-details.html" data-slug="2026-subsidy-master-guide" class="btn btn-primary" style="padding: 0.85rem 2rem; font-size: 0.98rem; box-shadow: 0 4px 20px rgba(224, 169, 45, 0.35);">
               Read Master Guide →
             </a>
           </div>
@@ -637,9 +637,38 @@
     </div>
   </div>
 
+  <script src="../js/blog-data.js"></script>
   <script src="../js/main.js"></script>
   <script src="../js/slider.js"></script>
   <script src="../js/calculator.js"></script>
   <script src="../js/components.js"></script>
+  <script>
+    document.addEventListener('DOMContentLoaded', function () {
+      var articles = window.BLOG_ARTICLES || {};
+      var byTitle = {};
+      Object.keys(articles).forEach(function (k) { byTitle[articles[k].title] = k; });
+
+      document.querySelectorAll('.blog-card').forEach(function (card) {
+        var link = card.querySelector('.blog-title a');
+        if (!link) return;
+        var slug = byTitle[link.textContent.trim()];
+        if (!slug) return;
+        card.querySelectorAll('a[href="blog-details.html"]').forEach(function (a) {
+          a.setAttribute('href', 'blog-details.html?id=' + encodeURIComponent(slug));
+        });
+      });
+
+      document.querySelectorAll('[data-slug]').forEach(function (el) {
+        var slug = el.getAttribute('data-slug');
+        if (el.tagName === 'A' && el.getAttribute('href') === 'blog-details.html') {
+          el.setAttribute('href', 'blog-details.html?id=' + encodeURIComponent(slug));
+        } else {
+          el.querySelectorAll('a[href="blog-details.html"]').forEach(function (a) {
+            a.setAttribute('href', 'blog-details.html?id=' + encodeURIComponent(slug));
+          });
+        }
+      });
+    });
+  </script>
 </body>
 </html>

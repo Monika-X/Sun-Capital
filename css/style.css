@@ -1159,3 +1159,32 @@ h1, h2, h3, h4, h5, h6 {
     grid-template-columns: 1fr !important;
   }
 }
+
+/* --- Universal Circular Avatar & Image Squish Protection --- */
+img {
+  max-width: 100%;
+}
+
+img[style*="border-radius: 50%"],
+img[style*="border-radius:50%"],
+div[style*="border-radius: 50%"],
+div[style*="border-radius:50%"],
+.author-avatar,
+.testimonial-avatar,
+.avatar-img,
+#authorBioImg,
+#articleAuthorImg {
+  flex-shrink: 0 !important;
+  aspect-ratio: 1 / 1 !important;
+  object-fit: cover !important;
+}
+
+@media (max-width: 650px) {
+  #author .card-glass,
+  .author-card-flex {
+    flex-direction: column !important;
+    text-align: center !important;
+    gap: 1.2rem !important;
+    padding: 1.8rem 1.2rem !important;
+  }
+}
