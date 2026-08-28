@@ -66,35 +66,42 @@ function initAssessmentModal() {
   });
 }
 
-/* --- Project Gallery Masonry Filter --- */
+/* --- Project Gallery & Blog Category Filter --- */
 function initGalleryFilter() {
-  const filterBtns = document.querySelectorAll('.filter-btn');
-  const galleryItems = document.querySelectorAll('.gallery-item');
+  const filterBars = document.querySelectorAll('.gallery-filter-bar');
+  if (!filterBars.length) return;
 
-  if (!filterBtns.length) return;
+  filterBars.forEach(bar => {
+    const btns = bar.querySelectorAll('.filter-btn');
+    const container = bar.closest('.container') || bar.parentElement;
 
-  filterBtns.forEach(btn => {
-    btn.addEventListener('click', () => {
-      filterBtns.forEach(b => b.classList.remove('active'));
-      btn.classList.add('active');
+    btns.forEach(btn => {
+      btn.addEventListener('click', () => {
+        btns.forEach(b => b.classList.remove('active'));
+        btn.classList.add('active');
 
-      const filterVal = btn.getAttribute('data-filter') || 'all';
+        const filterVal = btn.getAttribute('data-filter') || 'all';
+        const targetItems = container.querySelectorAll('.gallery-item, .blog-card');
 
-      galleryItems.forEach(item => {
-        const category = item.getAttribute('data-category');
-        if (filterVal === 'all' || category === filterVal) {
-          item.style.display = 'block';
-          item.style.opacity = '1';
-          item.style.transform = 'scale(1)';
-        } else {
-          item.style.opacity = '0';
-          item.style.transform = 'scale(0.9)';
-          setTimeout(() => {
-            if (btn.getAttribute('data-filter') !== 'all' && item.getAttribute('data-category') !== filterVal) {
-              item.style.display = 'none';
-            }
-          }, 300);
-        }
+        targetItems.forEach(item => {
+          const category = item.getAttribute('data-category');
+          if (filterVal === 'all' || category === filterVal) {
+            item.style.display = item.classList.contains('blog-card') ? 'flex' : 'block';
+            setTimeout(() => {
+              item.style.opacity = '1';
+              item.style.transform = 'scale(1)';
+            }, 10);
+          } else {
+            item.style.opacity = '0';
+            item.style.transform = 'scale(0.95)';
+            setTimeout(() => {
+              const activeVal = bar.querySelector('.filter-btn.active')?.getAttribute('data-filter') || 'all';
+              if (activeVal !== 'all' && item.getAttribute('data-category') !== activeVal) {
+                item.style.display = 'none';
+              }
+            }, 250);
+          }
+        });
       });
     });
   });
