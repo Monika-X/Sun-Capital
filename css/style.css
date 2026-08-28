@@ -1677,6 +1677,42 @@ div[style*="border-radius:50%"],
     height: 14px !important;
   }
 
+  /* Home 2 Page at 320px */
+  .hero-dark-section {
+    padding-top: 75px !important;
+    padding-bottom: 2.5rem !important;
+  }
+
+  .hero-dark-grid {
+    gap: 1.5rem !important;
+  }
+
+  .hero-dark-grid h1,
+  .hero-dark-grid .heading-xl {
+    font-size: 1.4rem !important;
+    line-height: 1.25 !important;
+  }
+
+  .hero-dark-grid .btn {
+    width: 100% !important;
+  }
+
+  .solutions-grid {
+    gap: 1.2rem !important;
+  }
+
+  .solutions-grid .card-glass {
+    padding: 1.1rem 0.75rem !important;
+  }
+
+  .roi-compare-grid {
+    gap: 1.2rem !important;
+  }
+
+  .roi-compare-grid > div {
+    padding: 1.2rem 0.85rem !important;
+  }
+
   /* Section 2: Financial Calculator at 320px */
   .calculator-card {
     padding: 1rem 0.7rem !important;

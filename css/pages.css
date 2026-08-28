@@ -314,19 +314,32 @@
 }
 
 /* --- Dark Background Section Text Contrast Safety Rules --- */
-.hero-dark-section,
-section[style*="color-evergreen"] {
-  color: var(--color-solar-cream) !important;
+.hero-dark-grid {
+  display: grid;
+  grid-template-columns: 1.2fr 1fr;
+  gap: 3rem;
+  align-items: center;
 }
 
-.hero-dark-section h1,
-.hero-dark-section h2,
-.hero-dark-section h3,
-.hero-dark-section .heading-xl,
-.hero-dark-section .heading-lg,
-section[style*="color-evergreen"] h1,
-section[style*="color-evergreen"] h2,
-section[style*="color-evergreen"] h3 {
-  color: #FFFFFF !important;
+.solutions-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 2.5rem;
+}
+
+.roi-compare-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 3rem;
+  align-items: center;
+}
+
+@media (max-width: 992px) {
+  .hero-dark-grid,
+  .solutions-grid,
+  .roi-compare-grid {
+    grid-template-columns: 1fr !important;
+    gap: 2rem !important;
+  }
 }
 
