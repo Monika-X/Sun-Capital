@@ -5,6 +5,12 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>SunCapital | Next-Gen Microgrids & Commercial Solar Solutions</title>
   <meta name="description" content="Discover SunCapital Next-Gen Microgrids, residential battery storage ecosystems, and small office commercial solar installations.">
+  <!-- Favicon Icons -->
+  <link rel="icon" type="image/svg+xml" href="../images/favicon.svg">
+  <link rel="icon" type="image/png" sizes="32x32" href="../images/favicon-32x32.png">
+  <link rel="icon" type="image/png" sizes="16x16" href="../images/favicon-16x16.png">
+  <link rel="apple-touch-icon" sizes="180x180" href="../images/apple-touch-icon.png">
+  <link rel="shortcut icon" href="../images/favicon.ico">
   
   <!-- CSS Stylesheets -->
   <link rel="stylesheet" href="../css/variables.css">
@@ -14,31 +20,7 @@
 </head>
 <body>
 
-  <!-- Top Announcement Bar -->
-  <div class="top-bar">
-    <div class="container top-bar-inner">
-      <div class="top-bar-info">
-        <span class="top-bar-item">
-          <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"/></svg>
-          Office & Commercial Hotline: +1 (888) 990-SUN2
-        </span>
-        <span class="top-bar-item">
-          <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="10"/><path d="M12 6v6l4 2"/></svg>
-          24/7 Smart Microgrid Monitoring
-        </span>
-      </div>
-      <div class="top-bar-controls">
-        <button class="toggle-btn theme-toggle-btn">
-          <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="5"/><path d="M12 1v2M12 21v2M4.22 4.22l1.42 1.42M18.36 18.36l1.42 1.42M1 12h2M21 12h2M4.22 19.78l1.42-1.42M18.36 5.64l1.42-1.42"/></svg>
-          <span class="theme-text">Dark Mode</span>
-        </button>
-        <button class="toggle-btn rtl-toggle-btn">
-          <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 12H3M9 6l-6 6 6 6"/></svg>
-          <span class="rtl-text">RTL</span>
-        </button>
-      </div>
-    </div>
-  </div>
+
 
   <!-- Sticky Navbar -->
   <header class="site-header">
@@ -47,7 +29,10 @@
         <div class="logo-icon">
           <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><circle cx="12" cy="12" r="5"/><path d="M12 1v2M12 21v2M4.22 4.22l1.42 1.42M18.36 18.36l1.42 1.42M1 12h2M21 12h2M4.22 19.78l1.42-1.42M18.36 5.64l1.42-1.42"/></svg>
         </div>
-        <div class="logo-text">Sun<span>Capital</span></div>
+        <div class="logo-text-group">
+          <div class="logo-text">Sun<span>Capital</span></div>
+          <span class="logo-tagline">Architectural Solar & Storage</span>
+        </div>
       </a>
 
       <nav class="nav-menu">
@@ -57,10 +42,17 @@
         <a href="services.html" class="nav-link">Services</a>
         <a href="blog.html" class="nav-link">Blog</a>
         <a href="contact.html" class="nav-link">Contact</a>
-        <a href="sitemap.html" class="nav-link">Sitemap</a>
       </nav>
 
       <div class="nav-cta-group">
+        <button class="toggle-btn theme-toggle-btn">
+          <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="5"/><path d="M12 1v2M12 21v2M4.22 4.22l1.42 1.42M18.36 18.36l1.42 1.42M1 12h2M21 12h2M4.22 19.78l1.42-1.42M18.36 5.64l1.42-1.42"/></svg>
+          <span class="theme-text">Dark Mode</span>
+        </button>
+        <button class="toggle-btn rtl-toggle-btn">
+          <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 12H3M9 6l-6 6 6 6"/></svg>
+          <span class="rtl-text">RTL</span>
+        </button>
         <button class="btn btn-primary trigger-assessment-modal">Book Assessment</button>
         <button class="mobile-nav-toggle" aria-label="Toggle Navigation">
           <span></span><span></span><span></span>
@@ -78,51 +70,60 @@
       <li><a href="services.html" class="mobile-nav-link">Services</a></li>
       <li><a href="blog.html" class="mobile-nav-link">Blog</a></li>
       <li><a href="contact.html" class="mobile-nav-link">Contact</a></li>
-      <li><a href="sitemap.html" class="mobile-nav-link">Sitemap</a></li>
     </ul>
+    <div style="display: flex; gap: 0.8rem; margin-bottom: 1.5rem;">
+      <button class="toggle-btn theme-toggle-btn">
+        <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="5"/><path d="M12 1v2M12 21v2M4.22 4.22l1.42 1.42M18.36 18.36l1.42 1.42M1 12h2M21 12h2M4.22 19.78l1.42-1.42M18.36 5.64l1.42-1.42"/></svg>
+        <span class="theme-text">Dark Mode</span>
+      </button>
+      <button class="toggle-btn rtl-toggle-btn">
+        <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 12H3M9 6l-6 6 6 6"/></svg>
+        <span class="rtl-text">RTL</span>
+      </button>
+    </div>
     <button class="btn btn-primary trigger-assessment-modal">Book Free Assessment</button>
   </div>
 
   <!-- SECTION 1: CINEMATIC ECO-TECH HERO -->
-  <section style="position: relative; background: var(--color-evergreen-dark); padding: 7rem 0; color: var(--color-solar-cream); overflow: hidden;">
+  <section class="hero-dark-section" style="position: relative; background: var(--color-evergreen-dark); padding: 7rem 0; color: var(--color-solar-cream); overflow: hidden;">
     <div style="position: absolute; top:0; left:0; width:100%; height:100%; opacity: 0.25;">
       <img src="https://images.unsplash.com/photo-1513694203232-719a280e022f?q=80&w=1600" alt="Futuristic Eco Residence" style="width:100%; height:100%; object-fit: cover;">
     </div>
     <div class="container" style="position: relative; z-index: 2;">
       <div style="display: grid; grid-template-columns: 1.2fr 1fr; gap: 4rem; align-items: center;">
         <div>
-          <span class="badge-pill">Next-Gen Solar Tech</span>
-          <h1 class="heading-xl" style="margin-top: 0.5rem; margin-bottom: 1.2rem;">
+          <span class="badge-pill" style="background: rgba(11, 33, 25, 0.85); border-color: var(--color-solar-gold); color: var(--color-solar-gold);">Next-Gen Solar Tech</span>
+          <h1 class="heading-xl" style="margin-top: 0.5rem; margin-bottom: 1.2rem; color: #FFFFFF !important; text-shadow: 0 2px 16px rgba(0, 0, 0, 0.6);">
             Autonomous Microgrids & Smart Energy Security
           </h1>
-          <p class="text-lead" style="color: rgba(247,243,231,0.85); margin-bottom: 2rem;">
+          <p class="text-lead" style="color: rgba(247, 243, 231, 0.95) !important; margin-bottom: 2rem; text-shadow: 0 1px 8px rgba(0, 0, 0, 0.5);">
             SunCapital integrates advanced solid-state storage with intelligent AI energy routing to power luxury homes and small offices completely independent of grid blackouts.
           </p>
           <div style="display: flex; gap: 1rem; flex-wrap: wrap;">
             <button class="btn btn-primary trigger-assessment-modal">Request CAD Microgrid Design</button>
-            <a href="services.html" class="btn btn-outline" style="color: #FFF; border-color: rgba(255,255,255,0.4);">View Service Matrix</a>
+            <a href="services.html" class="btn btn-outline" style="color: #FFFFFF !important; border-color: rgba(255,255,255,0.5); background: rgba(255,255,255,0.1);">View Service Matrix</a>
           </div>
         </div>
 
-        <div class="card-glass" style="background: rgba(18, 55, 42, 0.7); border-color: var(--color-solar-gold);">
+        <div class="card-glass" style="background: rgba(11, 33, 25, 0.88); border-color: var(--color-solar-gold); color: #FFFFFF !important; box-shadow: 0 12px 35px rgba(0,0,0,0.4);">
           <h3 style="font-family: var(--font-heading); font-size: 1.6rem; color: var(--color-solar-gold); margin-bottom: 1.2rem;">
             Live System Snapshot
           </h3>
-          <div style="display: flex; flex-direction: column; gap: 1rem;">
-            <div style="display: flex; justify-content: space-between; border-bottom: 1px solid rgba(255,255,255,0.1); padding-bottom: 0.5rem;">
-              <span>Peak Generation Output</span>
+          <div style="display: flex; flex-direction: column; gap: 1rem; color: rgba(247, 243, 231, 0.95);">
+            <div style="display: flex; justify-content: space-between; border-bottom: 1px solid rgba(255,255,255,0.15); padding-bottom: 0.5rem;">
+              <span style="color: rgba(247, 243, 231, 0.95);">Peak Generation Output</span>
               <strong style="color: var(--color-solar-gold);">22.4 kWh/day</strong>
             </div>
-            <div style="display: flex; justify-content: space-between; border-bottom: 1px solid rgba(255,255,255,0.1); padding-bottom: 0.5rem;">
-              <span>Grid Surplus Export</span>
+            <div style="display: flex; justify-content: space-between; border-bottom: 1px solid rgba(255,255,255,0.15); padding-bottom: 0.5rem;">
+              <span style="color: rgba(247, 243, 231, 0.95);">Grid Surplus Export</span>
               <strong style="color: var(--color-solar-gold);">+38% Net Metered</strong>
             </div>
-            <div style="display: flex; justify-content: space-between; border-bottom: 1px solid rgba(255,255,255,0.1); padding-bottom: 0.5rem;">
-              <span>Battery Reserve Level</span>
+            <div style="display: flex; justify-content: space-between; border-bottom: 1px solid rgba(255,255,255,0.15); padding-bottom: 0.5rem;">
+              <span style="color: rgba(247, 243, 231, 0.95);">Battery Reserve Level</span>
               <strong style="color: var(--color-solar-gold);">98% Capacity</strong>
             </div>
             <div style="display: flex; justify-content: space-between;">
-              <span>Carbon Avoidance</span>
+              <span style="color: rgba(247, 243, 231, 0.95);">Carbon Avoidance</span>
               <strong style="color: var(--color-solar-gold);">14.2 Metric Tons/Yr</strong>
             </div>
           </div>
@@ -153,9 +154,9 @@
             Designed for stealth integration with architectural roofing tiles, seamless EV fast charger hookups, and zero noise operation.
           </p>
           <ul style="display: flex; flex-direction: column; gap: 0.6rem; font-size: 0.9rem; margin-bottom: 1.8rem;">
-            <li style="display: flex; align-items: center; gap: 0.5rem;">✓ Monocrystalline All-Black Panel Options</li>
-            <li style="display: flex; align-items: center; gap: 0.5rem;">✓ Integrated 15kWh Home Power Reserve</li>
-            <li style="display: flex; align-items: center; gap: 0.5rem;">✓ 30% Federal ITC Tax Credit Clearance</li>
+            <li style="display: flex; align-items: center; gap: 0.5rem;"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="var(--color-solar-gold)" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg> Monocrystalline All-Black Panel Options</li>
+            <li style="display: flex; align-items: center; gap: 0.5rem;"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="var(--color-solar-gold)" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg> Integrated 15kWh Home Power Reserve</li>
+            <li style="display: flex; align-items: center; gap: 0.5rem;"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="var(--color-solar-gold)" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg> 30% Federal ITC Tax Credit Clearance</li>
           </ul>
           <button class="btn btn-outline trigger-assessment-modal">Explore Residential Options</button>
         </div>
@@ -170,9 +171,9 @@
             Drastically cut corporate operating overhead, achieve corporate ESG sustainability targets, and leverage accelerated MACRS depreciation.
           </p>
           <ul style="display: flex; flex-direction: column; gap: 0.6rem; font-size: 0.9rem; margin-bottom: 1.8rem;">
-            <li style="display: flex; align-items: center; gap: 0.5rem;">✓ 20kW to 100kW High-Yield Rooftop Arrays</li>
-            <li style="display: flex; align-items: center; gap: 0.5rem;">✓ Peak Demand Shaving & Utility Tariff Optimization</li>
-            <li style="display: flex; align-items: center; gap: 0.5rem;">✓ MACRS 100% Year-1 Tax Depreciation</li>
+            <li style="display: flex; align-items: center; gap: 0.5rem;"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="var(--color-solar-gold)" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg> 20kW to 100kW High-Yield Rooftop Arrays</li>
+            <li style="display: flex; align-items: center; gap: 0.5rem;"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="var(--color-solar-gold)" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg> Peak Demand Shaving & Utility Tariff Optimization</li>
+            <li style="display: flex; align-items: center; gap: 0.5rem;"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="var(--color-solar-gold)" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg> MACRS 100% Year-1 Tax Depreciation</li>
           </ul>
           <button class="btn btn-primary trigger-assessment-modal">Explore Commercial Systems</button>
         </div>
@@ -229,7 +230,9 @@
 
       <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(240px, 1fr)); gap: 1.8rem;">
         <div class="card-glass text-center">
-          <div style="font-size: 2.2rem; margin-bottom: 1rem;">☀️</div>
+          <div style="color: var(--color-solar-gold); margin-bottom: 1rem; display: flex; justify-content: center;">
+            <svg width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="5"/><path d="M12 1v2M12 21v2M4.22 4.22l1.42 1.42M18.36 18.36l1.42 1.42M1 12h2M21 12h2M4.22 19.78l1.42-1.42M18.36 5.64l1.42-1.42"/></svg>
+          </div>
           <h4>Monocrystalline Panels</h4>
           <p style="font-size: 0.88rem; color: var(--text-secondary); margin-top: 0.5rem;">
             22.8% industry-leading cell efficiency with anti-soiling hydrophobic coating.
@@ -237,7 +240,9 @@
         </div>
 
         <div class="card-glass text-center">
-          <div style="font-size: 2.2rem; margin-bottom: 1rem;">🔋</div>
+          <div style="color: var(--color-solar-gold); margin-bottom: 1rem; display: flex; justify-content: center;">
+            <svg width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="1" y="6" width="18" height="12" rx="2" ry="2"/><line x1="23" y1="11" x2="23" y2="13"/></svg>
+          </div>
           <h4>Solid-State Battery</h4>
           <p style="font-size: 0.88rem; color: var(--text-secondary); margin-top: 0.5rem;">
             Safe, non-flammable thermal stability with 10,000 charge cycle lifespan.
@@ -245,7 +250,9 @@
         </div>
 
         <div class="card-glass text-center">
-          <div style="font-size: 2.2rem; margin-bottom: 1rem;">📱</div>
+          <div style="color: var(--color-solar-gold); margin-bottom: 1rem; display: flex; justify-content: center;">
+            <svg width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="5" y="2" width="14" height="20" rx="2" ry="2"/><line x1="12" y1="18" x2="12.01" y2="18"/></svg>
+          </div>
           <h4>AI Energy Control App</h4>
           <p style="font-size: 0.88rem; color: var(--text-secondary); margin-top: 0.5rem;">
             Real-time power routing, weather forecast tracking, and outage alerts.
@@ -253,7 +260,9 @@
         </div>
 
         <div class="card-glass text-center">
-          <div style="font-size: 2.2rem; margin-bottom: 1rem;">⚡</div>
+          <div style="color: var(--color-solar-gold); margin-bottom: 1rem; display: flex; justify-content: center;">
+            <svg width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polygon points="13 2 3 14 12 14 11 22 21 10 12 10 13 2"/></svg>
+          </div>
           <h4>EV Fast Charging Hub</h4>
           <p style="font-size: 0.88rem; color: var(--text-secondary); margin-top: 0.5rem;">
             Level-2 & Level-3 solar charging for electric vehicles up to 22 kW speed.
@@ -273,8 +282,9 @@
 
       <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 3rem; align-items: center;">
         <div style="background: rgba(255,255,255,0.06); border: 1px solid rgba(255,255,255,0.15); padding: 2.5rem; border-radius: var(--radius-lg);">
-          <h4 style="font-family: var(--font-heading); font-size: 1.5rem; color: #E74C3C; margin-bottom: 1rem;">
-            ⚠️ Utility Grid Electricity (2026–2036)
+          <h4 style="font-family: var(--font-heading); font-size: 1.5rem; color: #E74C3C; margin-bottom: 1rem; display: flex; align-items: center; gap: 0.5rem;">
+            <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="#E74C3C" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M10.29 3.86L1.82 18a2 2 0 0 0 1.71 3h16.94a2 2 0 0 0 1.71-3L13.71 3.86a2 2 0 0 0-3.42 0z"/><line x1="12" y1="9" x2="12" y2="13"/><line x1="12" y1="17" x2="12.01" y2="17"/></svg>
+            <span>Utility Grid Electricity (2026–2036)</span>
           </h4>
           <p style="font-size: 0.95rem; color: rgba(247,243,231,0.8); margin-bottom: 1.5rem;">
             Utility rates increase by an average of 6.8% annually due to aging grid infrastructure penalties and peak demand tariffs.
@@ -284,8 +294,9 @@
         </div>
 
         <div style="background: rgba(224,169,45,0.15); border: 1.5px solid var(--color-solar-gold); padding: 2.5rem; border-radius: var(--radius-lg);">
-          <h4 style="font-family: var(--font-heading); font-size: 1.5rem; color: var(--color-solar-gold); margin-bottom: 1rem;">
-            ☀️ SunCapital Locked Solar Energy
+          <h4 style="font-family: var(--font-heading); font-size: 1.5rem; color: var(--color-solar-gold); margin-bottom: 1rem; display: flex; align-items: center; gap: 0.5rem;">
+            <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="var(--color-solar-gold)" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="5"/><path d="M12 1v2M12 21v2M4.22 4.22l1.42 1.42M18.36 18.36l1.42 1.42M1 12h2M21 12h2M4.22 19.78l1.42-1.42M18.36 5.64l1.42-1.42"/></svg>
+            <span>SunCapital Locked Solar Energy</span>
           </h4>
           <p style="font-size: 0.95rem; color: rgba(247,243,231,0.85); margin-bottom: 1.5rem;">
             Lock in a fixed, predictable zero-inflation power cost with 100% free sunshine once your system ROI is achieved.
@@ -330,11 +341,78 @@
   <!-- FOOTER -->
   <footer class="site-footer">
     <div class="container">
+      <div class="footer-grid">
+        <!-- Col 1: Brand & Socials -->
+        <div>
+          <a href="../index.html" class="footer-brand-title">Sun<span>Capital</span></a>
+          <p class="footer-brand-desc">
+            California's most exclusive destination for architectural rooftop solar panels and solid-state storage. A curated sanctuary where every estate tells an extraordinary story.
+          </p>
+          <div class="footer-socials">
+            <a href="https://instagram.com" target="_blank" rel="noopener" class="social-icon-btn" aria-label="Instagram">
+              <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="2" y="2" width="20" height="20" rx="5" ry="5"/><path d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z"/><line x1="17.5" y1="6.5" x2="17.51" y2="6.5"/></svg>
+            </a>
+            <a href="https://facebook.com" target="_blank" rel="noopener" class="social-icon-btn" aria-label="Facebook">
+              <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M18 2h-3a5 5 0 0 0-5 5v3H7v4h3v8h4v-8h3l1-4h-4V7a1 1 0 0 1 1-1h3z"/></svg>
+            </a>
+            <a href="https://twitter.com" target="_blank" rel="noopener" class="social-icon-btn" aria-label="Twitter">
+              <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M23 3a10.9 10.9 0 0 1-3.14 1.53 4.48 4.48 0 0 0-7.86 3v1A10.66 10.66 0 0 1 3 4s-4 9 5 13a11.64 11.64 0 0 1-7 2c9 5 20 0 20-11.5a4.5 4.5 0 0 0-.08-.83A7.72 7.72 0 0 0 23 3z"/></svg>
+            </a>
+            <a href="https://youtube.com" target="_blank" rel="noopener" class="social-icon-btn" aria-label="YouTube">
+              <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M22.54 6.42a2.78 2.78 0 0 0-1.94-2C18.88 4 12 4 12 4s-6.88 0-8.6.46a2.78 2.78 0 0 0-1.94 2A29 29 0 0 0 1 11.75a29 29 0 0 0 .46 5.33A2.78 2.78 0 0 0 3.4 19c1.72.46 8.6.46 8.6.46s6.88 0 8.6-.46a2.78 2.78 0 0 0 1.94-2 29 29 0 0 0 .46-5.25 29 29 0 0 0-.46-5.33z"/><polygon points="9.75 15.02 15.5 11.75 9.75 8.48 9.75 15.02"/></svg>
+            </a>
+          </div>
+        </div>
+
+        <!-- Col 2: Solutions -->
+        <div>
+          <h4 class="footer-col-title">SOLUTIONS</h4>
+          <div class="footer-links">
+            <a href="services.html" class="footer-link">Luxury Solar Arrays</a>
+            <a href="services.html" class="footer-link">Solid-State Batteries</a>
+            <a href="services.html" class="footer-link">Smart Microgrids</a>
+            <a href="services.html" class="footer-link">Executive EV Chargers</a>
+            <a href="services.html" class="footer-link">Repair & Services</a>
+          </div>
+        </div>
+
+        <!-- Col 3: Company Pages -->
+        <div>
+          <h4 class="footer-col-title">SUNCAPITAL</h4>
+          <div class="footer-links">
+            <a href="../index.html" class="footer-link">Home</a>
+            <a href="home-2.html" class="footer-link">Home 2</a>
+            <a href="about.html" class="footer-link">About</a>
+            <a href="services.html" class="footer-link">Services</a>
+            <a href="blog.html" class="footer-link">Journal</a>
+            <a href="contact.html" class="footer-link">Contact</a>
+          </div>
+        </div>
+
+        <!-- Col 4: Newsletter -->
+        <div>
+          <h4 class="footer-col-title">THE PRIVATE LIST</h4>
+          <p class="newsletter-desc">
+            Receive exclusive previews, private rebate invitations, and solar engineering insights before anyone else.
+          </p>
+          <form class="newsletter-form-inline">
+            <input type="email" placeholder="Your email" class="newsletter-input-box" required>
+            <button type="submit" class="newsletter-btn-join">JOIN</button>
+          </form>
+        </div>
+      </div>
+
+      <!-- Center Ornamental Divider -->
+      <div class="footer-divider-wrap">
+        <div class="footer-divider-dot"></div>
+      </div>
+
+      <!-- Bottom Bar -->
       <div class="footer-bottom">
-        <div>© 2026 SunCapital Solar Panel Inc. All Rights Reserved.</div>
+        <div>© 2026 SunCapital. All rights reserved. Established 2018, California.</div>
         <div class="footer-bottom-links">
-          <a href="privacy-policy.html" class="footer-link">Privacy</a>
-          <a href="terms-conditions.html" class="footer-link">Terms</a>
+          <a href="privacy-policy.html" class="footer-link">Privacy Policy</a>
+          <a href="terms-conditions.html" class="footer-link">Terms & Conditions</a>
           <a href="sitemap.html" class="footer-link">Sitemap</a>
         </div>
       </div>
@@ -345,7 +423,7 @@
   <div class="modal-backdrop" id="assessmentModal">
     <div class="modal-backdrop-close" style="position: absolute; top:0; left:0; width:100%; height:100%;"></div>
     <div class="modal-box">
-      <button class="modal-close-btn" aria-label="Close modal">✕</button>
+      <button class="modal-close-btn" aria-label="Close modal"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><line x1="18" y1="6" x2="6" y2="18"/><line x1="6" y1="6" x2="18" y2="18"/></svg></button>
       <div style="margin-bottom: 1.5rem;">
         <span class="badge-pill">Free Consultation</span>
         <h3 class="heading-md">Book Your Microgrid Consultation</h3>

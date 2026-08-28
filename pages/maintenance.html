@@ -5,6 +5,12 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Scheduled Solar Grid Infrastructure Upgrade | SunCapital</title>
   <meta name="description" content="SunCapital is currently performing scheduled infrastructure maintenance on our 3D CAD modeling portal. We will return online shortly.">
+  <!-- Favicon Icons -->
+  <link rel="icon" type="image/svg+xml" href="../images/favicon.svg">
+  <link rel="icon" type="image/png" sizes="32x32" href="../images/favicon-32x32.png">
+  <link rel="icon" type="image/png" sizes="16x16" href="../images/favicon-16x16.png">
+  <link rel="apple-touch-icon" sizes="180x180" href="../images/apple-touch-icon.png">
+  <link rel="shortcut icon" href="../images/favicon.ico">
   
   <!-- CSS Stylesheets -->
   <link rel="stylesheet" href="../css/variables.css">
@@ -14,19 +20,31 @@
 </head>
 <body>
 
-  <!-- Sticky Navbar -->
-  <header class="site-header">
-    <div class="container navbar">
-      <a href="../index.html" class="logo-brand">
+  <!-- Top Utility Bar (No Navbar) -->
+  <header style="padding: 1.5rem 0; position: relative; z-index: 100; border-bottom: 1px solid var(--border-light); background: var(--bg-primary);">
+    <div class="container" style="display: flex; justify-content: space-between; align-items: center; flex-wrap: wrap; gap: 1rem;">
+      <a href="../index.html" class="logo-brand" style="text-decoration: none;">
         <div class="logo-icon">
           <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><circle cx="12" cy="12" r="5"/><path d="M12 1v2M12 21v2M4.22 4.22l1.42 1.42M18.36 18.36l1.42 1.42M1 12h2M21 12h2M4.22 19.78l1.42-1.42M18.36 5.64l1.42-1.42"/></svg>
         </div>
-        <div class="logo-text">Sun<span>Capital</span></div>
+        <div class="logo-text-group">
+          <div class="logo-text">Sun<span>Capital</span></div>
+          <span class="logo-tagline">Architectural Solar & Storage</span>
+        </div>
       </a>
 
-      <div class="nav-cta-group">
-        <span class="badge-pill" style="margin: 0; background: rgba(224,169,45,0.2); border-color: var(--color-solar-gold);">
-          ⚡ Scheduled Maintenance
+      <div style="display: flex; align-items: center; gap: 0.8rem; flex-wrap: wrap;">
+        <button class="toggle-btn theme-toggle-btn" aria-label="Toggle Dark/Light Theme">
+          <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="5"/><path d="M12 1v2M12 21v2M4.22 4.22l1.42 1.42M18.36 18.36l1.42 1.42M1 12h2M21 12h2M4.22 19.78l1.42-1.42M18.36 5.64l1.42-1.42"/></svg>
+          <span class="theme-text">Dark Mode</span>
+        </button>
+        <button class="toggle-btn rtl-toggle-btn" aria-label="Toggle RTL/LTR Direction">
+          <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 12H3M9 6l-6 6 6 6"/></svg>
+          <span class="rtl-text">RTL</span>
+        </button>
+        <span class="badge-pill" style="margin: 0; background: rgba(224,169,45,0.2); border-color: var(--color-solar-gold); display: inline-flex; align-items: center; gap: 0.4rem;">
+          <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polygon points="13 2 3 14 12 14 11 22 21 10 12 10 13 2"/></svg>
+          <span>Scheduled Maintenance</span>
         </span>
       </div>
     </div>
@@ -153,19 +171,10 @@
     </div>
   </section>
 
-  <!-- FOOTER -->
-  <footer class="site-footer">
-    <div class="container">
-      <div class="footer-bottom">
-        <div>© 2026 SunCapital Solar Panel Inc. All Rights Reserved.</div>
-        <div class="footer-bottom-links">
-          <a href="privacy-policy.html" class="footer-link">Privacy</a>
-          <a href="terms-conditions.html" class="footer-link">Terms</a>
-          <a href="sitemap.html" class="footer-link">Sitemap</a>
-        </div>
-      </div>
-    </div>
-  </footer>
+  <!-- Minimal Bottom Bar (No Footer) -->
+  <div style="text-align: center; padding: 2rem 0; font-size: 0.85rem; color: var(--text-muted); border-top: 1px solid var(--border-light); background: var(--bg-primary);">
+    <div>© 2026 SunCapital. All rights reserved. Established 2018, California.</div>
+  </div>
 
   <script src="../js/main.js"></script>
   <script src="../js/slider.js"></script>

@@ -13,6 +13,16 @@
   overflow: hidden;
 }
 
+.page-hero h1,
+.page-hero .heading-xl,
+.page-hero .heading-lg {
+  color: #FFFFFF !important;
+}
+
+.page-hero .text-lead {
+  color: rgba(247, 243, 231, 0.95) !important;
+}
+
 .page-hero::after {
   content: '';
   position: absolute;
@@ -299,3 +309,21 @@
   text-transform: uppercase;
   letter-spacing: 0.1em;
 }
+
+/* --- Dark Background Section Text Contrast Safety Rules --- */
+.hero-dark-section,
+section[style*="color-evergreen"] {
+  color: var(--color-solar-cream) !important;
+}
+
+.hero-dark-section h1,
+.hero-dark-section h2,
+.hero-dark-section h3,
+.hero-dark-section .heading-xl,
+.hero-dark-section .heading-lg,
+section[style*="color-evergreen"] h1,
+section[style*="color-evergreen"] h2,
+section[style*="color-evergreen"] h3 {
+  color: #FFFFFF !important;
+}
+
