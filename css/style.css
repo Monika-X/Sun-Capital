@@ -350,20 +350,44 @@ h1, h2, h3, h4, h5, h6 {
   gap: 1rem;
 }
 
+/* Light Mode Toggle Button Contrast */
+[data-theme="light"] .site-header .toggle-btn,
+[data-theme="light"] header .toggle-btn,
+html[data-theme="light"] .toggle-btn {
+  background: rgba(18, 55, 42, 0.08) !important;
+  color: #12372A !important;
+  border: 1.5px solid rgba(18, 55, 42, 0.3) !important;
+  font-weight: 700 !important;
+}
+
+[data-theme="light"] .site-header .toggle-btn:hover,
+[data-theme="light"] header .toggle-btn:hover,
+html[data-theme="light"] .toggle-btn:hover {
+  background: var(--color-solar-gold) !important;
+  color: #0B2119 !important;
+  border-color: var(--color-solar-gold) !important;
+  box-shadow: 0 4px 12px rgba(224, 169, 45, 0.3) !important;
+}
+
+/* Dark Mode Toggle Button Contrast */
+[data-theme="dark"] .site-header .toggle-btn,
+[data-theme="dark"] header .toggle-btn,
+html[data-theme="dark"] .toggle-btn,
 .site-header .toggle-btn,
 header .toggle-btn {
-  background: rgba(255, 255, 255, 0.08) !important;
+  background: rgba(255, 255, 255, 0.12) !important;
   color: #FFFFFF !important;
   border: 1px solid var(--border-gold) !important;
   backdrop-filter: blur(8px);
 }
 
-.site-header .toggle-btn:hover,
-header .toggle-btn:hover {
-  background: rgba(224, 169, 45, 0.22) !important;
-  color: #FFFFFF !important;
+[data-theme="dark"] .site-header .toggle-btn:hover,
+[data-theme="dark"] header .toggle-btn:hover,
+html[data-theme="dark"] .toggle-btn:hover {
+  background: rgba(224, 169, 45, 0.25) !important;
+  color: var(--color-solar-gold) !important;
   border-color: var(--color-solar-gold) !important;
-  box-shadow: 0 0 0 3px rgba(224, 169, 45, 0.12);
+  box-shadow: 0 0 0 3px rgba(224, 169, 45, 0.15) !important;
 }
 
 /* Mobile Hamburger Toggle */
