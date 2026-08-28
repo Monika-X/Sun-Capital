@@ -931,23 +931,77 @@ h1, h2, h3, h4, h5, h6 {
 
 /* --- Responsive Adjustments --- */
 @media (max-width: 1024px) {
+  .site-header .navbar {
+    height: 68px !important;
+  }
+
+  .logo-brand {
+    gap: 0.55rem !important;
+  }
+
+  .logo-icon {
+    width: 36px !important;
+    height: 36px !important;
+    border-radius: 9px !important;
+  }
+
+  .logo-icon svg {
+    width: 20px !important;
+    height: 20px !important;
+  }
+
+  .logo-text {
+    font-size: 1.35rem !important;
+  }
+
+  .logo-tagline {
+    font-size: 0.52rem !important;
+    letter-spacing: 0.12em !important;
+  }
+
+  .mobile-nav-link {
+    font-size: 1.45rem !important;
+  }
+
+  .mobile-nav-list {
+    gap: 1rem !important;
+    margin-bottom: 1.5rem !important;
+  }
+
   .nav-menu {
     display: none !important;
   }
 
   .mobile-nav-toggle {
     display: flex !important;
+    width: 26px !important;
+    height: 18px !important;
+  }
+
+  .mobile-nav-toggle.open span:nth-child(1) {
+    transform: translateY(8px) rotate(45deg) !important;
+  }
+
+  .mobile-nav-toggle.open span:nth-child(3) {
+    transform: translateY(-8px) rotate(-45deg) !important;
   }
 
   .nav-cta-group {
     display: flex !important;
     align-items: center !important;
-    gap: 0.75rem !important;
+    gap: 0.5rem !important;
   }
 
-  .nav-cta-group .toggle-btn,
+  .nav-cta-group .toggle-btn {
+    display: inline-flex !important;
+    padding: 0.35rem 0.65rem !important;
+    font-size: 0.78rem !important;
+  }
+
   .nav-cta-group .btn-primary {
     display: inline-flex !important;
+    padding: 0.45rem 0.95rem !important;
+    font-size: 0.82rem !important;
   }
 
   .footer-grid {
@@ -998,13 +1052,13 @@ h1, h2, h3, h4, h5, h6 {
   .nav-cta-group {
     display: flex !important;
     align-items: center !important;
-    gap: 0.45rem !important;
+    gap: 0.4rem !important;
   }
 
   .nav-cta-group .toggle-btn {
     display: inline-flex !important;
-    padding: 0.4rem 0.6rem !important;
-    font-size: 0.78rem !important;
+    padding: 0.32rem 0.55rem !important;
+    font-size: 0.75rem !important;
   }
 
   .nav-cta-group .theme-toggle-btn .theme-text {
@@ -1039,13 +1093,38 @@ h1, h2, h3, h4, h5, h6 {
 }
 
 @media (max-width: 480px) {
+  .site-header .navbar {
+    height: 62px !important;
+  }
+
+  .logo-icon {
+    width: 32px !important;
+    height: 32px !important;
+  }
+
+  .logo-text {
+    font-size: 1.2rem !important;
+  }
+
+  .logo-tagline {
+    display: none !important;
+  }
+
   .nav-cta-group {
-    gap: 0.35rem !important;
+    gap: 0.3rem !important;
   }
 
   .nav-cta-group .toggle-btn {
-    padding: 0.38rem 0.55rem !important;
-    font-size: 0.75rem !important;
+    padding: 0.3rem 0.5rem !important;
+    font-size: 0.72rem !important;
+  }
+
+  .mobile-nav-link {
+    font-size: 1.3rem !important;
+  }
+
+  .mobile-nav-list {
+    gap: 0.8rem !important;
   }
 
   .newsletter-form-inline {
