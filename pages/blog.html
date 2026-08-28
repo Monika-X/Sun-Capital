@@ -97,25 +97,57 @@
     </div>
   </section>
 
-  <!-- SECTION 1: FEATURED COVER STORY ARTICLE -->
-  <section class="section-padding" style="padding-top: 2rem; padding-bottom: 2rem;">
+  <!-- SECTION 1: FEATURED COVER STORY ARTICLE (LUXURY REDESIGN) -->
+  <section class="section-padding" style="padding-top: 2rem; padding-bottom: 2.5rem;">
     <div class="container">
-      <div class="card-glass" style="max-width: 1040px; margin: 0 auto; display: grid; grid-template-columns: 1.05fr 1fr; gap: 2.2rem; padding: 0; overflow: hidden; align-items: center; border-radius: var(--radius-xl);">
-        <div style="height: 100%; min-height: 310px; max-height: 360px;">
-          <img src="https://i.pinimg.com/736x/b3/81/ac/b381acb3766fa49dd679399c655258b5.jpg" alt="The Complete 2026 Residential Solar Subsidy & Tax Incentive Master Guide" style="width: 100%; height: 100%; object-fit: cover;">
+      <div style="position: relative; border-radius: var(--radius-xl); overflow: hidden; background: linear-gradient(135deg, var(--color-evergreen-dark) 0%, #081D16 100%); border: 1px solid var(--border-gold); box-shadow: var(--shadow-lg);">
+        <!-- Background Overlay Image -->
+        <div style="position: absolute; top:0; right:0; width: 55%; height: 100%; opacity: 0.38; pointer-events: none; mask-image: linear-gradient(to right, transparent 0%, black 40%); -webkit-mask-image: linear-gradient(to right, transparent 0%, black 40%);">
+          <img src="https://i.pinimg.com/736x/b3/81/ac/b381acb3766fa49dd679399c655258b5.jpg" alt="The Complete 2026 Residential Solar Subsidy & Tax Incentive Master Guide" style="width: 100%; height: 100%; object-fit: cover; object-position: center;">
         </div>
-        <div style="padding: 2.2rem 2.2rem 2.2rem 0.8rem;">
-          <span class="blog-tag" style="position: static; display: inline-block; margin-bottom: 0.7rem; font-size: 0.75rem; padding: 0.28rem 0.7rem;">FEATURED COVER STORY</span>
-          <h2 style="font-family: var(--font-heading); font-size: 1.65rem; line-height: 1.3; margin-bottom: 0.9rem; color: var(--text-primary);">
+
+        <div style="position: relative; z-index: 2; padding: 3rem 3.5rem; max-width: 780px;">
+          <div style="display: flex; align-items: center; gap: 0.8rem; margin-bottom: 1.2rem; flex-wrap: wrap;">
+            <span class="badge-pill" style="background: rgba(224,169,45,0.18); border-color: var(--color-solar-gold); color: var(--color-solar-gold); margin: 0; font-size: 0.78rem;">
+              FEATURED COVER STORY
+            </span>
+            <span style="font-size: 0.82rem; color: rgba(247,243,231,0.7);">• IRS Form 5695 & NEM 3.0 Handbook</span>
+          </div>
+
+          <h2 style="font-family: var(--font-heading); font-size: 2.1rem; line-height: 1.28; margin-bottom: 1.1rem; color: #FFFFFF !important; text-shadow: 0 2px 12px rgba(0,0,0,0.5);">
             The Complete 2026 Residential Solar Subsidy & Tax Incentive Master Guide
           </h2>
-          <p style="color: var(--text-secondary); margin-bottom: 1.3rem; line-height: 1.58; font-size: 0.95rem;">
+
+          <p style="color: rgba(247,243,231,0.9) !important; font-size: 1.02rem; line-height: 1.65; margin-bottom: 1.8rem; text-shadow: 0 1px 6px rgba(0,0,0,0.4);">
             Everything luxury estate owners need to know about claiming the 30% Federal ITC credit, state net metering tariffs, and local utility property tax exemptions.
           </p>
-          <div class="blog-meta" style="margin-bottom: 1.5rem; font-size: 0.85rem;">
-            <span>By Dr. Sophia Chen</span> • <span>Aug 24, 2026</span> • <span>8 Min Read</span>
+
+          <!-- Key Takeaways Pills -->
+          <div style="display: flex; gap: 0.8rem; flex-wrap: wrap; margin-bottom: 2rem;">
+            <span style="font-size: 0.82rem; color: #FFF; background: rgba(255,255,255,0.12); backdrop-filter: blur(8px); padding: 0.4rem 0.85rem; border-radius: var(--radius-full); border: 1px solid rgba(255,255,255,0.25);">
+              ✓ 30% Federal Tax Deduction
+            </span>
+            <span style="font-size: 0.82rem; color: #FFF; background: rgba(255,255,255,0.12); backdrop-filter: blur(8px); padding: 0.4rem 0.85rem; border-radius: var(--radius-full); border: 1px solid rgba(255,255,255,0.25);">
+              ✓ Net Metering 3.0 Rate Maps
+            </span>
+            <span style="font-size: 0.82rem; color: #FFF; background: rgba(255,255,255,0.12); backdrop-filter: blur(8px); padding: 0.4rem 0.85rem; border-radius: var(--radius-full); border: 1px solid rgba(255,255,255,0.25);">
+              ✓ 100% Property Tax Immunity
+            </span>
           </div>
-          <a href="blog-details.html" class="btn btn-primary" style="padding: 0.65rem 1.6rem; font-size: 0.9rem;">Read Master Guide →</a>
+
+          <div style="display: flex; align-items: center; justify-content: space-between; gap: 2rem; flex-wrap: wrap; border-top: 1px solid rgba(224,169,45,0.25); padding-top: 1.5rem;">
+            <div style="display: flex; align-items: center; gap: 0.8rem;">
+              <div style="width: 42px; height: 42px; border-radius: 50%; background: var(--color-solar-gold); color: #000; display: flex; align-items: center; font-weight: 700; font-family: var(--font-heading); justify-content: center; font-size: 1rem;">SC</div>
+              <div>
+                <div style="color: #FFFFFF !important; font-weight: 700; font-size: 0.92rem;">Dr. Sophia Chen</div>
+                <div style="color: rgba(247,243,231,0.7) !important; font-size: 0.8rem;">Aug 24, 2026 • 8 Min Read</div>
+              </div>
+            </div>
+
+            <a href="blog-details.html" class="btn btn-primary" style="padding: 0.85rem 2rem; font-size: 0.98rem; box-shadow: 0 4px 20px rgba(224, 169, 45, 0.35);">
+              Read Master Guide →
+            </a>
+          </div>
         </div>
       </div>
     </div>
