@@ -6,6 +6,7 @@ document.addEventListener('DOMContentLoaded', () => {
   initFaqAccordion();
   initAssessmentModal();
   initGalleryFilter();
+  initBlogPagination();
   initFormValidation();
   initMythCards();
   initLightbox();
@@ -74,19 +75,26 @@ function initGalleryFilter() {
   filterBars.forEach(bar => {
     const btns = bar.querySelectorAll('.filter-btn');
     const container = bar.closest('.container') || bar.parentElement;
+    const viewMoreBtn = container.querySelector('#blogViewMoreBtn');
 
     btns.forEach(btn => {
       btn.addEventListener('click', () => {
         btns.forEach(b => b.classList.remove('active'));
         btn.classList.add('active');
 
+        // If this section has a blog View More button, reset pagination step to 4
+        if (viewMoreBtn && window.resetBlogPagination) {
+          window.resetBlogPagination();
+          return;
+        }
+
         const filterVal = btn.getAttribute('data-filter') || 'all';
-        const targetItems = container.querySelectorAll('.gallery-item, .blog-card');
+        const targetItems = container.querySelectorAll('.gallery-item');
 
         targetItems.forEach(item => {
           const category = item.getAttribute('data-category');
           if (filterVal === 'all' || category === filterVal) {
-            item.style.display = item.classList.contains('blog-card') ? 'flex' : 'block';
+            item.style.display = 'block';
             setTimeout(() => {
               item.style.opacity = '1';
               item.style.transform = 'scale(1)';
@@ -105,6 +113,71 @@ function initGalleryFilter() {
       });
     });
   });
+}
+
+/* --- Blog View More Step Pagination (4 Cards per Step) --- */
+function initBlogPagination() {
+  const blogGrid = document.querySelector('.blog-grid');
+  const viewMoreBtn = document.getElementById('blogViewMoreBtn');
+  if (!blogGrid || !viewMoreBtn) return;
+
+  let currentStep = 4;
+  const stepSize = 4;
+
+  function updateCardVisibility() {
+    const activeFilterBtn = document.querySelector('.gallery-filter-bar .filter-btn.active');
+    const filterVal = activeFilterBtn ? (activeFilterBtn.getAttribute('data-filter') || 'all') : 'all';
+
+    const allCards = Array.from(blogGrid.querySelectorAll('.blog-card'));
+    const matchingCards = allCards.filter(card => {
+      const cat = card.getAttribute('data-category');
+      return filterVal === 'all' || cat === filterVal;
+    });
+
+    // Hide cards that don't match active filter
+    allCards.forEach(card => {
+      if (!matchingCards.includes(card)) {
+        card.style.display = 'none';
+        card.style.opacity = '0';
+      }
+    });
+
+    // Show matching cards up to currentStep
+    matchingCards.forEach((card, index) => {
+      if (index < currentStep) {
+        card.style.display = 'flex';
+        setTimeout(() => {
+          card.style.opacity = '1';
+          card.style.transform = 'scale(1)';
+        }, 10);
+      } else {
+        card.style.display = 'none';
+        card.style.opacity = '0';
+      }
+    });
+
+    // Handle View More button state
+    if (currentStep >= matchingCards.length) {
+      viewMoreBtn.style.display = 'none';
+    } else {
+      viewMoreBtn.style.display = 'inline-block';
+      const remaining = matchingCards.length - currentStep;
+      const countToShow = Math.min(stepSize, remaining);
+      viewMoreBtn.textContent = `View More Articles (${countToShow} More) ↓`;
+    }
+  }
+
+  window.resetBlogPagination = function() {
+    currentStep = 4;
+    updateCardVisibility();
+  };
+
+  viewMoreBtn.addEventListener('click', () => {
+    currentStep += stepSize;
+    updateCardVisibility();
+  });
+
+  updateCardVisibility();
 }
 
 /* --- Form Validation & Toast Feedback ---
