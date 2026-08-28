@@ -932,40 +932,41 @@ h1, h2, h3, h4, h5, h6 {
 /* --- Responsive Adjustments --- */
 @media (max-width: 1024px) {
   .site-header .navbar {
-    height: 68px !important;
+    height: 58px !important;
   }
 
   .logo-brand {
-    gap: 0.55rem !important;
+    gap: 0.45rem !important;
   }
 
   .logo-icon {
-    width: 36px !important;
-    height: 36px !important;
-    border-radius: 9px !important;
+    width: 32px !important;
+    height: 32px !important;
+    border-radius: 7px !important;
   }
 
   .logo-icon svg {
-    width: 20px !important;
-    height: 20px !important;
+    width: 16px !important;
+    height: 16px !important;
   }
 
   .logo-text {
-    font-size: 1.35rem !important;
+    font-size: 1.2rem !important;
   }
 
   .logo-tagline {
-    font-size: 0.52rem !important;
-    letter-spacing: 0.12em !important;
+    font-size: 0.48rem !important;
+    letter-spacing: 0.1em !important;
+    margin-top: 1px !important;
   }
 
   .mobile-nav-link {
-    font-size: 1.45rem !important;
+    font-size: 1.25rem !important;
   }
 
   .mobile-nav-list {
-    gap: 1rem !important;
-    margin-bottom: 1.5rem !important;
+    gap: 0.8rem !important;
+    margin-bottom: 1.2rem !important;
   }
 
   .nav-menu {
@@ -974,34 +975,34 @@ h1, h2, h3, h4, h5, h6 {
 
   .mobile-nav-toggle {
     display: flex !important;
-    width: 26px !important;
-    height: 18px !important;
+    width: 24px !important;
+    height: 16px !important;
   }
 
   .mobile-nav-toggle.open span:nth-child(1) {
-    transform: translateY(8px) rotate(45deg) !important;
+    transform: translateY(7px) rotate(45deg) !important;
   }
 
   .mobile-nav-toggle.open span:nth-child(3) {
-    transform: translateY(-8px) rotate(-45deg) !important;
+    transform: translateY(-7px) rotate(-45deg) !important;
   }
 
   .nav-cta-group {
     display: flex !important;
     align-items: center !important;
-    gap: 0.5rem !important;
+    gap: 0.4rem !important;
   }
 
   .nav-cta-group .toggle-btn {
     display: inline-flex !important;
-    padding: 0.35rem 0.65rem !important;
-    font-size: 0.78rem !important;
+    padding: 0.28rem 0.55rem !important;
+    font-size: 0.72rem !important;
   }
 
   .nav-cta-group .btn-primary {
     display: inline-flex !important;
-    padding: 0.45rem 0.95rem !important;
-    font-size: 0.82rem !important;
+    padding: 0.35rem 0.75rem !important;
+    font-size: 0.76rem !important;
   }
 
   .footer-grid {
@@ -1016,8 +1017,8 @@ h1, h2, h3, h4, h5, h6 {
   }
 
   .container {
-    padding-left: 1.2rem !important;
-    padding-right: 1.2rem !important;
+    padding-left: 1rem !important;
+    padding-right: 1rem !important;
     width: 100% !important;
     max-width: 100% !important;
     box-sizing: border-box !important;
@@ -1052,13 +1053,13 @@ h1, h2, h3, h4, h5, h6 {
   .nav-cta-group {
     display: flex !important;
     align-items: center !important;
-    gap: 0.4rem !important;
+    gap: 0.35rem !important;
   }
 
   .nav-cta-group .toggle-btn {
     display: inline-flex !important;
-    padding: 0.32rem 0.55rem !important;
-    font-size: 0.75rem !important;
+    padding: 0.26rem 0.48rem !important;
+    font-size: 0.71rem !important;
   }
 
   .nav-cta-group .theme-toggle-btn .theme-text {
@@ -1094,16 +1095,22 @@ h1, h2, h3, h4, h5, h6 {
 
 @media (max-width: 480px) {
   .site-header .navbar {
-    height: 62px !important;
+    height: 52px !important;
   }
 
   .logo-icon {
-    width: 32px !important;
-    height: 32px !important;
+    width: 28px !important;
+    height: 28px !important;
+    border-radius: 6px !important;
+  }
+
+  .logo-icon svg {
+    width: 14px !important;
+    height: 14px !important;
   }
 
   .logo-text {
-    font-size: 1.2rem !important;
+    font-size: 1.08rem !important;
   }
 
   .logo-tagline {
@@ -1111,20 +1118,20 @@ h1, h2, h3, h4, h5, h6 {
   }
 
   .nav-cta-group {
-    gap: 0.3rem !important;
+    gap: 0.25rem !important;
   }
 
   .nav-cta-group .toggle-btn {
-    padding: 0.3rem 0.5rem !important;
-    font-size: 0.72rem !important;
+    padding: 0.22rem 0.42rem !important;
+    font-size: 0.68rem !important;
   }
 
   .mobile-nav-link {
-    font-size: 1.3rem !important;
+    font-size: 1.15rem !important;
   }
 
   .mobile-nav-list {
-    gap: 0.8rem !important;
+    gap: 0.65rem !important;
   }
 
   .newsletter-form-inline {
