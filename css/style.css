@@ -1238,3 +1238,288 @@ div[style*="border-radius:50%"],
     padding-bottom: 3.5rem !important;
   }
 }
+
+/* ==========================================================================
+   MASTER RESPONSIVE BREAKPOINT SUITE (1024px, 760px, 480px, 360px, 320px)
+   ========================================================================== */
+
+/* --- 1. Breakpoint: 1024px (Laptops / Tablets) --- */
+@media (max-width: 1024px) {
+  .container {
+    max-width: 960px;
+    padding-left: 1.5rem;
+    padding-right: 1.5rem;
+  }
+
+  .nav-menu {
+    gap: 1.2rem;
+  }
+
+  .hero-content h1,
+  .hero-content .heading-xl {
+    font-size: 2.8rem !important;
+  }
+
+  .grid-2col,
+  .grid-3col,
+  .services-grid,
+  .blog-grid,
+  .sitemap-section-grid {
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)) !important;
+    gap: 1.8rem !important;
+  }
+
+  .calculator-card {
+    grid-template-columns: 1fr !important;
+    gap: 2rem !important;
+  }
+}
+
+/* --- 2. Breakpoint: 760px (Portrait Tablets / Phablets) --- */
+@media (max-width: 760px) {
+  .container {
+    padding-left: 1.25rem;
+    padding-right: 1.25rem;
+  }
+
+  body {
+    padding-top: 0 !important;
+  }
+
+  .site-header {
+    padding: 0.5rem 0 !important;
+  }
+
+  .nav-menu {
+    display: none !important;
+  }
+
+  .mobile-nav-toggle {
+    display: flex !important;
+  }
+
+  .hero-slider-wrapper {
+    margin-top: 0 !important;
+    height: auto !important;
+    min-height: 520px !important;
+  }
+
+  .hero-content {
+    justify-content: flex-start !important;
+    padding-top: 110px !important;
+    padding-bottom: 3.5rem !important;
+    text-align: left !important;
+  }
+
+  .hero-content h1,
+  .hero-content .heading-xl {
+    font-size: 2.2rem !important;
+    line-height: 1.25 !important;
+  }
+
+  .page-hero {
+    margin-top: 0 !important;
+    padding-top: 105px !important;
+    padding-bottom: 3rem !important;
+  }
+
+  .section-padding {
+    padding-top: 3.5rem !important;
+    padding-bottom: 3.5rem !important;
+  }
+
+  .grid-2col,
+  .grid-3col,
+  .team-grid,
+  .myth-grid,
+  .services-grid,
+  .blog-grid,
+  .sitemap-section-grid,
+  .countdown-grid {
+    grid-template-columns: 1fr !important;
+    gap: 1.5rem !important;
+  }
+
+  .author-card-flex,
+  #author .card-glass {
+    flex-direction: column !important;
+    text-align: center !important;
+    gap: 1.2rem !important;
+  }
+}
+
+/* --- 3. Breakpoint: 480px (Large Mobiles) --- */
+@media (max-width: 480px) {
+  .container {
+    padding-left: 1rem;
+    padding-right: 1rem;
+  }
+
+  .hero-content {
+    padding-top: 105px !important;
+    padding-bottom: 3rem !important;
+  }
+
+  .hero-content h1,
+  .hero-content .heading-xl {
+    font-size: 1.85rem !important;
+  }
+
+  .page-hero {
+    padding-top: 100px !important;
+    padding-bottom: 2.5rem !important;
+  }
+
+  .heading-lg {
+    font-size: 1.6rem !important;
+  }
+
+  .heading-md {
+    font-size: 1.3rem !important;
+  }
+
+  .card-glass {
+    padding: 1.4rem 1.1rem !important;
+  }
+
+  .btn {
+    width: 100% !important;
+    justify-content: center !important;
+    text-align: center !important;
+  }
+
+  .btn-inline-group {
+    flex-direction: column !important;
+    width: 100% !important;
+  }
+
+  .newsletter-input-wrap,
+  .newsletter-form-inline {
+    flex-direction: column !important;
+    align-items: stretch !important;
+  }
+
+  .newsletter-btn-join {
+    width: 100% !important;
+  }
+}
+
+/* --- 4. Breakpoint: 360px (Standard Mobiles) --- */
+@media (max-width: 360px) {
+  .container {
+    padding-left: 0.85rem;
+    padding-right: 0.85rem;
+  }
+
+  .logo-text {
+    font-size: 1.05rem !important;
+  }
+
+  .logo-tagline {
+    font-size: 0.44rem !important;
+  }
+
+  .hero-content h1,
+  .hero-content .heading-xl {
+    font-size: 1.65rem !important;
+  }
+
+  .text-lead {
+    font-size: 0.92rem !important;
+  }
+
+  .badge-pill {
+    font-size: 0.72rem !important;
+    padding: 0.3rem 0.65rem !important;
+    white-space: normal !important;
+    text-align: center !important;
+  }
+
+  .countdown-item {
+    min-width: 80px !important;
+    padding: 0.6rem !important;
+  }
+
+  .countdown-val {
+    font-size: 1.6rem !important;
+  }
+}
+
+/* --- 5. Breakpoint: 320px (Small Mobiles / Ultra Compact) --- */
+@media (max-width: 320px) {
+  html {
+    font-size: 14px !important;
+  }
+
+  .container {
+    padding-left: 0.7rem !important;
+    padding-right: 0.7rem !important;
+  }
+
+  .site-header .navbar {
+    height: 52px !important;
+  }
+
+  .logo-icon {
+    width: 26px !important;
+    height: 26px !important;
+  }
+
+  .logo-text {
+    font-size: 0.98rem !important;
+  }
+
+  .logo-tagline {
+    display: none !important;
+  }
+
+  .nav-cta-group .toggle-btn {
+    padding: 0.2rem 0.35rem !important;
+    font-size: 0.65rem !important;
+  }
+
+  .hero-content {
+    padding-top: 95px !important;
+    padding-bottom: 2.5rem !important;
+  }
+
+  .hero-content h1,
+  .hero-content .heading-xl {
+    font-size: 1.5rem !important;
+    line-height: 1.2 !important;
+  }
+
+  .page-hero {
+    padding-top: 90px !important;
+    padding-bottom: 2rem !important;
+  }
+
+  .card-glass {
+    padding: 1.1rem 0.85rem !important;
+  }
+
+  .badge-pill {
+    font-size: 0.68rem !important;
+    padding: 0.25rem 0.5rem !important;
+    letter-spacing: 0.04em !important;
+  }
+
+  .countdown-grid {
+    gap: 0.5rem !important;
+  }
+
+  .countdown-item {
+    min-width: 72px !important;
+    padding: 0.45rem !important;
+  }
+
+  .countdown-val {
+    font-size: 1.4rem !important;
+  }
+
+  .sitemap-card,
+  .blog-card,
+  .team-card {
+    padding: 0.9rem !important;
+  }
+}
