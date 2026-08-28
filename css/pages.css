@@ -7,7 +7,8 @@
   position: relative;
   background: linear-gradient(135deg, var(--color-evergreen-dark), #091712);
   color: var(--color-solar-cream);
-  padding-top: 7rem;
+  margin-top: calc(-1 * var(--header-height));
+  padding-top: calc(var(--header-height) + 5rem);
   padding-bottom: 5rem;
   border-bottom: 1px solid rgba(224, 169, 45, 0.2);
   overflow: hidden;

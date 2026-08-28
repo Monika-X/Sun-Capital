@@ -9,6 +9,7 @@
   height: clamp(650px, 85vh, 850px);
   overflow: hidden;
   background: var(--color-evergreen-dark);
+  margin-top: calc(-1 * var(--header-height));
 }
 
 .hero-slide {
@@ -62,6 +63,7 @@
   display: flex;
   flex-direction: column;
   justify-content: center;
+  padding-top: calc(var(--header-height) + 2.5rem);
   padding-bottom: 5rem;
   color: #FFFFFF !important;
   max-width: 850px;
@@ -80,11 +82,17 @@
 }
 
 .hero-content .badge-pill {
-  background-color: rgba(11, 33, 25, 0.8) !important;
-  border: 1px solid var(--color-solar-gold) !important;
+  align-self: flex-start;
+  width: fit-content;
+  max-width: 100%;
+  background: linear-gradient(135deg, rgba(224, 169, 45, 0.18), rgba(11, 33, 25, 0.85)) !important;
+  border: 1px solid rgba(224, 169, 45, 0.6) !important;
   color: var(--color-solar-gold) !important;
-  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.3);
+  box-shadow: 0 4px 18px rgba(0, 0, 0, 0.35), inset 0 0 0 1px rgba(224, 169, 45, 0.12);
   backdrop-filter: blur(8px);
+  font-weight: 700;
+  letter-spacing: 0.12em;
+  padding: 0.5rem 1.25rem;
 }
 
 .hero-content .btn-outline {
