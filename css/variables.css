@@ -2,7 +2,7 @@
    SUNCAPITAL ECO-LUXURY DESIGN SYSTEM - VARIABLES & THEMING
    ========================================================================== */
 
-@import url('https://fonts.googleapis.com/css2?family=DM+Serif+Display:ital@0;1&family=Space+Grotesk:wght@300;400;500;600;700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Cinzel:wght@600;700;800;900&family=DM+Serif+Display:ital@0;1&family=Outfit:wght@600;700;800;900&family=Plus+Jakarta+Sans:wght@700;800&family=Space+Grotesk:wght@300;400;500;600;700;800&family=Syne:wght@700;800&display=swap');
 
 :root {
   /* Core Brand Palette */
@@ -47,6 +47,7 @@
   /* Fonts */
   --font-heading: 'DM Serif Display', Georgia, serif;
   --font-body: 'Space Grotesk', system-ui, -apple-system, sans-serif;
+  --font-logo: 'Outfit', 'Plus Jakarta Sans', 'Space Grotesk', sans-serif;
 
   /* Transition Speeds */
   --transition-fast: 0.2s cubic-bezier(0.4, 0, 0.2, 1);
