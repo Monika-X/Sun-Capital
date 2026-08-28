@@ -1890,6 +1890,27 @@ div[style*="border-radius:50%"],
     height: 200px !important;
   }
 
+  /* 404 Search Input at 320px */
+  .card-glass input[placeholder*="Search SunCapital"] {
+    font-size: 0.82rem !important;
+  }
+
+  /* Maintenance Status Checklist & Newsletter Form at 320px */
+  .status-checklist-row {
+    flex-direction: column !important;
+    align-items: flex-start !important;
+    gap: 0.5rem !important;
+  }
+
+  .status-checklist-row span[style*="background"] {
+    font-size: 0.78rem !important;
+    padding: 0.25rem 0.55rem !important;
+  }
+
+  .maintenance-teaser-img {
+    height: 180px !important;
+  }
+
   /* Pre-footer CTA Banner at 320px */
   .cta-banner {
     padding: 1.25rem 0.75rem !important;
