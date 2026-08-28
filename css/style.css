@@ -25,6 +25,7 @@ body {
   overflow-x: hidden;
   max-width: 100%;
   position: relative;
+  padding-top: var(--header-height);
   transition: background-color var(--transition-normal), color var(--transition-normal);
 }
 
@@ -212,7 +213,7 @@ h1, h2, h3, h4, h5, h6 {
 
 /* --- Navigation Header --- */
 .site-header {
-  position: sticky;
+  position: fixed;
   top: 0;
   left: 0;
   width: 100%;
@@ -931,6 +932,10 @@ h1, h2, h3, h4, h5, h6 {
 
 /* --- Responsive Adjustments --- */
 @media (max-width: 1024px) {
+  body {
+    padding-top: 58px;
+  }
+
   .site-header .navbar {
     height: 58px !important;
   }
@@ -1094,6 +1099,10 @@ h1, h2, h3, h4, h5, h6 {
 }
 
 @media (max-width: 480px) {
+  body {
+    padding-top: 52px;
+  }
+
   .site-header .navbar {
     height: 52px !important;
   }
@@ -1114,7 +1123,10 @@ h1, h2, h3, h4, h5, h6 {
   }
 
   .logo-tagline {
-    display: none !important;
+    display: block !important;
+    font-size: 0.46rem !important;
+    letter-spacing: 0.08em !important;
+    margin-top: 1px !important;
   }
 
   .nav-cta-group {
