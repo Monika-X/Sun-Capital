@@ -225,7 +225,12 @@
           </div>
         </div>
 
-        <button type="button" class="btn btn-primary" onclick="alert('Your privacy preferences have been updated!');" style="margin-top: 1.8rem;">
+        <div id="prefSuccessMsg" style="display: none; margin-top: 1.5rem; padding: 0.85rem 1.2rem; background: rgba(39, 174, 96, 0.15); border: 1px solid rgba(39, 174, 96, 0.4); color: #27AE60; border-radius: var(--radius-md); font-weight: 600; font-size: 0.92rem; align-items: center; gap: 0.6rem; transition: all 0.3s ease;">
+          <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="20 6 9 17 4 12"/></svg>
+          <span>Your privacy and telemetry preferences have been successfully saved!</span>
+        </div>
+
+        <button type="button" class="btn btn-primary" onclick="const msg = document.getElementById('prefSuccessMsg'); if(msg) msg.style.display = 'flex'; if(typeof showToast === 'function') showToast('Privacy preferences successfully saved!', 'success');" style="margin-top: 1.5rem;">
           Save Privacy Preferences
         </button>
       </div>
