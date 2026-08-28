@@ -115,11 +115,14 @@ function initGalleryFilter() {
   });
 }
 
-/* --- Blog View More Step Pagination (4 Cards per Step) --- */
+/* --- Blog Search, Trending Tags & View More Pagination --- */
 function initBlogPagination() {
   const blogGrid = document.querySelector('.blog-grid');
   const viewMoreBtn = document.getElementById('blogViewMoreBtn');
-  if (!blogGrid || !viewMoreBtn) return;
+  const searchInput = document.getElementById('blogSearchInput');
+  const trendingTags = document.querySelectorAll('.blog-trending-tag');
+
+  if (!blogGrid) return;
 
   let currentStep = 4;
   const stepSize = 4;
@@ -127,14 +130,22 @@ function initBlogPagination() {
   function updateCardVisibility() {
     const activeFilterBtn = document.querySelector('.gallery-filter-bar .filter-btn.active');
     const filterVal = activeFilterBtn ? (activeFilterBtn.getAttribute('data-filter') || 'all') : 'all';
+    const searchQuery = searchInput ? searchInput.value.trim().toLowerCase() : '';
 
     const allCards = Array.from(blogGrid.querySelectorAll('.blog-card'));
+
+    // Filter cards matching category AND live search query
     const matchingCards = allCards.filter(card => {
-      const cat = card.getAttribute('data-category');
-      return filterVal === 'all' || cat === filterVal;
+      const cat = card.getAttribute('data-category') || '';
+      const textContent = card.textContent.toLowerCase();
+
+      const matchesCat = (filterVal === 'all' || cat === filterVal);
+      const matchesSearch = !searchQuery || textContent.includes(searchQuery);
+
+      return matchesCat && matchesSearch;
     });
 
-    // Hide cards that don't match active filter
+    // Hide cards that don't match active filter or search query
     allCards.forEach(card => {
       if (!matchingCards.includes(card)) {
         card.style.display = 'none';
@@ -157,13 +168,15 @@ function initBlogPagination() {
     });
 
     // Handle View More button state
-    if (currentStep >= matchingCards.length) {
-      viewMoreBtn.style.display = 'none';
-    } else {
-      viewMoreBtn.style.display = 'inline-block';
-      const remaining = matchingCards.length - currentStep;
-      const countToShow = Math.min(stepSize, remaining);
-      viewMoreBtn.textContent = `View More Articles (${countToShow} More) ↓`;
+    if (viewMoreBtn) {
+      if (currentStep >= matchingCards.length) {
+        viewMoreBtn.style.display = 'none';
+      } else {
+        viewMoreBtn.style.display = 'inline-block';
+        const remaining = matchingCards.length - currentStep;
+        const countToShow = Math.min(stepSize, remaining);
+        viewMoreBtn.textContent = `View More Articles (${countToShow} More) ↓`;
+      }
     }
   }
 
@@ -172,10 +185,44 @@ function initBlogPagination() {
     updateCardVisibility();
   };
 
-  viewMoreBtn.addEventListener('click', () => {
-    currentStep += stepSize;
-    updateCardVisibility();
+  // Bind live typing search input
+  if (searchInput) {
+    searchInput.addEventListener('input', () => {
+      currentStep = 4;
+      updateCardVisibility();
+    });
+  }
+
+  // Bind trending tag pill buttons
+  trendingTags.forEach(tagBtn => {
+    tagBtn.addEventListener('click', (e) => {
+      e.preventDefault();
+      const tagText = tagBtn.getAttribute('data-tag') || tagBtn.textContent.replace('#', '');
+
+      if (searchInput && searchInput.value.toLowerCase() === tagText.toLowerCase()) {
+        searchInput.value = '';
+        tagBtn.style.background = 'transparent';
+        tagBtn.style.color = 'var(--text-primary)';
+      } else {
+        if (searchInput) searchInput.value = tagText;
+        trendingTags.forEach(t => {
+          t.style.background = 'transparent';
+          t.style.color = 'var(--text-primary)';
+        });
+        tagBtn.style.background = 'var(--color-solar-gold)';
+        tagBtn.style.color = '#000000';
+      }
+      currentStep = 4;
+      updateCardVisibility();
+    });
   });
+
+  if (viewMoreBtn) {
+    viewMoreBtn.addEventListener('click', () => {
+      currentStep += stepSize;
+      updateCardVisibility();
+    });
+  }
 
   updateCardVisibility();
 }
