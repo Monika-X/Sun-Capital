@@ -1570,59 +1570,178 @@ div[style*="border-radius:50%"],
   }
 
   .container {
-    padding-left: 0.7rem !important;
-    padding-right: 0.7rem !important;
+    padding-left: 0.65rem !important;
+    padding-right: 0.65rem !important;
   }
 
+  /* Header & Navigation at 320px */
   .site-header .navbar {
-    height: 52px !important;
+    height: 50px !important;
   }
 
   .logo-icon {
-    width: 26px !important;
-    height: 26px !important;
+    width: 24px !important;
+    height: 24px !important;
+    border-radius: 5px !important;
   }
 
   .logo-text {
-    font-size: 0.98rem !important;
+    font-size: 0.95rem !important;
   }
 
   .logo-tagline {
-    display: block !important;
-    font-size: 0.4rem !important;
-    letter-spacing: 0.04em !important;
-    margin-top: 1px !important;
+    display: none !important;
+  }
+
+  .nav-cta-group {
+    gap: 0.2rem !important;
   }
 
   .nav-cta-group .toggle-btn {
-    padding: 0.2rem 0.35rem !important;
-    font-size: 0.65rem !important;
+    padding: 0.18rem 0.32rem !important;
+    font-size: 0.62rem !important;
+  }
+
+  /* Section 1: Hero Slider at 320px */
+  .hero-slider-wrapper {
+    min-height: 520px !important;
   }
 
   .hero-content {
-    padding-top: 95px !important;
+    padding-top: 85px !important;
     padding-bottom: 5.5rem !important;
+  }
+
+  .badge-pill {
+    font-size: 0.65rem !important;
+    padding: 0.22rem 0.45rem !important;
+    letter-spacing: 0.03em !important;
+    white-space: normal !important;
+    text-align: center !important;
+    word-break: break-word !important;
   }
 
   .hero-content h1,
   .hero-content .heading-xl {
-    font-size: 1.5rem !important;
+    font-size: 1.4rem !important;
     line-height: 1.2 !important;
+    margin-top: 0.5rem !important;
+    margin-bottom: 0.7rem !important;
   }
 
-  .page-hero {
-    padding-top: 90px !important;
-    padding-bottom: 2rem !important;
+  .hero-content .text-lead {
+    font-size: 0.85rem !important;
+    line-height: 1.35 !important;
+    margin-bottom: 1.2rem !important;
   }
 
+  .hero-content .btn {
+    width: 100% !important;
+    font-size: 0.82rem !important;
+    padding: 0.55rem 0.8rem !important;
+    min-height: 40px !important;
+  }
+
+  .slider-arrow {
+    width: 32px !important;
+    height: 32px !important;
+  }
+
+  .slider-arrow svg {
+    width: 14px !important;
+    height: 14px !important;
+  }
+
+  /* Section 2: Financial Calculator at 320px */
+  .calculator-card {
+    padding: 1rem 0.7rem !important;
+    gap: 1.2rem !important;
+    border-radius: 12px !important;
+  }
+
+  .calc-metric-grid {
+    grid-template-columns: 1fr !important;
+    gap: 0.75rem !important;
+  }
+
+  .metric-card {
+    padding: 0.75rem 0.6rem !important;
+  }
+
+  .metric-val {
+    font-size: 1.35rem !important;
+  }
+
+  /* Section 3: Tier Pricing & Specs at 320px */
+  .tier-card {
+    padding: 1.1rem 0.75rem !important;
+  }
+
+  .tier-price {
+    font-size: 1.6rem !important;
+  }
+
+  /* Section 4: Performance Stats Bar at 320px */
+  .stats-grid {
+    grid-template-columns: 1fr !important;
+    gap: 1rem !important;
+  }
+
+  .stat-item {
+    padding: 0.8rem 0.5rem !important;
+  }
+
+  .stat-val {
+    font-size: 1.5rem !important;
+  }
+
+  /* Section 5: Solar Myths Flip Cards at 320px */
+  .myth-card {
+    padding: 1rem 0.75rem !important;
+  }
+
+  /* Section 6: Testimonials Carousel at 320px */
+  .testimonial-card {
+    padding: 1.1rem 0.75rem !important;
+  }
+
+  .testimonial-quote {
+    font-size: 0.88rem !important;
+  }
+
+  /* Section 7: FAQ Accordion at 320px */
+  .accordion-header {
+    padding: 0.8rem 0.6rem !important;
+    font-size: 0.88rem !important;
+  }
+
+  .accordion-body {
+    padding: 0.8rem 0.6rem !important;
+    font-size: 0.82rem !important;
+  }
+
+  /* Section 8: Consultation Callout Banner at 320px */
   .card-glass {
-    padding: 1.1rem 0.85rem !important;
+    padding: 1.1rem 0.75rem !important;
   }
 
-  .badge-pill {
-    font-size: 0.68rem !important;
-    padding: 0.25rem 0.5rem !important;
-    letter-spacing: 0.04em !important;
+  /* Section 9: Site Footer at 320px */
+  .footer-grid {
+    gap: 1.5rem !important;
+  }
+
+  .newsletter-form-inline input {
+    font-size: 0.82rem !important;
+    padding: 0.55rem 0.8rem !important;
+  }
+
+  .newsletter-btn-join {
+    font-size: 0.82rem !important;
+    padding: 0.55rem 0.8rem !important;
+  }
+
+  .footer-bottom {
+    font-size: 0.75rem !important;
   }
 
   .countdown-grid {
