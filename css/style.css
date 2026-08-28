@@ -1838,6 +1838,58 @@ div[style*="border-radius:50%"],
     gap: 0.8rem !important;
   }
 
+  /* 404 & Maintenance Utility Header at 320px */
+  .utility-header {
+    padding: 0.6rem 0 !important;
+  }
+
+  .utility-header .logo-text {
+    font-size: 0.95rem !important;
+  }
+
+  .utility-header .logo-icon {
+    width: 24px !important;
+    height: 24px !important;
+    border-radius: 5px !important;
+  }
+
+  .utility-header .logo-tagline {
+    display: none !important;
+  }
+
+  .utility-header .toggle-btn {
+    padding: 0.18rem 0.32rem !important;
+    font-size: 0.62rem !important;
+  }
+
+  .destinations-grid {
+    grid-template-columns: 1fr !important;
+    gap: 1rem !important;
+  }
+
+  .destinations-grid .card-glass {
+    padding: 1rem 0.75rem !important;
+  }
+
+  .maintenance-hero-grid {
+    gap: 1.5rem !important;
+  }
+
+  .maintenance-hero-grid h1 {
+    font-size: 1.4rem !important;
+    line-height: 1.25 !important;
+  }
+
+  .maintenance-vector-box {
+    padding: 1.2rem 0.8rem !important;
+  }
+
+  .maintenance-vector-box svg,
+  .maintenance-vector-box div[style*="width: 280px"] {
+    width: 200px !important;
+    height: 200px !important;
+  }
+
   /* Pre-footer CTA Banner at 320px */
   .cta-banner {
     padding: 1.25rem 0.75rem !important;

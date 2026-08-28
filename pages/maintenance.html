@@ -21,8 +21,8 @@
 <body style="padding-top: 85px;">
 
   <!-- Top Utility Bar (Fixed Header) -->
-  <header class="utility-header" style="position: fixed; top: 0; left: 0; width: 100%; z-index: 1010; padding: 1.1rem 0; border-bottom: 1px solid var(--border-light); background: var(--bg-primary); backdrop-filter: blur(16px); -webkit-backdrop-filter: blur(16px); box-shadow: var(--shadow-sm);">
-    <div class="container" style="display: flex; justify-content: space-between; align-items: center; flex-wrap: wrap; gap: 1rem;">
+  <header class="utility-header">
+    <div class="container" style="display: flex; justify-content: space-between; align-items: center; gap: 0.5rem;">
       <a href="../index.html" class="logo-brand" style="text-decoration: none;">
         <div class="logo-icon">
           <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><circle cx="12" cy="12" r="5"/><path d="M12 1v2M12 21v2M4.22 4.22l1.42 1.42M18.36 18.36l1.42 1.42M1 12h2M21 12h2M4.22 19.78l1.42-1.42M18.36 5.64l1.42-1.42"/></svg>
@@ -33,7 +33,7 @@
         </div>
       </a>
 
-      <div style="display: flex; align-items: center; gap: 0.8rem; flex-wrap: wrap;">
+      <div style="display: flex; align-items: center; gap: 0.4rem;">
         <button class="toggle-btn theme-toggle-btn" aria-label="Toggle Dark/Light Theme">
           <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="5"/><path d="M12 1v2M12 21v2M4.22 4.22l1.42 1.42M18.36 18.36l1.42 1.42M1 12h2M21 12h2M4.22 19.78l1.42-1.42M18.36 5.64l1.42-1.42"/></svg>
           <span class="theme-text">Dark Mode</span>
@@ -42,7 +42,7 @@
           <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 12H3M9 6l-6 6 6 6"/></svg>
           <span class="rtl-text">RTL</span>
         </button>
-        <span class="badge-pill" style="margin: 0; background: rgba(224,169,45,0.2); border-color: var(--color-solar-gold); display: inline-flex; align-items: center; gap: 0.4rem;">
+        <span class="badge-pill maintenance-header-pill" style="margin: 0; background: rgba(224,169,45,0.2); border-color: var(--color-solar-gold); display: inline-flex; align-items: center; gap: 0.4rem;">
           <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polygon points="13 2 3 14 12 14 11 22 21 10 12 10 13 2"/></svg>
           <span>Scheduled Maintenance</span>
         </span>
@@ -79,10 +79,10 @@
   <!-- SECTION 1: ANIMATED VECTOR HERO & COUNTDOWN (2-COLUMN GRID) -->
   <section class="section-padding" style="min-height: 75vh; display: flex; align-items: center; justify-content: center; position: relative; overflow: hidden;">
     <div class="container">
-      <div style="display: grid; grid-template-columns: 1.2fr 1fr; gap: 4rem; align-items: center;">
+      <div class="maintenance-hero-grid">
         
         <!-- LEFT COLUMN: CONTENT, PROGRESS & COUNTDOWN -->
-        <div style="text-align: left;">
+        <div>
           <span class="badge-pill" style="border-color: var(--color-solar-gold); color: var(--color-solar-gold); margin-bottom: 1rem;">
             System Infrastructure Optimization
           </span>
@@ -107,7 +107,7 @@
           </div>
 
           <!-- COUNTDOWN GRID -->
-          <div class="countdown-grid" style="justify-content: flex-start;">
+          <div class="countdown-grid">
             <div class="countdown-item" style="border-color: var(--border-gold); background: var(--bg-card); min-width: 100px;">
               <div class="countdown-val" style="color: var(--color-solar-gold); font-size: 2rem;">02</div>
               <div class="countdown-label">Hours</div>
@@ -124,7 +124,7 @@
         </div>
 
         <!-- RIGHT COLUMN: ANIMATED VECTOR ILLUSTRATION CONTAINER -->
-        <div class="card-glass" style="border-color: var(--border-gold); padding: 3rem 2rem; display: flex; flex-direction: column; align-items: center; justify-content: center; border-radius: var(--radius-xl); box-shadow: var(--shadow-lg);">
+        <div class="card-glass maintenance-vector-box" style="border-color: var(--border-gold); padding: 3rem 2rem; display: flex; flex-direction: column; align-items: center; justify-content: center; border-radius: var(--radius-xl); box-shadow: var(--shadow-lg);">
           <div style="position: relative; width: 280px; height: 280px; display: flex; align-items: center; justify-content: center;">
             <svg width="280" height="280" viewBox="0 0 280 280" fill="none" xmlns="http://www.w3.org/2000/svg" style="overflow: visible;">
               <!-- Glowing Outer Aura -->

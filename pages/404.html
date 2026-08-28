@@ -21,7 +21,7 @@
 <body style="padding-top: 85px;">
 
   <!-- Top Utility Bar (Fixed Header) -->
-  <header class="utility-header" style="position: fixed; top: 0; left: 0; width: 100%; z-index: 1010; padding: 1.1rem 0; border-bottom: 1px solid var(--border-light); background: var(--bg-primary); backdrop-filter: blur(16px); -webkit-backdrop-filter: blur(16px); box-shadow: var(--shadow-sm);">
+  <header class="utility-header">
     <div class="container" style="display: flex; justify-content: space-between; align-items: center;">
       <a href="../index.html" class="logo-brand" style="text-decoration: none;">
         <div class="logo-icon">
@@ -33,7 +33,7 @@
         </div>
       </a>
 
-      <div style="display: flex; align-items: center; gap: 0.8rem;">
+      <div style="display: flex; align-items: center; gap: 0.4rem;">
         <button class="toggle-btn theme-toggle-btn" aria-label="Toggle Dark/Light Theme">
           <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="5"/><path d="M12 1v2M12 21v2M4.22 4.22l1.42 1.42M18.36 18.36l1.42 1.42M1 12h2M21 12h2M4.22 19.78l1.42-1.42M18.36 5.64l1.42-1.42"/></svg>
           <span class="theme-text">Dark Mode</span>
@@ -48,9 +48,9 @@
 
   <!-- SECTION 1: ANIMATED 404 VISUAL HERO -->
   <section class="error-hero">
-    <div class="container">
+    <div class="container text-center">
       <div class="error-code">404</div>
-      <span class="badge-pill" style="margin-top: 1rem;">System Routing Error</span>
+      <span class="badge-pill" style="margin-top: 0.8rem;">System Routing Error</span>
       <h1 class="heading-lg" style="margin-top: 0.8rem; margin-bottom: 1rem;">
         This Page Has Gone Off-Grid
       </h1>
@@ -78,7 +78,7 @@
         <h2 class="heading-md">Popular Destinations</h2>
       </div>
 
-      <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(240px, 1fr)); gap: 1.8rem;">
+      <div class="destinations-grid">
         <a href="../index.html" class="card-glass text-center">
           <div style="color: var(--color-solar-gold); margin-bottom: 0.8rem; display: flex; justify-content: center;">
             <svg width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M3 9l9-7 9 7v11a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2z"/><polyline points="9 22 9 12 15 12 15 22"/></svg>
